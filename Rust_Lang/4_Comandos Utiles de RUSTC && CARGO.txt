@@ -1,0 +1,159 @@
+COMANDOS DE RUST BASICOS::::
+
+uso de RUSTC
+
+rustc es el compilador de Rust, y se utiliza para compilar y optimizar código fuente Rust a código ejecutable.
+
+rustc [nombre_del_archivo.rs]: Este es el comando básico para compilar un archivo Rust. Sustituye [nombre_del_archivo.rs] por el nombre del archivo que se desea compilar.
+
+rustc --version: Este comando muestra la versión actual del compilador de Rust que se está utilizando.
+
+rustc --emit=llvm-ir [nombre_del_archivo.rs]: Este comando compila el archivo Rust en código de representación intermedia de bajo nivel (LLVM IR).
+
+rustc --emit=asm [nombre_del_archivo.rs]: Este comando compila el archivo Rust en código ensamblador.
+
+rustc --test [nombre_del_archivo.rs]: Este comando compila y ejecuta las pruebas unitarias del archivo Rust.
+
+rustc --release [nombre_del_archivo.rs]: Este comando compila el archivo Rust en modo de optimización de rendimiento para su uso en producción. (TARDA EN EJECUTARSE MAS DE LO NORMAL!)
+
+rustc --crate-type=dylib [nombre_del_archivo.rs]: Este comando compila el archivo Rust en una biblioteca dinámica.
+
+
+uso de Cargo
+
+cargo es el sistema de construcción y gestión de paquetes de Rust.
+
+cargo init . Este comando se ejecuta dentro de una carpeta vacia, realiza lo mismo que cargo new pero sin crear una carpeta, simplemente coloca los archivos necesarios para un proyecto nuevo rust dentro del directorio/carpeta actual asi nomas.
+
+Ejemplo: // cargo init . ==> solicita que se cree un arbol de archivos para un proyecto inmediatamente en el directorio donde estemos localizados.
+
+
+cargo new [nombre_del_proyecto]: Este comando crea un nuevo proyecto Rust: Creando una nueva carpeta donde se alojaran todos los archivos iniciales necesarios para crear nuestro proyecto.
+
+Ejemplo: // cargo new RUSTY_LEX ==>  solicita que se cree un arbol de archivos para un proyecto inmediatamente, creando un sub-directorio: RUSTY_LEX, respecto a donde nos encontremos localizados
+
+
+Cargo new --lib [nombre de la librería]: Este comando crea una nueva librería Rust: Creando una nueva carpeta donde se alojaran todos los archivos iniciales necesarios para crear nuestra librería
+
+Ejemplo: Creamos una librería y un proyecto, cada uno en su propia carpeta:
+(--Necesito ver que extension de archivo me permite insertar imagenes desde visual studio code, posiblemente .md?)
+Y vemos como queda el arbol de archivos resultante:
+(--Necesito ver que extension de archivo me permite insertar imagenes desde visual studio code, posiblemente .md?)
+
+cargo build: Este comando compila el proyecto Rust en modo de desarrollo y genera un archivo ejecutable.
+
+cargo run: Este comando compila y ejecuta el proyecto Rust en modo de desarrollo.
+
+cargo check: Este comando compila el proyecto Rust sin generar un archivo ejecutable, y verifica si el código fuente cumple con las reglas de Rust y si no hay errores de compilación.
+
+cargo test: Este comando compila y ejecuta las pruebas unitarias del proyecto Rust.
+
+cargo bench: Este comando compila y ejecuta las pruebas de rendimiento del proyecto Rust.
+
+cargo doc: Este comando genera la documentación del proyecto Rust en formato HTML.
+
+cargo clean: Este comando elimina los archivos generados por la compilación del proyecto Rust, como el archivo ejecutable y los archivos objeto.
+
+cargo update: Este comando actualiza las dependencias del proyecto Rust a sus versiones más recientes compatibles.
+
+cargo doc --open: abre la documentacion de todas las dependencias actualmente implementadas en el proyecto 
+
+cargo init --help ==> obtener ayuda acerca del comando cargo "init"
+
+// rm -f Cargo.toml ==> borra un archivo de manera forzada (forzado)
+
+// rm -rf src ==> remueve un directorio/carpeta y todos los contenidos: carpetas y archivos dentro de esta (recursivo,forzado) //Este comando funciona en Linux Debian, Y habia leido que funcionaba en windows, sin embargo personalmente a mi no me funciono en Windows10.
+
+Alternativa al comando anterior:
+// rm -r -fo src ==>  remueve un directorio/carpeta y todos los contenidos: carpetas y archivos dentro de esta (recursivo,forzado) //FUNCIONA EN WINDOWS! (powershell integra algunos comandos de linux, pero a veces fallan algunos comandos, asi que debemos usar una forma alternativa!)
+Esta es una forma acortada/acotada de usar el comando: 
+// Remove-Item -Recurse -Force -Path app
+Desde <https://stackoverflow.com/questions/61573115/rm-rf-equivalent-for-windows-powershell> 
+
+
+
+cargo init --lib . ==> crea dentro del directorio actual los archivos necesarios para desarrollar una LIBRERÍA de Rust.
+
+
+NOTA: RESPECTO AL archivo: cargo.lock ==> por favor no usar este archivo en caso de construir una librería.
+
+RUSTFMT==> aplica formato al codigo para que sea mas legible:
+
+1)instalar::::$cargo install rustfmt
+Nota: Puedes desinstalar RUSTFMT utilizando el comando: cargo uninstall rustfmt
+
+2)ejecutar RUSTFMT en la carpeta actual::::$cargo fmt
+
+• Curiosidades Extra::::
+
+		○ Si no tienes agregado "cargo" en tu PATH, pero si tienes instalado RUST, también puedes utilizar rustup para ejecutar Rustfmt de esta manera::::$rustup run stable cargo fmt //aunque esto es solo una curiosidad, ya que si instalaste RUST, entonces debes configurar rust correctamente, en cuyo caso este comando no tiene lugar o uso realista.
+
+		○ instalar::::$rustup component add rustfmt  
+		○ Instalar::::$rustup component add rustfmt-preview >> solo sirve pa'versiones anteriores a 2021???!!!!! //pendiente de verificar!!!!
+
+
+• //PARA usar RUSTFMT dentro de VISUAL_STUDIO_CODE usando el atajo: SHIFT+ALT+F
+
+	1. Install the visual code extension:_ "rust-analyzer"
+	2. Dentro de la terminal instalar RUSTFMT usando la terminal e introduciendo el comando::::$cargo install rustfmt
+	3. Asegurate de agregar a tu PATH: C:\Users\%UserProfile%\.cargo\bin
+		//nota: despues de instalar RUSTFMT usando la terminal, cuando termine arrojara este mensaje:
+		(--Necesito ver que extension de archivo me permite insertar imagenes desde visual studio code, posiblemente .md?)
+		//Dentro de ese mensaje se encuentra la ruta a agregar a tu path!!!!!
+	4. Abre dentro de Visual studio code:
+	File -> Preferences -> Settings -> Extensions -> JSON ->  Scroll down and find "Edit in settings.json".
+
+Añade, dentro de las corcheas todo el siguiente codigo:
+//inicio codigo a añadir
+"[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+},
+//fin codigo a añadir
+
+//el siguiente codigo es mas completo y puedes añadirlo de igual forma:
+//inicio codigo mas completo
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "rust-analyzer.rustfmt.enableRangeFormatting": true,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer", 
+        "editor.formatOnSave": true,
+         "editor.formatOnSaveMode": "file",
+    },
+//fin codigo mas completo
+
+Te quedara algo asi:
+(--Necesito ver que extension de archivo me permite insertar imagenes desde visual studio code, posiblemente .md?)
+
+
+Cierra y vuelve a abrir tu visual studio code, y listo!!!
+
+//Nota: presento error al tratar de habilitar RUSTfmt, aparentemente: 
+
+	1) tiene que ver con que instale: rustfmt usando consola == que no creo que sea el caso, aun asi, para la siguiente omitir este paso para ver como reacciona.
+		Puedes desinstalar RUSTFMT utilizando el comando: cargo uninstall rustfmt
+		
+	2) Rust-analyzer no encuentra una carpeta denominada sysroot, esto debido a que estoy empleando una instalacion de rust en una version GNU en lugar de una version MSI.
+	Esto sucede porque Rust-analyser emplea la  carpeta .src, la cual deberia estar dentro de .cargo, esa carpeta creo que es instanciada por rustup de algun modo.
+	
+	Como nota: mi version GNU, es funcional asi que no me afecta no tener un identador, de cualquier modo creo que:  es mas recomendable instalar la version que automatiza la instalacion de visual studio community! En lugar de la que solo instalar el compilador x64.
+	
+	La version que tengo GNU y la forma en que lo instale solo con x64, es mas ligera pero tengo en cuenta que la version:_ init.exe de rust que instala de manera predeterminada visual studio community es mas robusta.
+
+Mas detalles en la pagina:
+visual studio code - How to run cargo fmt on save in vscode? - Stack Overflow
+editor - VS code Format Code command and shortcut Shift+Alt+F doesn't work - Stack Overflow ==> <https://stackoverflow.com/questions/67859926/how-to-run-cargo-fmt-on-save-in-vscode>
+
+Nota curiosa, tambien puedes navegar usando el explorador de archivos propio del sistema al archivo settings.json:
+• On Windows, you can find the settings.json file in %APPDATA%CodeUsersettings.json.
+• On macOS, you can find the settings.json file in $HOME/Library/Application Support/Code/User/settings.json.
+• On Linux, you can find the settings.json file in $HOME/.config/Code/User/settings.json.
+
+
+Otra buena opción es usar la extensión: 
+Rust Assist:
+(--Necesito ver que extension de archivo me permite insertar imagenes desde visual studio code, posiblemente .md?)
+
+La cual requiere de la instalacion de FMT usando rustup

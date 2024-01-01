@@ -1,1 +1,142 @@
-This is a file to test the repository
+This is a file to test the repository:
+
+
+Posible indice:
+
+Conceptos importantes a aprender en rust:
+
+
+Inicio::::::::::::::::::::::::::::::::::::::
+
+x_BIBLIOTECAS, DEPENDENCIAS Y PAQUETES DE CODIGO.
+
+X_USO DE HERRAMIENTAS RUST
+	RUST COMMANDOS
+	CARGO COMMANDOS
+	USO DE CARGO PARA COMPARTIR CON OTROS (publicamente? Y de forma privada?)
+	Breve explicacion de PAQUETES DE CODIGO: Vease "Y_Librerias/Dependencias" 
+	Breve explicacion de las bibliotecas mas comunes:
+		STandarD == STD
+			Math.
+			Io.
+
+0_tipos de dato SCALAR u primitives == UNIVALORES
+	INTEGERS 
+	FLOATING-POINT
+	BOOLEAN
+	CHAR==CHARACTERS
+	
+1_variables
+2_constantes
+
+3.0 Explicación de la arquitectura básica de una computadora... Cómo funciona el procesador y como se enlaza a RAM
+3.1_ownership
+
+Que es un tipo de dato
+
+4_TIPO DE DATO COMPUESTO u Estructurado == A.K.A.COLLECTION O MULTIVALORES
+	
+	Explicación de la arquitectura básica de una computadora... Cómo funciona el procesador y como se enlaza a RAM
+	
+	Entendiendo STORAGES:::(memoria HEAP and STACK)
+	
+	TUPLA 
+	ARRAY 
+		nota::tupla y array son (considerado basico u primitivo por su forma de almacenarse pero también una collection de datos)
+		
+		nota::::primitivo == almacenados utilizando memoria "stack" y son eliminados del stack para eliminar memoria en cuanto su SCOPE termina.
+		
+		nota::::STACK == memoria a corto plazo que almacena valores dentro de si con una alta velocidad de procesamiento. Su alcance temporal es mas a CORTO PLAZO.
+		
+		nota::::HEAP == memoria a largo  plazo que almacena valores dentro de si y luego otorga un apuntador para la memoria stack. Su alcance temporal es mas a LARGO PLAZO y puede almacenar tipos de datos compuestos.
+	
+		nota:::scope es el alcance de algun elemento de codigo.
+	STRINGS (str y string)
+	VECTOR
+	STRUCT--omitido por ahora
+	ENUMERATOR--omitido por ahora
+	
+	
+5_funciones
+	Parametros, argumentos y retornos.
+5_structs
+6_metodos(implementación de funciones dentro de structs)
+	CLOSURES
+7_enumeradores
+
+CONDICIONALES BASICAS:(IF_ELSE)
+Y PARAMETROS CONDICIONALES BASICOS: (AND, NOT Y OR)
+
+CICLOS CONDICIONALES
+	Ciclo LOOP (hasta que la condicional se cumpla sale del ciclo) Y lex_RECURSIVIDAD (hasta que la condicional se cumpla ejecuta un break)
+	Ciclo FOR_
+	Ciclo ITERACION == for_each==> responsible for the logic of iterating over each item
+	Desde <https://rust-book.cs.brown.edu/ch13-02-iterators.html> 
+	
+		*Nota:("Closures==Loops" and iterators) 
+		1_loop:CICLO Repetidor infinito con condicion de salida==(hasta que se cumpla la condicion de salida)
+		2_iteracion:CICLO Iterativo con condicion predefinida==hasta que se ejecute cierto numero de veces
+	Lex_CICLOS (while y do_while) //es posible incluirlos en rust?
+
+8_patrones u flujos de control 
+	(especificamente explicando la expresión "MATCH" como "funcion de control de flujo")
+	(especificamente explicando el patron IF_LET como "constructo/patron de control de flujo")
+	
+9_CustomTypes (uso de structs y enumeradores para hacer custom DataTypes)==PERSONALIZACION U CREACION DE "UN TIPO DE DATO UNICO"
+
+10_ más tipos de datos customizables: 
+	Generics
+	Traits
+	Lifetimes
+	Concepto de  Multi_Typos: PERSONALIZACION U CREACION DE UN "CONJUNTO DE TIPOS DE DATO",consolidando ese conjunto dentro de un solo tipo de dato personalizado.
+
+//hasta aquí abarcan las partes basicas y fundamentales
+
+12_Como lidiar con los errores ("Error_handling") Conceptos y Tecnicas
+
+13_lex_Planificación del FLUJO DE UN PROGRAMA PARTES BASICAS QUE CONFORMAN EL FLUJO DE UN PROGRAMA: "CODIGO SCRATCH"
+
+14_Construccion de una aplicación de linea de comandos, en especifico una aplicación "similar" a GREP que busca "texto" dentro de archivos.
+
+12_Como lidiar con los errores ("Error_handling") Conceptos y Tecnicas
+
+13_Testing
+	Asegurarse que la logica del programa sea correcta.
+
+Curiosidades:::11
+11_Acerca del "Sistema Modular de Rust": 
+	reglas de privacidad, 
+	organizador de codigo 
+	y su API* abierta al publico. 
+		Nota:API*==(Application programming interface)
+
+12.1_lex_EVENTOS Y DESENCADENADORES
+
+12.2_USO DE "INTERFACES" PARA PROTEGER LOS DATOS INTERNOS MOSTRANDO AL USUARIO SOLO LO NECESARIO
+
+15_ APUNTADORES INTELIGENTES/SMART POINTERS (los cuales son proveidos por la librería STD, tambien se vera cuales TRAITS/MODULOS especificos dentro de la librería STD son los que permiten a los smart pointers funcionar).
+
+16_MODELOS DE CONCURRENCIA
+	Programacion por HILOS/Threads
+	
+17_Similitudes de la Programacion orientada a objetos y el lenguaje RUST.
+
+18_ patrones y "patrones coincidentes/Pattern Matching"
+
+19_ smorgasbord of advanced topics of interes //ULTIMAS ACLARACIONES ANTES DE TERMINAR:
+including unsafe Rust, macros, and more about lifetimes, traits, types, functions, and closures.
+
+20_ proyecto final: low-level multithreaded web server!
+
+APENDICES
+	Appendix A covers Rust’s keywords, 
+	Appendix B covers Rust’s operators and symbols,
+	Appendix C covers derivable traits provided by the standard library, 
+	Appendix D covers some useful development tools, 
+	Appendix E explains Rust editions. 
+	Appendix F, you can find translations of the book, 
+	Appendix G we’ll cover how Rust is made and what nightly Rust is. == Rust Version Beta
+	
+	Informacion que estoy estudiando y comprendiendo a partir del libro: <https://rust-book.cs.brown.edu/ch00-00-introduction.html>, esto es una interpretacion personal de mi aprendizaje, asi que puedo estar equivocado o no tener los conceptos muy claros, 
+    por lo que todo en este repositorio es una opinion personal de cada uno de los conceptos aprendidos, aprendizaje y opiniones que trato de apoyar con conocimiento y algunas notas que tomo y en caso de que sean de terceros siempre trato de referenciar de algun modo y de buena fe. 
+    Si llego a omitir alguna referencia no duden en comentarme para incluirla cuando pueda o me acuerde!!!

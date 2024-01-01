@@ -1,0 +1,9 @@
+3 herramientas importantes incluidas en el paquete de desarrollo de "RUST LANG OFFICIAL"::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Cargo_  manejador/administrador de "dependencias" y "build tool"_:  hace que añadir, compilar y administrar dependencias sea sencillo y consistente dentro del ecosistema de rust que poseamos en nuestra computadora.
+
+Rustfmt_ herramienta de formateo de sintaxis, se asegura que los programadores tengan un y solo un estilo de codificación constante para que la codificación sea entendible.
+
+Rust Language Server_ herramienta de verificación de código: es un "entorno virtual de desarrollo integrado" == IDE (INTEGRATED DEVELOPMENT ENVIROMENT), el cual proporciona: 
+-ayuda en la elaboración de párrafos de código proporcionando AUTOCOMPLETADO (no automático). (luego del proceso de compilación proporciona consejos de autocompletado).
+-ayuda en la detección de errores, proporcionando retroalimentación al usuario acerca del posible error que podria estar sucediendo.

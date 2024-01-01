@@ -1,0 +1,25 @@
+Rust es una opción atractiva para el desarrollo de software en comparación con otros lenguajes de programación. 
+
+Seguridad: Rust es un lenguaje de programación de sistemas que ha sido diseñado para garantizar la seguridad del código. El compilador de Rust utiliza un sistema de tipos que previene errores comunes, como null pointer exceptions o buffer overflows, y verifica que el código sea seguro antes de compilarlo.
+
+Rendimiento: Rust ha sido diseñado para ofrecer un alto rendimiento en aplicaciones de sistemas. Gracias a su sistema de gestión de memoria y a su capacidad para trabajar directamente con el hardware, Rust puede ser más rápido que otros lenguajes de programación.
+
+Confiabilidad: Rust tiene una sintaxis limpia y simple, lo que lo hace fácil de leer y mantener. Además, su sistema de gestión de paquetes, Cargo, hace que sea fácil agregar, actualizar y administrar dependencias de manera confiable.
+
+Multiplataforma: Rust es compatible con una amplia variedad de sistemas operativos y arquitecturas, lo que lo hace adecuado para proyectos que necesitan ser portátiles.
+
+Comunidad: Rust tiene una comunidad activa y creciente de desarrolladores y entusiastas que trabajan juntos para mejorar el lenguaje y crear herramientas útiles para los desarrolladores.
+
+Posibles usos de RUST LANG::::::::::::::::::::::::::::::::::::::::::::::
+
+web services
+DevOps tooling
+embedded devices
+audio and video analysis and transcoding
+Cryptocurrencies
+Bioinformatics
+search engines,and even major parts of the Firefox web browser.
+Internet of Things applications
+machine learning
+
+Desde <https://rust-book.cs.brown.edu/ch00-00-introduction.html> 

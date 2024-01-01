@@ -1,0 +1,100 @@
+La instalación de rust requiere SABER en que sistema lo vamos a instalar:Linux/Windows/MacOS
+
+En cada sistema existe algo llamado "VARIABLE DE ENTORNO": una variable de entorno puede ser un "archivo String" ó un "Directorio" que contiene información relevante, específicamente a las rutas de acceso de los programas en ejecución.(dicho de otra forma una variable de entorno dice donde se ubica la información relevante a un ó varios programas en específico)
+
+Existen 3 tipos de variable de entorno:
+0_Variables de entorno INTERNAS u RESERVADAS PARA EL PROPIO SISTEMA OPERATIVO. (NO ACCESIBLES)
+Son para toda la maquina==equipo de cómputo, INDEPENDIENTEMENTE DEL USO DE UN INTERPRETE DE COMANDOS==SHELL ó INDEPENDIENTEMENTE DEL USO DE UNA VENTANA DE LOGIN para acceder al sistema, Estas variables de entorno son administradas directamente por el sistema operativo para el propio correcto funcionamiento de si mismo como sistema operativo y sus programas contenidos. NO SON ACCESIBLES mas que por el propio sistema.
+
+1_Variables de entorno EXTERNAS al intérprete de comandos u shell del sistema:
+Estas variable de entorno NO SON EJECUTADAS directamente por el intérprete de comandos==shell de nuestro S.O. sino que tienen un proceso administrado por otro programa.
+Sin embargo poseen un registro por parte del sistema operativo (es decir el sistema operativo no se encarga directamente de hacer uso u la ejecución estas variables, pero si se encarga de LLEVAR UN registro de actividades y la administración de estas variables de entorno para que otros programas puedan hacer uso de ellas)
+
+2_Variable de entorno PARA USUARIOS
+estas variables de entorno SOLAMENTE APLICAN para los usuarios logueados en el sistema:
+sin embargo existen dos opciones en que estas variables de entorno son aplicadas:
+A) Para TODOS LOS USUARIOS RECONOCIDOS CON LOGIN en forma general 
+B) Para UN SOLO USUARIO RECONOCIDO CON LOGIN en especifico DESDE SHELL
+-----Estas variables estarán activas siempre y cuando los usuarios esta logueado, de lo contrario estas variables permanecerán inactivas hasta el momento de registrar un login-----
+
+(Nota RELEVANTE: Para "loguearse==iniciar sesion" y ser reconocido por el sistema mediante el uso de credenciales de acceso de seguridad, Existen varios casos que pueden presentarse, en específico 3:
+1__En el primer caso:
+EL USUARIO ACCEDE al sistema MEDIANTE SOLAMENTE EL USO DE LA VENTANA DE LOGIN propia del sistema y es reconocido.
+2__En el segundo caso:
+El USUARIO ACCEDE remotamente o directamente al sistema MEDIANTE SOLAMENTE EL USO DEL INTERPRETE DE COMANDOS==SHELL propio del sistema y es reconocido.
+3__En el tercer caso:
+El USUARIO ACCEDE al sistema remotamente o directamente CON OTRAS CREDENCIALES DE ACCESO CON PERMISOS DE SEGURIDAD LIMITADOS (limite al ejecutar comandos peligrosos) Y DE ACCESO "LIMITADOS" (limite de acceso a informacion privilegiada o confidencial) (ya sea en login en ventana ó haciendo uso de shell para acceder),
+LUEGO MEDIANTE EL USO DEL INTERPRETE DE COMANDOS==SHELL, el usuario inicia sesion == se loguea para ser reconocido por el sistema y asi poder ejecutar comandos utilizando credenciales de acceso de seguridad propias u acceder a informacion privilegiada o confidencial.)
+
+3_Variables de entorno QUE NO REQUIEREN LOGIN PERO QUE SON ESPECIFICAS DE UN SOLO USUARIO
+estas variables de entorno APLICAN EN TODO MOMENTO PARA UN SOLO USUARIO independientemente del inicio de sesión de ese usuario. (Es decir que mientras el sistema este activo, estas variables funcionaran en todo momento pero solamente afectaran a ese usuario)
+
+__________________________________________________________
+__________________________________________________________
+__________________________________________________________
+
+ZONAS DE ALMACENAMIENTO DE VARIABLES DE ENTORNO:::::
+Para linux: 
+	variablesEXTERNAS==>/./etc/enviroment/ 
+	variablesLOGIN==>(TodosUsuariosLogin) /./etc/profile (UsuarioLoginIndividual) /./home/~MyUser/.bash_profile
+	variablesNOLOGIN==>(UsuarioEspecifico) /./home/~MyUser/.bashrc
+Para windows: 
+	Usar editor de registro y ver la ruta (HKEY_CURRENT_USER/Enviroment/PATH/WindowsEnviromentpathRegistryKey) 
+	ó USAR EL APLICATIVO "EDITAR VARIABLES DE ENTORNO DEL SISTEMA"==>pestaña "PATH" y verificar que se encuentren==> 
+		(Direccion compilador RUST-LANG) C:\Users\alexx\.cargo\bin (esta ruta es equivalente::::) %USERPROFILE%\.cargo\bin
+		(Direccion compilador C++x64) C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\Hostx64\x64
+Para MacOS:
+	INFORMACION OMITIDA (No uso Mac)
+
+NOTAS:
+Despues de la instalacion en linux, en caso de haber instalado rust de manera general como superusuario ó administrador pero al querer usarlo con un usuarioLOGIN especifico, puedes habilitar el acceso de RUST  a ese usuarioLogin agregando la siguiente linea al archivo:::: /./home/~MyUser/.bash_profile==>
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+en la linea anterior notese por favor que la ruta agregada a la variable de entorno PATH, es la ubicacion donde se encuentra instalado CARGO: ~/.cargo/bin para el caso de linux.
+NOTAS:
+USO DE UN "LINKER"::::
+Un linker es un script que se ejecuta al momento de compilar un programa de RUST
+este script cuando se ejecuta "GESTIONA la memoria" a usar y define tambien la manera en que nuestro programa tendra permitido el acceso a las "memorias dentro del procesador==ALU" y el acceso a la memoria RAM.
+Para recordar mas facilmente: un linker==>"Liga/Linkea/enlaza" el PROCESADOR y la RAM al con la futura forma de ejecucion de nuestro programa.
+
+Rust reciclo muchas de las funcionalidades y herramientas del compilador C++ (hace uso de algunos "scripts utiles" y hace uso de ellos de "forma optimizada" para implementar funcionalidades de RUST y hacer RUST compartibles con los sistemas actuales que hacen uso de C++)
+
+Rust emplea el compilador C++x64 y sus librerias para usarlas como linker/enlace entre el hardware disponible y nuestra ejecucion de nuestro programa.
+
+En caso de tener el compilador de C++x64 dentro de otra ruta podemos agregar la variable de entorno directamente a RUST haciendo uso del comando:::: rustc linker="/./colocarla rutaaqui/x64"
+
+
+IMPORTANTE!!!!!!!!!
+Solo realizar una instalacion de RUST por equipo, en caso de realizar 2 instalaciones activas, cada una tratara de usar la variable PATH de rust: C:\Users\alexx\.cargo\bin, resultando que la instalacion mas reciente sobrescribe toda la informacion anterior, invalidando asi la instalacion anterior y posiblemente dejando dependencias u archivos sueltos que no seran accesibles mas, no habra una ruta de acceso registrada para estos y solo ocuparan espacio e incluso pueden afectar la instalacion reciente.
+
+__________________________________________________________
+__________________________________________________________
+__________________________________________________________
+
+Comandos de instalación RUST:
+FUNCIONA PARA: windows y LINUX
+
+//comando funcional proporcionado por la pagina oficial:rustup.rs - The Rust toolchain installer
+$curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+//Alternativa al comando official que funciona de igual manera:
+$curl https://sh.rustup.rs -sSf | sh
+
+Comando para actualizacion RUST:
+$rustup update
+
+Comando para  ver la version de RUST:
+$rustc --version
+ó
+$rustc -V
+
+Comando para ver la version de CARGO (si usaste un instalador oficial CARGO viene instalado por defecto):
+$cargo --version
+
+//En caso de que uses linux debian: (muestra la ruta donde se encuentra instalado cargo)
+$which cargo
+
+si deseamos desisntalar RUST usar el comando: (Esto solamente desinstala RUST)
+$rustup self uninstall
+

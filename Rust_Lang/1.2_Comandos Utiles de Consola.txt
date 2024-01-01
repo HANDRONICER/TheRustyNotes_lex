@@ -1,0 +1,10 @@
+
+Comandos de consola linux/Windows:
+cd ==>  cambia directorio
+mkdir ==> crea un nuevo directorio en la ruta actual.
+
+Comandos solo Windows:
+dir /B ==> lista los archivos dentro del directorio, pero en lugar de mostrar todos los datos de cada archivo, solo muestra su nombre y su extensión.
+
+Comandos solo Linux: (Debian)
+

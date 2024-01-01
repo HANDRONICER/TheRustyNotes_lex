@@ -1,0 +1,32 @@
+Que tenemos hasta el momento:
+
+Paquetes Extras importantes  por parte de otros programas:
+	• Visual Studio Community (Desarrollo de aplicaciones C++) =proporciona=> Compilador C++ x64
+
+Por parte de la instalación de RUST:
+	• compilador RUST_LANG
+	• Constructor/administrador de paquetes y dependencias CARGO
+
+
+Por parte de Visual Code:
+	• Programa "Visual Code"
+	• extensiones (breve resumen de cada una) 
+		○ BetterTOML (ayuda a Visual studio a comprender la estructura de un archivo TOML)
+		○ CodeLLDB (Extension necesaria para realizar DEBUGGING a codigo rust, EL DEBUGGING ES: la capacidad de encontrar errores mientras se ejecuta el programa, siendo capaz de ralentizar la ejecucion del mismo hasta poder "aislar un momento explicito en el cual ocurre un error",por tanto, si el compilador se encarga de que la estructura gramatical este bien implementada, el debugging se encarga de que toda la información y el flujo de esta dentro del programa sea correcto en todo momento).
+		○ Crates (ayuda a verificar cuales son las dependencias Oficiales de RUST: crates mas recientes)
+		○ ErrorLens (Resalta los errores que tiene nuestro codigo en letras grandes y rojas)
+		○ RustAnalyser (Instala un "servicio local de analisis de codigo RUST_Lang para visual Studio, el servicio esta completamente aislado dentro de nuestro sistema", este servicio proporciona cosas utiles como: autocompletado para rust que verifica la integridad del codigo mientras lo escribimos, entre otras cosas)
+		○ Tabnine (AI que otorga autocompletado de bloques enteros de codigo personalizado proporcionando codigo similar al nuestro)
+
+
+NOTA ANEXA:::: es importante despues de verificar los componentes instalados que nuestro sistema reconozca y tenga disponibles estos programas...para ello debemos decirle donde se encuentran estos programas:
+Verificar dentro de la "variable de entorno PATH", que tengamos estas rutas para asi decirle a nuestro sistema explícitamente donde se encuentran disponibles estos programas:
+Esta es la ruta del Compilador C++ x64: (a agregar si no lo hemos hecho aún, dentro de nuestra variable de entorno PATH)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\Hostx64\x64
+NOTITA:::: Visual Studio Community intentara agregar de forma automatica esta ruta a la variable path... pero siempre es bueno verificar que si este agregada!
+NOTITA2:::: LA CARPETA MSVC puede contener una carpeta diferente de la carpeta descrita "14.35.32215", en ese caso sustituir en la ruta proporcionada el nombre de la carpeta que tengas disponible.
+
+Esta es la ruta del administrador de paquetes y dependencias CARGO: (a agregar si no lo hemos hecho aún, dentro de nuestra variable de entorno PATH)
+C:\Users\alexx\.cargo\bin
+o la ruta equivalente::::
+%USERPROFILE%\.cargo\bin

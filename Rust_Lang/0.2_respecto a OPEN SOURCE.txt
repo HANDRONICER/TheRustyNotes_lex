@@ -1,0 +1,104 @@
+RUST ES OPEN SOURCE == (VEASE: 0.2_respecto a "OPEN SOURCE")
+Rust programming language, community, developer tools, and libraries son proporcionadas de manera gratuita para su uso, y con limitaciones comerciales.
+
+10/10/2023
+Rust tiene una licencia doble, Apache License 2.0 y MIT, que lo hace apto para todo tipo de proyectos.
+Desde <https://www.rust-lang.org/es/production> 
+
+Version 2.0, January 2004,Apache License 2.0
+Desde <https://www.apache.org/licenses/LICENSE-2.0> 
+
+The MIT License
+Version N/A
+SPDX short identifier: MITMIT
+
+Desde <https://opensource.org/license/mit/> 
+
+
+Pensamiento: ser contribuidor te da derecho a la "Apache Licence 2.0" 
+Un contribuidor es quien hace un trabajo a partir de un trabajo original con licencia, incluyendo el original o una version modificada o con añadiduras formada a partir del trabajo original, el trabajo del contribuidor es un derivado del original.
+
+Pensamiento: obtener una copia del software rust y su documentacion te da derecho a la "MIT"
+Como persona y particular, puedes usar el software sin restriccion y limitaciones.
+
+NOTA: 
+Iconos por Freepik, a partir de www.flaticon.com, con licencia CC-3.0-BY pueden ser ideales para evitar pasar por algun derecho de copyright?
+
+Open Source Developers
+Rust is for people who want to build the Rust programming language, community, developer tools, and libraries. We’d love to have you contribute to the Rust language
+Desde <https://rust-book.cs.brown.edu/ch00-00-introduction.html#open-source-developers> 
+
+El software open source es un código diseñado de manera que sea accesible al público: todos pueden ver, modificar y distribuir el código de la forma que consideren conveniente, las encargadas de su desarrollo son las comunidades
+Desde <https://www.redhat.com/es/topics/open-source/what-is-open-source> 
+
+
+La Open Source Initiative,es una organización dedicada a la promoción del código abierto, fundada en febrero de 1998. 
+
+Un grupo de personas atraídas en el trabajo a través de un software libre y en GNU/Linux introdujeron un término de mercadotecnia para el software libre, 
+siendo sustentable para negocios y con menos carga ideológica en su competencia con el software propietario. Esto condujo a la creación del término Open Source. 
+
+¿Qué es Software Privado? 
+Software Privado (o software no libre o software de propiedad) refiere a cualquier programa informático en el que los usuarios tienen limitadas capacidades de usarlo, modificarlo o redistribuirlo (con o sin modificaciones), o cuyo código fuente no está disponible o el acceso se encuentra restringido. 
+
+¿Qué es Software Libre? 
+Software libre (en inglés free software) se le denomina a un software que respeta la libertad de los usuarios sobre el producto adquirido, por tanto, puede ser utilizado de la manera que mejor le convenga a su comprador, desde copiarlo, estudiarlo y quizá modificarlo hasta lograr alguna versión mejorada de este.  
+
+Diferencias entre software libre y código abierto 
+
+El software de código abierto y el software libre comparten muchas licencias en la práctica, estos obtienen grandes diferencias con respecto a sus características, "movimientos u posiciones sociales IDEOLOGICAS" y funcionalidades. 
+
+La principal diferencia entre los términos «Open Source» y «Free Software» se basa en el "respeto" a cuestionamientos más sugeridos hacia lo filosófico, en comparación de aspectos enteramente técnicos. 
+
+Dentro de las motivaciones del software "OPEN SOURCE" en comparación de las motivaciones del "Free Software"
+Existen diferencias significativas pero similares:
+
+El Software Libre ofrece 4 particularidades, también son conocidas como libertades, estás se extienden a los usuarios que adquirieron este software: 
+
+1.- Usar el programa con cualquier propósito. 
+2.- Estudiar cómo funciona el programa y modificarlo, adaptándolo a las propias necesidades. 
+3.- Distribuir copias del programa, con lo cual se puede ayudar a otros usuarios. 
+4.- Mejorar el programa y hacer públicas esas mejoras a los demás, de modo que toda la comunidad se beneficie. 
+
+Mientras tanto, el Open Source maneja 10 premisas: 
+
+1.- Libre redistribución: el software debe poder ser regalado o vendido libremente. 
+2.- Código fuente: el código fuente debe estar incluido u obtenerse libremente. 
+3.- Trabajos derivados: la redistribución de modificaciones debe estar permitida. 
+4.- Integridad del código fuente del autor: las licencias pueden requerir que las modificaciones sean redistribuidas sólo como parches. 
+5.- Sin discriminación de personas o grupos: nadie queda fuera. 
+6.- Sin discriminación de áreas de iniciativa: los usuarios comerciales no serán excluidos. 
+7.- Distribución de la licencia: deben aplicarse los mismos derechos a todo el que reciba el programa. 
+8.- La licencia no debe ser específica de un producto: el programa no puede licenciarse como parte de una distribución mayor. 
+9.- La licencia no debe restringir otro software: la licencia no puede obligar a que algún otro software que sea distribuido por cualquier medio, deba ser de código abierto. 
+10.- La licencia debe ser tecnológicamente neutral: sin necesidad por requerir la aceptación de la licencia por medio de un acceso por click u otra forma específica en el soporte del software
+Desde <https://ideasatcloud.azurewebsites.net/open-source-es-una-buena-opcion-para-mi-empresa/> 
+
+Los proyectos de código abierto, o "open source," tienen ventajas y desventajas, y la decisión de adoptar esta filosofía de desarrollo depende en gran medida de los objetivos y las circunstancias del programador. 
+
+Ventajas del código abierto:
+1. Colaboración y retroalimentación: Al publicar un proyecto de código abierto, puedes atraer a una comunidad de colaboradores y usuarios que pueden proporcionar retroalimentación valiosa, encontrar errores y contribuir al desarrollo del proyecto. Esto puede mejorar significativamente la calidad y la funcionalidad del software.
+2. Aprendizaje: Al permitir que otros accedan y examinen tu código, puedes aprender de sus aportes y mejorar tus habilidades como programador. La revisión por pares es una excelente manera de aprender buenas prácticas de programación.
+3. Reputación y visibilidad: Contribuir a proyectos de código abierto y publicar tu propio código abierto puede aumentar tu visibilidad y reputación en la comunidad de desarrollo. Esto puede ser beneficioso para tu carrera, ya que puede atraer ofertas de empleo, oportunidades de negocio o colaboraciones.
+4. Uso gratuito: Si el objetivo principal de tu proyecto no es la monetización, permitir que otros lo utilicen de forma gratuita puede beneficiar a una amplia gama de personas y organizaciones.
+
+
+Desventajas del código abierto:
+1) Falta de remuneración directa: Publicar un proyecto de código abierto generalmente no genera ingresos directos para el programador. Esto puede ser un inconveniente si buscas ingresos directos a través de tu trabajo en el software.
+2) Competencia: Si tu proyecto tiene un componente comercial o quieres utilizarlo para obtener ingresos, otros pueden copiarlo y competir contigo. Sin embargo, es posible que puedas ofrecer servicios relacionados, como soporte o personalización, para ganar dinero.
+3) Pérdida de control: Al abrir tu código, pierdes cierto grado de control sobre quién lo utiliza y cómo lo utilizan. Esto puede ser un problema si tienes preocupaciones sobre el uso ético o inapropiado de tu software.
+
+En cuanto a si el código abierto perjudica a los programadores, depende de la perspectiva. 
+
+Algunos argumentan que el código abierto fomenta la innovación, el aprendizaje y la colaboración, lo que en última instancia beneficia a la comunidad de desarrollo en su conjunto. 
+
+Otros pueden argumentar que, en algunos casos, puede llevar a la explotación del trabajo de los programadores sin una compensación adecuada.
+
+Es importante recordar que, si deseas monetizar tu proyecto de código abierto, hay formas de hacerlo, como ofrecer servicios relacionados, licenciar tu software bajo términos que permitan el uso gratuito pero requieran pagos por características avanzadas o personalización, o buscar financiamiento a través de donaciones o patrocinios. 
+
+La elección de la licencia de código abierto que utilices también puede influir en tu capacidad para proteger tu trabajo y recibir créditos por él.
+
+En resumen, la decisión de hacer que un proyecto sea de código abierto o no depende de tus objetivos personales y profesionales, así como de tus valores y preferencias como programador.
+
+En otras palabras, si quieres ganar billetazo y ves potencial en tu codigo y nadie ha hecho algo similar y es innovador  hasta la medula, has tu codigo privado, pero si estas experimentando y aprendiendo entonces puedes ayudar a otros creando codigo, el cual te sirve para ganar experiencia y ademas tener un buen portafolio/repositorio de codigo para mostrar a los reclutadores de empleo y avale que tan bueno eres haciendo lo que haces. Lo que te permite ganar un salario mas sofisticado.
+
+Mantener tu codigo de abeja puede hacer que cualquier persona de la colmena lo vea, hoy en dia mantener tu codigo guardado en las sombras en lugar de mostrarlo a tu panal es un error, porque mostrarlo ayuda a que vean que sabes y haces bien tu chamba lo que atrae mas ofertas de trabajo para ti, como genial abeja en la colmena.
