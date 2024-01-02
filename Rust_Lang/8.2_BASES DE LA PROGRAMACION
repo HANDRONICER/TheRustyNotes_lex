@@ -1,0 +1,363 @@
+Contenido 
+
+Una computadora: 
+Artefacto electronico-digital, capaz de recibir INFORMACION, Procesar esa informacion, y Proveer un resultado
+
+
+Llámese HARDWARE A CUALQUIER EXISTENCIA FISICA DE LA COMPUTADORA.
+
+HARDWARE BASICO DE TODA PC::
+
+MODULOS INTERNOS
+MOTHERBOARD (Base sobre la cual se sustenta todo el sistema, es el cimiento principal de nuestra PC y es donde se conectan todos los componentes de HARDWARE Y también ofrece un medio físico por el cual se comunican los componentes en otras palabras la motherboard es la base de todo nuestro edificio (si la PC fuese un edificio))
+
+Almacenamiento de memoria a corto plazo RAM
+Almacenamiento de memoria a largo plazo HDD/SDD
+FUENTE DE PODER (Proporciona electricidad a todo nuestro sistema u edificio)
+PROCESADOR (CPU)
+TARJETA GRAFICA (GPU)
+
+(EXTRAS)
+VENTILADORES(DISIPADORES DE CALOR)(CPU,GPU,FuenteDePoder)
+
+(PERIFERICOS) (MODULOS EXTERNOS)
+TECLADO
+PANTALLA
+RATON
+TARJETA WIFI (puede venir integrada a la placa, venir como un módulo interno O venir como un módulo externo usb)
+CARCAZA U TORRE
+
+
+Llámese SOFTWARE A CUALQUIER EXISTENCIA:
+1_CONSIDERADA "NO TANGIBLE" (YA QUE SU PRESENCIA FISICA SOLO EXISTE EN FORMA DE "PULSOS ELECTRICOS"),
+2_CAPAZ DE INTERACTUAR CON EL ENTORNO DIGITAL INTERNO DEL COMPUTADOR (DE MANERA LOGICO-ARITMETICA).
+
+Si la computadora fuese un cerebro, Entonces:
+el hardware vendría a ser es el "cuerpo" de una computadora.
+Y el software vendría a ser el "pensamiento" de una máquina.
+
+LLAMESE "CODIGO" A CUALQUIER EXISTENCIA QUE ESTA PRESENTE DENTRO DE UNA computadora o maquina A NIVEL DE SOFTWARE.
+
+Un programa, es codigo, una aplicación es codigo, una web es codigo, una imagen es codigo, un texto es codigo, una letra es codigo, un punto y coma es codigo.
+
+Siempre que aquello a lo que nombramos exista, como "una unidad" o "conjunto dentro del software", 
+y este dentro de una computadora es código.
+
+Si el sofware es el pensamiento de la máquina, entonces el código es cada "idea" de la máquina.
+
+NOTA: La idea y el pensamiento son dos palabras que a menudo se confunden. 
+
+La idea == es equivalente al "CODIGO" 
+se refiere a uno o un conjunto de varios "plan(es) ó proceso(s)" que ocurre dentro de la mente/computadora en relación con la finalización de un trabajo o deber.
+
+El pensamiento ==  es equivalente a todo el "SOFTWARE EN GENERAL", 
+Se refiere a uno o un conjunto de varios "proceso(s)" que ocurren dentro de la mente/computadora los cuales son vitales, útiles ó necesarios para "el correcto funcionamiento interno de la mente/computador", estos procesos continúan sin cesar.
+
+Asi como un pensamiento puede ser interrumpido pero también puede reanudarse. Un proceso de software puede ser interrumpido pero también reanudarse.
+
+En el momento en que el pensamiento se convierte en una idea o en varias ideas, deja de ser pensamiento y se transforma en idea. 
+
+El pensamiento es algo abierto que sucede sin cesar solo para preservar el funcionamiento interno de la mente, mientras que la idea es algo cerrado con un objetivo o finalidad.
+
+Nota: Una "existencia de código" 
+puede referirse a una sola parte dentro de un código, (si se habla con claridad y de manera específica) 
+o a Todo el código en si mismo, (siempre que se hable de manera clara y general).
+
+LA FINALIDAD DE UN:
+CUERPO/CONTENER EL CONOCIMIENTO ==> ES EL PENSAMIENTO/CONOCIMIENTO/HACE EL SABER ==> ES LA IDEA/SABIDURIA/ ES SABER HACER ==> ACCION/HACER
+HARDWARE ==> CONTIENE EL SOFTWARE ==> CONTIENE EL CODIGO ==> REALIZA ACCIONES CON UN OBJETIVO O FINALIDAD.
+
+QUE ES EXACTAMENTE UN CODIGO:
+
+"Un conjunto de datos" los cuales pueden interactuar con la máquina.
+
+Un dato es un valor alfanumérico.
+Un dato por si solo carece de significado y es solo un nombramiento, es decir: 21 es solo un "numero" al nombrarlo, A es solo una letra al nombrarla.
+
+Es cuando un dato:
+	1) Caso1: Se le otorga al dato un significado especial dentro de un sistema, ya sea funcional o estético que vaya más allá de su nombramiento.
+		a. LA LETRA "A" para un archivo, SIGNIFICA "ABIERTO"
+	2) Caso 2: Se enlaza con otros dato u otro conjunto de datos, y a esa conjunción se le otorga un significado, ya sea funcional o estetico, que vaya mas alla dde su nombramiento.
+		a. EL NUMERO "21" Y LA LETRA "A" == 21G, para un archivo SIGNIFICA "ABIERTO 21 ocasiones". 
+	3) Caso 3: Se enlaza como singular o como conjunto, a otra información==*(en adelante "vieja información"), y esa conjunción pasa a tener otro significado (ya sea funcional o estético) del que originalmente se le había dado a la información, Ya sea que el significado de esa vieja información fuese funcional o estético.
+		Conjunto de datos alfanumericos: 2-SEP-1945
+		SIGNIFICADO: Fecha de término de la segunda guerra mundial.
+			DATO + SIGNIFICADO = INFORMACION!
+
+No es necesario acordarse de todos los puntos anteriores,
+
+Solo recuerde que cuando un "dato o conjunto de datos" se les otorga un "significado funcional o estético" pasa ya no a llamarse dato, sino "INFORMACION".
+
+El valor de un DATO siempre está contenido o enlazado DIRECTA Y DEPENDIENTEMENTE a un "apuntador".
+
+Un apuntador no es más que una manera de llamar a cualquier localidad de memoria que guarda datos, una localidad de memoria puede almacenar datos de forma temporal o persistente
+
+La computadora interactúa con los datos e información, para ello necesita acceder a las localidades de memoria.
+
+Los "Tipos de acceso" a cualquier memoria capaz de almacenar cualquier DATOS u INFORMACION son los siguientes:
+LECTURA, ESCRITURA, ACTUALIZACION, BORRADO, MOVER, COPIAR
+
+A su vez también es prudente explicar los diferentes tipos o localidades de memoria de almacenamiento disponibles como hardware dentro de la computadora.
+
+Los TIPOS DE "LOCALIDADES DE MEMORIA" disponibles como hardware "BASICOS" siempre incluyen 3 caracteristicas importantes.
+
+1_TAMAÑO U CAPACIDAD DE ALMACENAMIENTO DE DATOS U INFORMACION.
+2_TIEMPO PROMEDIO QUE ALMACENAN LOS DATOS EN SU INTERIOR. == AKA. "PERSISTENCIA DE DATOS U INFORMACION".
+3_VELOCIDAD QUE POSEE EL HARDWARE DE CADA LOCALIDAD DE MEMORIA PARA ACCEDER A ESOS DATOS == AKA. "VELOCIDAD DE ACCESO A DATOS U INFORMACIÓN".
+
+
+A continuación se presentan las localidades de memoria básicas, 
+comenzando por los tamaños de almacenamiento más grandes, mayor tiempo en la persistencia de datos, y  velocidades de acceso mas lentas y finalmente terminando con los tamaños de almacenamiento de datos mas pequeños, menor tiempo de persistencia de datos y velocidades de acceso mas rapidas.
+
+
+	• DISCODURO == HDD/SSD
+		○ TAMAÑO DE ALMACENAMIENTO: GRANDE
+		○ PERSISTENCIA DE DATOS U INFORMACION: LARGA DURACION
+		○ VELOCIDAD DE ACCESO: LENTA
+	
+	• MEMORIA_RAM == DRAM/[SRAM aka. RAM_DDR (Double Data Rate)]
+		○ TAMAÑO DE ALMACENAMIENTO: MEDIANO
+		○ PERSISTENCIA DE DATOS U INFORMACION: MEDIA DURACION
+		○ VELOCIDAD DE ACCESO: RAPIDA
+		Tipos de ranura de memoria de una computadora (techlandia.com)
+		
+		○ CACHE ==>  [CACHE_L == aka. CACHE Level ]
+			§ TAMAÑO DE ALMACENAMIENTO: PEQUEÑO
+			§ PERSISTENCIA DE DATOS U INFORMACION: CORTA DURACION
+			§ VELOCIDAD DE ACCESO: ULTRA_RAPIDA
+			
+			El tamaño de una cache se mide en: MB ó KB 
+			Varios módulos de memoria cache se encuentran incluidos dentro de la memoria RAM, pero la memoria cache no es lo mismo que la memoria RAM ya que el cache es una parte de la RAM, y la memoria RAM es una totalidad conformada por varias partes además de la ya mencionada cache. 
+			La cache almacena puntadores los cuales sirven para identificar las localidades de datos a las cuales se quiere acceder, las localidades de datos estan almacenadas directamente en la memoria RAM, sin embargo estas localidades dentro de la RAM no solo pueden almacenar datos e informacion, sino que tambien pueden almacenar en su interior apuntadores de otros dispositivos, como lo son los apuntadores que usa el disco duro para identificar sus datos u información propia ==> los apuntadores de la cache, pueden comunicarse con la CPU (esta comunicación se considera directa con propósito de aprendizaje)
+			
+			
+	• CPU_REGISTROS
+		○ TAMAÑO DE ALMACENAMIENTO: MICRO
+		○ PERSISTENCIA DE DATOS U INFORMACIÓN: MICRO DURACION
+		○ VELOCIDAD DE ACCESO: INSTANTANEA
+		
+			§ La velocidad de acceso que proveen los registros de una CPU se miden en GHz (gigahertz).
+			(y la velocidad de un registro dentro de la CPU es tambien mas rapida que la cache_RAM, 
+			los registros son de uso exclusivo para el CPU pero obtienen sus datos gracias a las indicaciones que ofrecen los apuntadores de nuestra Cache_RAM para encontrar asi las localidades de memoria que almacenan nuestra informacion u datos, ya sea que estas localidades de memoria llenas de datos u informacion, se encuentren dentro de nuestra memoria RAM o dentro de nuestro DISCO DURO)
+			§ Su tamaño se mide en Bytes o KiloBytes.
+			§ Los registros dentro de la cpu son una parte que se encuentra dentro del CPU, estos ayudan a almacenar información. Los registros alimentan el procesador principal interno de la CPU con datos e informacion, el cual procesa esa informacion de manera LOGICO-MATEMATICA para realizar una accion o funcionalidad especifica, luego al terminar el procesamiento, finalmente guarda el resultado de esa accion o funcionalidad realizada dentro de otro REGISTRO, esto con la finalidad de programar la realizacion a futuro de esa accion, para realizar esa accion de manera instantanea ó bien para mantener un historico que compruebe que la acción fue realizada y que sera de utilidad cuando se desee realizar otra accion (con su debido proceso) a futuro ó de manera inmediata.
+			
+
+Es necesario entender los conceptos anteriores, para poder llegar a la conclusión de como fluye la información dentro de nuestra computadora gracias a las LOCALIDADES DE MEMORIA Y APUNTADORES: 
+
+a)_la computadora lee un dato u información y dependiendo de en qué localidad memoria se encuentre el dato u información leído(a),
+b)_ se desencadenara una acción prevista u pre-planificada en el codigo, 
+c)_luego se generara un resultado el cual almacenara dentro a otras localidades de memoria, con su respectivo apuntador que servira de identificador a toda esa información.
+
+La computadora puede acceder, leer y procesar cientos de datos en un corto periodo de tiempo, por tanto es importante definir en el código el conjunto de INSTRUCCIONES que se realizaran previo a realizarlas.
+
+Una instrucción es: cualquier acción de manipulación de datos.
+
+La manipulación de datos incluye pero no solo se limita a:
+
+	1) La "agrupación/estructuración/acoplar" == la union u conjuncion de datos.
+	Y La "des-agrupar/des-estructurar/des-acoplar" == el desempaquetamiento u separacion de datos.
+	De "valores == datos/informacion" de manera específica ESTO MEDIANTE EL USO DE DataTypes.
+	
+	2) Realizar operaciones/evaluaciones con los valores == datos/información dentro de los DataTypes ESTO MEDIANTE EL USO DE EXPRESIONES.
+	
+	3) Crear, modificar, borrar, leer, copiar y mover Valores == datos/información dentro de "LOCALIDADES DE MEMORIA". 
+	(A la realizacion de cualquier acción de CMBLCM se le llama: allocation of memory/ locacion de memoria).
+
+
+Al conjunto de INSTRUCCIONES de: 
+
+==> Obtener un dato (Leer un dato desde una localidad externa)
+	==> guardar un dato (copiar ese dato desde una localidad externa a otra local)
+		==> leer un dato (leer un dato desde la localidad local)
+			==> Realizar una acción/funcionalidad con el dato.(evaluación del dato u operación conjunta de nuestro dato actual con otros datos)
+					==> proporcionar un valor como resultado: que diga si la operación/evaluación:
+					
+						◊  pudo finalizar correctamente ==> Se proporciona el valor resultante de la operación.
+						◊  no pudo finalizar correctamente ==> Se proporciona un valor de error ( el cual puede o no incluir la descripción de ¿por qué? no finalizo correctamente).
+							
+						==> guardar el valor resultado en una localidad de memoria.
+							==>REPETIR EL PROCESO SI ES NECESARIO
+							
+A ese conjunto de INSTRUCCIONES específicas se le llama Procesamiento u Proceso de la información. 
+
+Y ese conjunto de INSTRUCCIONES específicas, es el PROCESO MAS SIMPLE existente dentro de una computadora.
+
+Cuando elaboramos un "CODIGO SIMPLE" o un "CONJUNTO DE INSTRUCCIONES simple", se busca siempre realizar un "PROCESO SENCILLO":
+
+==> Obtener un dato
+	==> guardar un dato 
+		==> leer un dato 
+			==> Realizar una acción/funcionalidad con el dato.(evaluación del dato u operación conjunta de nuestro dato actual con otros datos)
+				==> proporcionar un valor como resultado
+					==> guardar el valor resultado en una localidad de memoria.
+
+Pero prestemos mucha atención en que el objetivo final de todo ese proceso es::: "REALIZAR UNA ACCION u FUNCIONALIDAD" dentro de la computadora.
+
+Asi pues, el objetivo final de TODO CODIGO no es "REALIZAR UN PROCESO", 
+Sino que su objetivo final es obtener como resultado: "La REALIZACION DE UNA ACCION u FUNCIONALIDAD" dentro de la computadora.
+
+Resumiendo: un codigo simple realiza un proceso simple, lo que da como resultado la realizacion de una sola accion o funcion.
+
+
+
+
+Pero una computadora no solo hace una sola acción o función, ¡¡sino que puede realizar muchas acciones y funciones!!
+
+Veamos a continuación cómo podemos agrupar varios CODIGOS INDIVIDUALES, cada uno de los cuales hace un proceso, y así obtener como resultado final de esa union/agrupacion: varias acciones u funciones.
+
+Al Codigo que realiza/ejecuta un "proceso sencillo y solitario" == "Conjunto de instrucciones simple", lo denominamos: "TAREA".
+
+El código que realiza un proceso sencillo y solitario llamado tarea, Se le puede UNIR con al menos otro (o varios) código(s) de TAREA(s).
+
+Es entonces cuando se obtiene un conjunto de "CODIGOS DE TAREA" 
+(atención: este "conjunto de tareas" contiene dentro de sí varios "conjuntos de instrucciones", mas no contiene varias instrucciones aisladas que se encuentren fuera de un conjunto).
+
+Dentro de este "conjunto de Tareas", Cada Código de Tarea aporta su acción u función sencilla y solitaria.
+Realizando así dentro del conjunto no solo uno, sino varios procesos que resultan en acciones y funciones. 
+
+A ese "CONJUNTO DE CODIGOS DE VARIAS TAREAS UNIDAS" se le denomina: PROGRAMA.
+
+En resumen:
+Programa ==> agrupación de tareas.
+Tarea ==> código simple, que realiza un proceso simple, cuyo resultado es una acción o función simple.
+
+
+Como podemos ver: Un programa, se compone de tareas y las tareas están compuestas por instrucciones.
+
+
+La "tarea" == "conjunto de instrucciones", más sencilla y funcional que un programador puede codificar, es la tarea que permite la creación de un: "Objeto de código".
+
+
+
+La tarea para crear un "objeto de código" contiene:
+	-"Un solo valor".
+	-3 instrucciones en el siguiente orden: 
+		-Definir una plantilla con las características y formato que se requiere que posea la localidad de memoria.
+		-Dar formato a una localidad de memoria según la plantilla que tenemos y asignarle a esa localidad nueva == limpia/sin valores y recién modificada con nuestra plantilla, un "nombre unico" == "identificador alfanumerico".
+		- Meter "Un solo valor" en la localidad de memoria 
+		
+//IMPORTANTE: se consideran 3 instrucciones en total de esta tarea: "Crear Objeto de codigo", las cuales codifica a mano el programador.
+Sin embargo todas las demas instrucciones de la tarea son realizadas de manera automatica por la maquina. 
+
+Realizando todo un proceso dentro de la tarea.
+
+==> Obtener un "valor" cualquiera (Este "valor" lo proporciona el programador)
+	==> guardar "el valor" en una localidad de memoria temporal con identificador binario (Esto lo realiza la maquina) 
+		==> leer el valor  (esto lo realiza la maquina automaticamente luego de guardar temporalmente "el valor")
+			==> Realizar una acción/funcionalidad:
+			
+			Instrucción A_Se define la plantilla de una localidad de memoria (Esto lo hace el programador)
+			
+			Instrucción B_Se crea la localidad de memoria tomando como base la plantilla.
+			(Esto lo hace el programador, sin embargo es importante comentar que, la maquina tambien realiza instrucciones propias en segundo plano == sin que se noten para ayuda a realizar correctamente esta instrucción.
+			Esas instrucciones en segundo plano, se encuentran automatizadas por la maquina y no son accesibles por el programador, ya que, si las toca o le mueve algo a esas instrucciones esto puede ocasionar fallos o corrupcion del codigo ó de la informacion necesaria para que la maquina funcione de manera normal y feliz. Por lo que no es prudente ni saludable pesar todo el tiempo en: "que estara haciendo en segundo plano mi maquina", simplemente_: "dejar que la maquina haga lo suyo si no nos concierne". ) 
+			
+			C_(El valor es asignado por el programador dentro de la localidad de memoria recien establecida, la cual posee ahora: un nombre unico/identificador_alfanumerico, el valor dentro de si, sus caracteristicas y su formato para que la maquina pueda acceder a el valor correctamente ).
+				
+				==> proporcionar un valor como resultado (La accion de guardar el valor en una localidad de memoria nombrada/identificada_alfanumericamente: retorna un valor que indica a la maquina que este proceso se realizo correctamente o si existe algun fallo).
+					==> guardar el valor resultado en una localidad de memoria. 
+						(El valor resultado queda en una localidad de memoria temporal esto lo realiza la maquina y si no se realiza ninguna ninguna otra accion especifica con este valor por parte del usuario, se descarta por parte de la maquina de manera automatica).
+						
+
+//En otras palabras: si la maquina omite ciertas instrucciones dentro de un proceso y las realiza en segundo plano: es porque un conjunto de programadores sabe que codificar dentro de esas instrucciones a mano una y otra vez es peligroso para la salud de la máquina.
+
+No piensen en ello a menos que quieran especializarse en lenguaje maquina, o sea necesario acceder al codigo de esos procesos en segundo plano debido a algun error que no es nuestro sino por parte de la propia codificacion interna de la máquina.
+
+		
+Un valor puede ser lo siguiente: 
+	-Un "Dato" o un conjunto de datos
+	-Un solo "dato con significado" o un "conjunto de datos con significado" == información.
+	-Una "instrucción" o un conjunto de instrucciones
+
+
+Un objeto de codigo puede definirse como:
+La instrucción con identidad propia la cual:
+crea una asignación de un "valor" hacia una (o varias localidades de memoria en particular, en caso de que el valor sea extenso o muy grande). 
+
+Permitiendo asi que ese "valor" habite u se encuentre contenido dentro de esa localidad de memoria
+
+Es importante destacar que luego de que Esa localidad de memoria contenga un valor, Esa localidad de memoria sera identificada de ahora en adelante mediante un nombre proporcionado por el usuario.
+
+Un "objeto de código" permite que el programador y su código accedan mediante la identidad del objeto de codigo a un valor contenido dentro de una localidad de memoria, sin tener que colocar en cada ocasión el identificador binario de la localidad de memoria completo y en su lugar colocando un nombre asociado a la localidad de memoria.
+
+	
+//importante: un objeto de codigo solo interactua con una unica localidad de memoria, 
+POR TANTO solo existe una unica asociacion de esa localidad de memoria hacia un solo valor contenido.
+
+	Por ello, en lugar de decir:
+Que un objeto de codigo es una asociacion entre una localidad de memoria y el valor que contiene dentro de si.
+	Es perfectamente válido decir: 
+Un objeto de codigo ==> contiene valores.
+
+//nota: Un objeto de código puede poseer varios valores dentro de si,
+siempre que este conjunto de valores se considere no un conjunto de valores sino un UNICO VALOR que represente a todos los valores.
+
+//nota: Un objeto de código puede poseer varias localidades de memoria dentro de si,
+siempre que este conjunto de localidades de memoria se considere: no un conjunto de localidades sino como una UNICA LOCALIDAD que representa a todas las localidades .
+
+
+Un objeto de código pasa por esas 3 instrucciones u etapas realizadas por el programador antes de poder interactuar con otros "valores" == "otros objetos de codigo, o con mas instrucciones: 
+
+1)Planificacion del objeto de codigo
+AKA. Definicion/Declaracion == ES LA "ESTRUCTURACION/PLANIFICACION" DE un objeto de  CODIGO "INERTE".
+
+	Dicho de otra manera: EN OTRAS PALABRAS PLANIFICAMOS LAS CARACTERISTICAS DE NUESTRA LOCALIDAD DE MEMORIA, ESPECIFICANDO el  FORMATO del valor que contendra asi como tambien las CARACTERISTICAS y comportamientos de ese valor, REALIZANDO ASI UNA "PLANTILLA" DE UN POSIBLE "CONTENEDOR DE VALOR".
+	
+	//A esta Planificacion/Estructuracion/plantilla se le denomina con el nombre de:  Definición de un DataType.
+	(Veremos a detalle que es un DataType, mantengan el nombre en su memoria pero no se distraigan con ello).
+
+2)Creacion del objeto de codigo, 
+AKA. Instanciacion (tambien se usa el termino de "llamada" aunque su uso es erroneo") == Es la "CREACION" DE un objeto de CODIGO "VIVO" a partir de una definición/declaración.
+	
+	Dicho de otra manera: CREAMOS UN "CONTENEDOR de VALOR", con su formato, caracteristicas y comportamientos ya presentes,  y acto seguido asociamos un nombre que identifique de forma unica este "contenedor de valor".
+	
+	Directamente cuando asociamos un nombre a un "Contenedor de valor" este deja inmediatamente de ser una posibilidad, y se convierte en algo real y manipulable dentro de nuestro programa.
+	
+	A pesar de ya poder contener datos en su interior, TODAVIA NO INCLUIMOS UN VALOR dentro de este Objeto de codigo.
+	
+	//Una instancia de codigo siempre es independiente de la declaración a partir de la cual se creó.
+	
+	a. Invocación ==> Se crea la instancia de nuestro objeto de codigo e inmediatamente despues de crearse, dentro de la misma instrucción con la cual creamos la instancia del objeto de codigo, se realizar el llenado de nuestro objeto de codigo con valores.
+	
+3)Uso del objeto de codigo
+AKA. Llamada == Es el uso de nuestro "Contenedor de valor u Objeto de codigo".
+Al llenar nuestro objeto de codigo con un valor, (estamos haciendo uso de nuestro "objeto de codigo")
+Al leer la informacion dentro de nuestro objeto de codigo, (estamos haciendo uso de nuestro "objeto de codigo")
+Al modificar la informacion dentro de nuestro objeto de codigo, (estamos haciendo uso de nuestro "objeto de codigo")
+
+Y al realizar cualquier interaccion con nuestro OBJETO DE CODIGO instanciado en general, (estamos haciendo uso de nuestro "objeto de codigo")
+
+
+
+
+
+
+//Conceptos relevantes pero no incluidos dentro de la explicacion principal.
+
+Un objeto de codigo realiza los siguientes pasos para realizar un proceso:
+
+1) Se define una instrucción.
+2) Se define o se acepta una entrada.
+3) Se realiza un proceso (Cuando un valor interactua directamente con una instrucción se dice que esta realizando un proceso)
+4) Se genera una salida (y SIEMPRE al finalizar un proceso se genera una "salida", Una salida es un "nuevo valor==dato/informacion" resultante de un proceso.)
+
+Finalmente resumiremos todo lo que acabamos de ver en un solo parrafo:
+
+Un programa informático o programa de computadora es: una "secuencia de varias TAREAS".
+
+Cada Tarea se interpreta y se ejecuta en secuencia para obtener como resultado una acción o funcionalidad compleja == Conjunto de varias acciones o funciones simples.
+
+Un solo "Conjunto de tareas" se encuentra conformado en su interior por varios conjuntos de  "instrucciones u órdenes".
+
+Un solo "conjunto de instrucciones u órdenes" tiene como finalidad realizar "una sola acción o función" dentro de la máquina.
+
+Cada instrucción realiza una interacción con un "Valor" los cuales son diversos y distintos.
+
+Un valor puede y debe ser almacenado dentro de un "Objeto de Codigo". (Excepto cuando los datos se consideren temporales o descartables.)
+ 
+
+
+Desde <https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico> 
+
+

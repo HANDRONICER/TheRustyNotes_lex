@@ -1,0 +1,136 @@
+
+Un valor siempre ES una "secuencia de caracteres:  alfabeticos ó Simbolicos ó numericos" == 1234abcd"!(/?&
+
+Un dato es un valor, que por si solo carece de significado , y podemos referirnos a este valor mediante un nombramiento cualquiera que puede variar en todo momento ya que no es un nombramiento definitivo.
+
+Es decir: el valor "21" es solo un "numero" al nombrarlo, el valor "A" es solo una "letra" al nombrarla, el valor "murcielago", es una palabra cualquiera,  el valor: "36729192", es un numero  cualquiera. El valor: "!" es un simbolo cualquiera.
+
+Al nombrar "32": podemos hacerlo de muchas maneras y como nos plazca: "numerito", "caracteres", "simbolos",etc.
+Al nombrar "A": podemos hacerlo de muchas maneras y como nos plazca: "letra", "simbolo", "carácter", "escritura", etc.
+Al nombrar "defenestrar": podemos hacerlo de muchas maneras y como nos plazca: "palabra", "muchas letras", "conjunto de simbolos", "palabra que me parecio graciosa", etc.
+Al nombrar "2071969": podemos hacerlo de muchas maneras y como nos plazca: "numerote", "numero extenso", "secuencia de simbolitos", "numero que me parecio muy grandote",etc.
+Al nombrar "!",podemos hacerlo de muchas maneras y como nos plazca: "i volteada", "simbolo exclamacion", "simbolo sorpresa", "onomatopeya", "simbolo importante", etc.
+
+DATO == "VALOR ALFANUMERICO"+"NOMBRAMIENTOCUALQUIERA"
+
+Informacion es otorgarle a un dato, un "significado funcional o estético", ademas de referirnos a este valor mediante un nombramiento en PARTICULAR definitivo e invariable. 
+
+Cuando al valor: "32", le asociamos un nombramiento en particular por ejemplo: "Edad", y asignamos un significado: "Años de vida de mi gato pepe", estamos hablando de informacion.
+Cuando al valor: "A", le asociamos un nombramiento en particular por ejemplo: "SALON", y asignamos un significado: "Letra de mi salon u grupo", estamos hablando de informacion.
+ Cuando al valor: "defenestrar", le asociamos un nombramiento en particular por ejemplo: "Verbo", y asignamos un significado: "Accion de arrojar a alguien por la ventana", estamos hablando de informacion.
+Cuando al valor: "2071969", le asociamos un nombramiento en particular por ejemplo: "Fecha", y asignamos un significado: "Conmemoracion de la llegada del hombre a la luna", estamos hablando de informacion.
+Cuando al valor: "!", le asociamos un nombramiento en particular por ejemplo: "Error", y asignamos un significado: "Simbolo que si sale en la pantalla de un arma mortal indica que el arma ya no tiene municion ", estamos hablando de informacion.
+
+Informacion == "VALOR ALFANUMERICO"+"NOMBRAMIENTO PARTICULAR"+"SIGNIFICADO".
+
+
+• Un datatype == aka. "Tipo de valor" u "TipoDeDato"
+
+Es la manera de llamar a un FORMATO que se le aplica a una localidad de memoria.
+
+El proposito de la existencia de un Formato DataType:
+Es ser asignado a una localidad de memoria en particular, lo que permite estandarizar como es que nuestra computadora almacena y manipula los datos dentro esa localidad de memoria en particular.
+
+Específicamente un DataType establece:
+
+La manera de ALMACENAR UN VALOR Y la manera de MANIPULAR UN VALOR:
+
+Para ello un DataType posee la informacion necesaria dentro de si que establece: 
+	• la manera de CONVERTIR el "valor==datos/información" al código binario y viceversa.
+	• la manera de ORGANIZAR el código binario que representa el valor dentro de las localidades de memoria disponibles en nuestro computador.
+
+Los DataTypes disponibles para formatear localidades de memoria ya estan definidos por el lenguaje Rust.
+
+___________________________________________________
+___________________________________________________
+___________________________________________________
+
+Rust da formato a los valores para realizar su almacenamiento dentro de las "localidades de memoria", para ello toma en cuenta las siguientes características: (Este es un ejemplo didactico basado en opiniones personales y en conocimiento propio, las caracteristicas que toma en cuenta Rust pueden variar):
+
+	Tamaño final al convertir el valor: (El tamaño final nunca excede los 64 bits que la arquitectura del sistema permite y limita)
+
+	Velocidad u tiempo que toma convertir el valor a binario y vise-versa
+	
+	Compatibilidad al convertir ese valor a otro tipo similar.
+	
+	Complejidad del valor: 
+	si es "singular y simple" el cual es un todo de manera solitaria 
+	ó si es: el resultado de unir un conjunto de valores dentro de un todo creando asi un solo valor".
+	
+Sin embargo, la característica a la cual Rust le otorgo una importancia superior al momento de crear una clasificación de para los FORMATOS DataType que permiten almacenar valores dentro de nuestras localidades de memoria, fue la"CARACTERISTICA: complejidad del valor":
+
+Dividiendo los valores en 2 grupos de posibles Formatos DataType: (De acuerdo a su complejidad)
+
+	• simple == el valor es un todo: singular y sencillo
+	
+	• o complejo== la unión de dos o más valores dentro de un nuevo "valor todo", donde el nuevo "valor todo" resultante es el plural y compuesto de esos valores simples.
+
+Es a partir de esos 2 grupos que nace la actual clasificacion de DataTypes como se mira a continuación:
+
+(Mapa de estructura "arbol": DATATYPES)
+
+//Mapa de FORMATOS DataTypes disponibles (Solo titulos):
+
+	1. DataType Classification: Primitive/Scalar types //DataTypes capaces de dar formato a valores simples u primitivos:
+	
+		a. DataTypes para almacenar valores Numericos:
+			i. Bool
+			ii. Integer
+			iii. Float
+			
+		b. DataTypes para almacenar un solo carácter textual:
+			i. Char 
+			
+		c. DataTypes para denotar que la localidad de memoria se encuentra vacia en ese momento:
+			i. Never 
+			
+	2. DataType Classification: Compound/Collection Types: //DataTypes capaces de dar formato a valores complejos u compuestos.
+	
+		a. DataTypes para conjunto de valores:  "Secuencias"
+		
+				1) _Secuencias capaces de almacenar valores alfa-numericos, pero mayormente con un uso enfocado a valores NUMEROS_ 
+					a) Tuple 
+					b) Array
+					
+				2) _Secuencias capaces de almacenar valores alfa-numericos, pero mayormente con un uso enfocado a valores TEXTOS_
+					a) String  
+					b) &str
+					c) _Vector
+					
+		b. DataTypes para conjunto de valores: "Personalizados u definidos por el usuario"
+			i. Struct
+			ii. Enum
+			iii. Union
+			
+		c. DataTypes para conjunto de valores: "Funciones"
+			i. Functions
+			ii. Closures
+		
+		d. DataTypes para conjunto de valores: "Apuntadores"
+			i. References
+			ii. Raw pointers
+			iii. Function pointers
+		
+		e. DataTypes para conjunto de valores: "Trait":
+			i. Trait objects
+			ii. Impl trait
+
+
+___________________________________________________
+___________________________________________________
+___________________________________________________
+
+Explicacion: como funciona un DataType nativo de rust:
+
+Cuando se tiene una localidad de memoria en particular, y se le aplica un formato DataType a esa localidad de memoria en particular:
+
+Esa localidad de memoria en particular sigue existiendo, sin embargo nuestra maquina ya no la reconoce como una localidad de memoria, ya que al aplicar el formato DataType esa localidad de memoria en particular pasa a ser una: "localidad contenedora de valores" u "localidad de memoria capaz de contener valores" == lo que se acorta en: CONTENEDOR DE VALORES.
+
+El proposito de un CONTENEDOR DE VALORES es almacenar dentro de si, de manera expresa y detallada los siguientes valores==Datos u Informacion mostrados a continuacion:
+
+	1) "FORMATO DataType"
+		Que se realizo y que actualmente se encuentra asignado al presente contenedor de valores. (Especificamente es capaz de almacenar una instancia del objeto de codigo "Formato DataType").
+	2) "NOMBRAMIENTO"
+		Es la "identidad u identificador" que asignamos como programadores para poder acceder a nuestro contenedor de valores.
+	3) "VALOR"
+		valores diversos que deseen almacenarse, los cuales siempre deben cumplir con los lineamientos de formato proveidos por su Formato DataType asignado.

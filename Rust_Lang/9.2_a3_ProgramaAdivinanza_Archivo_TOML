@@ -1,0 +1,18 @@
+Contenido 
+
+Podemos ver el archivo ".TOML" de nuestro programa "a3_ProgramaAdivinanza" si nos dirigimos a la siguiente ruta:
+$cd %USERPROFILE%/Desktop/ProyectosRust/a3_guessing_game
+Y luego de estar dentro de esa ruta abrimos el archivo:
+$vim Cargo.toml
+
+Y dentro del archivo ".toml" vas a agregar la siguiente linea de codigo, justo debajo de [dependencies]:
+
+rand = "0.8.5"
+
+//esta dependencia posee librerias capaces de generar numeros aleatorios en rust.
+
+
+nota:: vim es un editor de texto en consola propio de linux, es multiplataforma pero tambien se puede instalar en windows.
+
+//Usando VIM PODEMOS EDITAR EL ARCHIVO TOML!! ==> ES BASTANTE SIMPLE si han interactuado previamente con el editor de archivos: "VIM" (MAS DETALLES en 1.1_Comandos Utiles de Vim)
+

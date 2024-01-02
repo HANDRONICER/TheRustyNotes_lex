@@ -1,0 +1,32 @@
+En este apartado veremos conceptos fundamentales de la programación::::
+
+De manera breve crearemos el codigo para un programa simple....
+
+
+Nota: de aquí en adelante para cualquier programa que se realice:
+Para codificar, al "acceder a una carpeta del sistema":
+SIEMPRE SE USARA LA RUTA ABSOLUTA de acceso a carpetas y archivos, EN LUGAR DE RUTA RELATIVA de acceso a carpetas y archivos.
+
+Que son:
+La Ruta absoluta es la ubicacion detallada, especifica y exacta de donde se encuentra un archivo de la computadora,
+comenzando desde su "carpeta inicial contenedora", (aka. "exterior,superficial,padre u origen del arbol de archivos del disco duro") HASTA el archivo u carpeta a ubicar, siendo este "archivo a ubicar" ó "carpeta final contenedora a ubicar" (aka. carpeta u archivo "interior,profundo,hijo u final del arbol de archivos del disco duro) el contenido/archivo/carpeta a localizar usando la ruta absoluta.
+
+Ejemplo de ruta absoluta::::
+
+Si tenemos nuestro programa en CarpetaPrograma y ese programa quiere acceder a por ejemplo una carpeta "Documentos" la cual contiene un archivo de texto llamado "ArchivoWord.doc", usando la ruta absoluta le indicamos la ubicacion/localizacion de ese archivo de texto.
+
+
+C://Usuario/Escritorio/CarpetaPrograma/Documentos/ArchivoWord.doc
+
+ la ruta relativa es la ubicacion relativa, abstracta, u parcial de donde se encuentra un archivo de computadora comenzando desde su carpeta "final contenedora" HASTA el "archivo a ubicar", es decir la ubicacion donde encontraremos "archivos u otras carpetas" solo se limita a la carpeta contenedora final donde tenemos el programa y nada mas.
+
+Si tenemos nuestro programa dentro de la "CarpetaPrograma2" y ese programa quiere acceder a por ejemplo una carpeta "Documentos2" la cual contiene un archivo de texto llamado "ArchivoWord2.doc", usando la ruta absoluta le indicamos la ubicacion/localizacion de ese archivo de texto.
+
+Ejemplo de una ruta relativa::::
+./Documentos2/ArchivoWord2.doc
+
+Ejemplo de la ruta absoluta del mismo archivo:
+C://Usuario/Escritorio/CarpetaPrograma2/Documentos2/ArchivoWord2.doc
+
+(Los programas siempre tienen acceso a la carpeta que los contiene en este caso la carpeta que contiene nuestro programa es: "CarpetaPrograma2", la cual en la ruta relativa esta implicita mediante el uso de el simbolo "." 
+

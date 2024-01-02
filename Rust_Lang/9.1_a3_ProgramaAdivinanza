@@ -1,0 +1,20 @@
+Creando un PROYECTO con CARGO::::
+NAVEGA A TU DIRECTORIO DE PROYECTOS:::: (Almacén donde creas cada uno de tus programas!)
+$cd %USERPROFILE%/Desktop/ProyectosRust
+
+Ejecuta el comando para crear un nuevo proyecto CARGO:::: 
+(¡Este comando GENERA el árbol de "carpetas" y "archivos" iniciales que todo proyecto hecho en cargo necesita!)
+$cargo new a3_guessing_game
+
+Entra a la carpeta en donde se creo el proyecto::::
+$cd a3_guessing_game
+
+Requerimientos::::
+Se solicitara un input por parte del usuario, se procesara ese input, el programa generara un input aleatorio, luego se compararan esos 2 inputs (el del usuario y el generado por el programa), si son similares, se emitira un mensaje diciendo: "VERDADERO" y se saldra del programa , si no son similares se emitira un mensaje diciendo: "falso" y se permanecera en el programa volviendo al punto donde se solicita un input por parte del usuario para volver a realizar todo el proceso.
+
+Código a incluir::::
+
+//POR FAVOR VEASE EL PROGRAMA:::: a3_guessing_game <https://github.com/HANDRONICER/Rusty_Lex/tree/main/a3_guessing_game>
+
+Finalmente ejecuta el programa desde la ruta donde se encuentra almacenado empleando ::::
+$cargo run
