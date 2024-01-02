@@ -1,0 +1,13 @@
+Archivo ".gitignore" ==> archivo que contiene una lista de los archivos y carpetas a ignorar si usamos un "sistema de control de versiones" como "GIT"  
+
+(SI ESTE ARCHIVO EXISTE: RUST inicializo un repositorio git automaticamente)
+
+Nota:::: el archivo ".gitignore" es utilizado para indicarle al "sistema de control de versiones Git" qué archivos o carpetas se deben ignorar y no incluir en el repositorio,lo que significa que los archivos y carpetas indicados --no se rastrearán ni se incluirán en las confirmaciones o "commits"--. 
+
+Esto es útil para evitar que archivos innecesarios o sensibles (como contraseñas o información de configuración) se agreguen accidentalmente al repositorio.
+
+El archivo ".gitignore" se coloca en el directorio raíz del repositorio Git y se puede personalizar para incluir o excluir archivos y carpetas específicos. También es posible agregar patrones de nombres de archivo o de carpeta para excluir varias archivos o carpetas a la vez.
+
+PUEDES OMITIR EL USO DE UN "SISTEMA DE CONTROL DE VERSIONES" agregando la flag: "--vcs" == "version control system"
+ejemplo::::
+$cargo new a2_hello_cargo --vcs

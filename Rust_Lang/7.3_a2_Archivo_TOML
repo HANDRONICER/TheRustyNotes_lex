@@ -1,0 +1,19 @@
+• Archivo "Cargo.toml" ==> archivo de configuración de cargo que contiene una lista con todas nuestras dependencias implementadas, la extensión de este archivo quiere decir: "Tom's Obvious, Minimal Language", este archivo es sencillo de leer y comprender, este archivo es el formato estándar para cualquier configuración de CARGO. 
+
+Las líneas dentro de un archivo TOML son las siguientes:::: 
+[package] ==> Esta sección Indica que la siguiente información es para configurar nuestro proyecto en caso de que deseemos convertirlo en un "paquete"/"crate" Y SUBIRLO A donde se encuentran todas las crates DE MANERA PUBLICA A NIVEL MUNDIAL
+
+name = "a2_hello_cargo" ==> Esta DEFINICION contiene el nombre de nuestro proyecto
+
+versión = "0.1.0" ==> Esta DEFINICION contiene la versión actual de nuestro proyecto
+
+edición = "2021" ==> Esta DEFINICION contiene la edición actual de nuestro programa CARGO
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html ==> Aqui podemos ver mas "Secciones" y sus respectivas definiciones
+
+[dependencies]==> Esta SECCION indica que la siguiente información establece las dependencias/crates OFICIALES desde el repositorio/almacén de crates que posee RUST, las cuales queremos incluir dentro de nuestro proyecto.
+
+IMPORTANTE!!!!
+Los archivos con extensión TOML solo pueden ser abiertos y ejecutados exclusivamente por RUST usando el administrador de paquetes CARGO. 
+LOS ARCHIVOS CON EXTENSION TOML NO SON APTOS PARA SER USADOS POR OTROS PROGRAMAS y son exclusivos para uso de RUST_LANG.
+

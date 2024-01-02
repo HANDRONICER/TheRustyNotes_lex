@@ -1,0 +1,23 @@
+Construye/Build el proyecto con cargo:::: 
+(Este comando se ejecuta dentro de la carpeta del proyecto)
+$cargo build
+
+Construir se refiere a 2 acciones simultaneas que se ejecutan en orden, una inmediatamente después de que la otra finaliza:
+1 compilar el proyecto y 0
+2 generar un archivo ejecutable del proyecto
+
+Luego de la construcción del proyecto, podemos ver como
+El arbol de carpetas y archivos iniciales dentro de la carpeta de nuestro proyecto AÑADE ALGUNOS ELEMENTOS A SU ESTRUCTURA luego de realizar una compilación usando CARGO, estos son::::
+
+	• Carpeta "target==Objetivo" ==> Dentro de este directorio se encuentran los objetivos finales de nuestra compilación, es decir: los archivos y carpetas que se generan luego de una compilación.
+		(La cual contiene en su interior:)
+		○ Archivo ".rustc_info.json" ==> ??
+		○ Archivo "CACHEDIR.TAG" ==>??
+		○ Carpeta "Debug==Depuración" ==> Contiene todos los archivos aun faltantes por DEPURAR==" Aun no estan REVISADOS para buscarles errores, sin embargo ya estan LISTOS para ejecutarse (Depuracion==Revisados/Sin errores y listos/Ejecutables)"
+			(La cual contiene en su interior)
+			§ Carpetas con información util a rust:::: (.fingerprint,build,deps,examples,incremental)
+			§ Archivo "Cargo.lock" ==> mantiene un log de control de dependencias (Si nuestro proyecto posee alguna dependencia que use), es decir: mantiene un historial de las versiones más antiguas y más recientes aplicadas a nuestro proyecto. (ADMINISTRADO AUTOMATICAMENTE POR CARGO)
+			§ Archivo "a2_hello_cargo.exe" ==> este es el archivo ejecutable luego de compilar nuestro proyecto
+			§ Archivo "a2_hello_cargo.pdb" ==> este es el archivo de debug luego de compilar nuestro proyecto contiene el codigo maquina x86 ó x64 de nuestro proyecto.
+			§ Archivo "a2_hello_cargo.d" ==> este es el archivo secundario de debug luego de compilar nuestro proyecto, Cargo lo utiliza en conjunto con los archivos de "debug" con extension .pdb",
+			este archivo permite a los depuradores asociar la información de depuración correcta con el código fuente original. Esta información puede incluir los nombres de funciones y variables, así como información sobre el flujo de control y los valores de las variables en tiempo de ejecución.

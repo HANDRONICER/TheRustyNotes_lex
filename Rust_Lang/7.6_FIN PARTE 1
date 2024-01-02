@@ -1,0 +1,11 @@
+Recapitulando lo aprendido:
+Hasta el momento hemos visto:
+
+-INSTALACION DE RUST
+-COMANDOS 
+	//RUSTC (SOLO COMPILACION) 
+	//CARGO (Construccion, compilacion,correr, liberar)
+-Programa simple en rustc y en cargo
+
+Por entrar a detalle en la siguiente seccion::::
+	Algunas notas sobre funciones (solo fue introductorio para entenderle al programa, pero veremos una introduccion apropiada)

@@ -1,0 +1,10 @@
+La carpeta RAIZ del proyecto::::(en este caso específico seria:::: "a2_hello_cargo")::::
+SOLO DEBE CONTENER: 
+	• ARCHIVOS tipo "README"==> Un archivo que contiene información e instrucciones acerca del proyecto, sirve como una guía a nuevos usuarios y desarrolladores que quieran entender cómo usar el proyecto (y también podemos incluir información acerca de cómo pueden contribuir al proyecto).
+	Un archivo "readme" contiene, pero no se limita a solamente::::
+		○ NOMBRE DEL PROYECTO Y UNA BREVE DESCRIPCION DE LO QUE HACE.
+		○ instrucciones DE INSTALACION, INCLUYENDO DEPENDENCIAS O REQUISITOS NECESARIOS DEL SISTEMA PARA PODER FUNCIONAR.
+		○ Información acerca de como poder contribuir al proyecto: incluyendo guías u instrucciones detalladas a seguir para reportar BUGS, guías u instrucciones para realizar solicitudes de características que quisieran incluirse a futuro, o guías u solicitudes para contribuir al código!
+		○ Información de licencia, incluyendo el tipo de licencia y cualquier terminología u condiciones asociadas al uso del proyecto y sus dependencias, asi como los terminos asociados y condiciones de uso herramientas externas (en caso de ser incluidas)
+	• ARCHIVOS con información respecto a "Licencias y permisos"
+ARCHIVOS de "CONFIGURACION"

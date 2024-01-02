@@ -1,0 +1,30 @@
+
+Una funcion es un codigo que agrupa instrucciones,
+Al ejecutar una funcion, esas instrucciones se realizan para realizar una accion u funcionalidad. 
+
+(Nota: 
+no confundir codificar una "funcion": "definir/declarar en codigo las instrucciones a ejecutar a futuro" 
+Con codificar una "funcionalidad/accion/ejecucion: "llevar a cabo las instrucciones de una funcion haciendo uso de una definicion/declaracion previamente establecida").
+
+(fn) ==> es la palabra reservada empleada para crear funciones!
+
+
+• Un parámetro es cuando se "definen" los espacios de los datos que se aceptaran.
+
+• Un argumento es cuando se "proporcionan" los datos para llenar esos espacios.
+
+• Firma == conjunto de parámetros dentro de una funcion
+
+
+fn main() ==> este código indica la creación de una función llamada "MAIN", por  tradición las funciones MAIN siempre son las primeras en ejecutarse,
+como nota importante: dentro de un solo ejecutable individual pueden habitar varias funciones con diferentes nombres, pero solo puede habitar por tradición Y DE MANERA DEFINITIVA: únicamente una solitaria función MAIN que posea el nombre "main", ya que si existen 2 a la vez el compilador no sabe cuál es la primera que se ejecutara.
+Es decir: LA FUNCION MAIN solo puede declararse una sola vez por ejecutable.
+
+LA SINTAXIS DE UNA FUNCION ES LA SIGUIENTE:
+
+fn nombre_funcion(parametros_aceptados_por_mi_funcion){
+	//Dentro de los "brackets{}" va lo que se denomina "CUERPO DE LA FUNCION/ BODY OF THE FUNCTION";
+	//en el cuerpo de la función contiene el código a ejecutar cuando se invoque esta función;
+	//este comentario está dentro del cuerpo de la función!!
+	retorno_de_la_funcion
+}

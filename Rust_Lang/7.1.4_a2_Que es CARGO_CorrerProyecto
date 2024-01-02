@@ -1,0 +1,15 @@
+Construye/Build, LUEGO DE ELLO INMEDIATAMENTE "CORRE/EJECUTA" el proyecto con cargo:::: 
+(Este comando se ejecuta dentro de la carpeta del proyecto)
+$cargo RUN
+
+//Si ya hemos compilado previamente nuestro proyecto y no hay ningun cambio desde la ultima compilacion::::
+este comando unicamente ejecuta sin demora el programa (omite la "construcción")
+
+
+
+
+
+nota::::
+Construir se refiere a 2 acciones simultaneas que se ejecutan en orden, una inmediatamente después de que la otra finaliza:
+1 compilar el proyecto y 0
+2 generar un archivo ejecutable del proyecto

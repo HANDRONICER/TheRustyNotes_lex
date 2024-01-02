@@ -1,0 +1,33 @@
+SI UNICAMENTE DESEAMOS "COMPILAR" para verificar que nuestro codigo no tenga errores, 
+SIN GENERAR UN ARCHIVO EJECUTABLE:::: ("cargo check" es mas rapido al ejecutarse como comando que "cargo build")
+$cargo check
+
+Nota::::
+Compilar ==> proceso de traducir el código fuente de Rust en lenguaje de máquina que puede ejecutarse en una computadora.
+//EL OBJETIVO FINAL DE LA COMPILACION ES VERIFICAR QUE SE PUEDA GENERAR UN ARCHIVO EJECUTABLE A PARTIR DEL CODIGO FUENTE QUE PROPORCIONEMOS
+
+LA COMPILACION REALIZA LO SIGUIENTE::::
+incluyendo pero no limitado solamente a:
+	• el análisis sintáctico, 
+	• la optimización del código, 
+	
+	(los siguientes pasos solo aplican cuando se desea generar un archivo ejecutable::::)
+	• la generación de código objeto y 
+	• la vinculación del código objeto para generar el archivo ejecutable final.
+
+CODIGO OBJETO:::
+el "código objeto" es un archivo binario generado por el compilador, este archivo binario contiene nuestro programa usando "código de máquina" generado a partir de nuestro "código fuente". 
+
+El código objeto se genera durante el proceso de compilación y  es este "archivo binario escrito en codigo maquina" lo que se usa como entrada para el "proceso de vinculación y transformación" que genera el archivo ejecutable final.
+
+Durante el proceso de vinculación y transformación, el código objeto se combina con otros archivos objeto y bibliotecas para crear el archivo ejecutable final que se puede ejecutar en el sistema operativo.
+
+El código objeto contiene instrucciones en lenguaje de máquina, datos y otros elementos necesarios para ejecutar el programa. 
+
+En Rust, el código objeto se genera a partir del código fuente compilado y contiene el código en lenguaje de máquina que puede ser ejecutado directamente por nuestro procesador de la computadora.
+
+Es importante tener en cuenta que el código objeto es específico de la plataforma y solo se puede ejecutar en la misma arquitectura de procesador y sistema operativo en la que se compiló. Por lo tanto, se deben generar diferentes archivos objeto para diferentes plataformas si se desea ejecutar el programa en diferentes sistemas operativos o arquitecturas de procesador.
+
+UN "CODIGO OBJETO" == "ARCHIVO BINARIO EL CUAL CONTIENE CODIGO MAQUINA" ==> ES COMPLETAMENTE DIFERENTE DE UN "ARCHIVO DE DEBUGGING" == "ARCHIVO BINARIO EL CUAL CONTIENE INFORMACION UTIL CUANDO SE REALICE LA DEPURACION" 
+
+EL archivo debugging CONTIENE::::  contiene información adicional sobre el código fuente y la ruta u apuntador del código objeto que se puede utilizar para depurar el programa. Este archivo se genera durante el proceso de compilación y se utiliza en conjunto con el código objeto para depurar el programa.

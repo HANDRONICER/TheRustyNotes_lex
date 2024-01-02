@@ -1,0 +1,10 @@
+ruta donde se localiza el archivo con extension ".pdb":::: /CarpetaRaizProyecto/target/debug/nombreCarpetaRaizProyecto.pdb
+
+EL ARCHIVO ".PDB"
+Contiene información de depuración (conteniendo pero no solamente limitado a lo siguiente):
+
+	• Los nombres de las variables y las funciones, que se utilizan para vincular el "código objeto/Codigomaquina/codigodebug" con el "código fuente original" y permitir la depuración en tiempo de ejecución del programa.
+	• Bibliotecas y archivos DLL, que se utilizaron para vincular dependencias u archivos extras dentro de nuestro proyecto con nuestro nuestro codigo fuente principal.
+
+Estos archivos no son necesarios para ejecutar el programa, 
+pero son útiles para la depuración en tiempo de ejecución y para compilar el programa en modo de depuración.

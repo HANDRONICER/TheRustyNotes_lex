@@ -1,0 +1,15 @@
+Liberación/Release:::: "LIBERA" el proyecto con cargo:::: 
+(Este comando se ejecuta dentro de la carpeta del proyecto)
+$cargo build --release
+
+
+LA LIBERARCION/RELEASE ES::::
+CUANDO SE BUSCA COMPILAR Y CREAR UN EJECUTABLE DE NUESTRO PROYECTO, PARA SER UTILIZADO ESPECIFICAMENTE YA EN UN AMBIENTE DE PRODUCCION (DESTINADO A UN USO INDUSTRIAL,EMPRESARIAL O DE NEGOCIO).
+
+LA LIBERACION SE REALIZA CUANDO HEMOS ACABADO CON LOS TEST Y COMPROBADO QUE EL CODIGO SEA EFICIENTE Y NO POSEA ERRORES.
+
+EL ARCHIVO EJECUTABLE QUE SE OBTIENE LUEGO DE EJECUTAR EL COMANDO --release, ES UN ARCHIVO EJECUTABLE CON MUY LIGERAS "OPTIMIZACIONES" Y SE GUARDA EN LA RUTA::::
+
+$cargo build --release ==> ./target/release ==> Archivo apto para benchmarking y liberacion final
+
+$cargo build                  ==> ./target/debug  ==> Archivo apto para testing y debugging/depuracion

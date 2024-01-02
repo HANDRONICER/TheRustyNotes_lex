@@ -1,0 +1,24 @@
+Cargo: es el "sistema sobre el cual esta construido RUST y es también un administrador de:
+	• "paquetes de código" (Pueden contener: 
+		○ pueden contener una o múltiples librerías dentro de si, 
+		○ pueden contener "sub-paquetes" == librerías especializadas que forman parte de una libreria mayor, 
+		○ pueden contener uno o varios bloques de código ya compilado y por tanto ejecutable aislados que no formen parte de una librería).
+	• "librerías" (Pueden contener:
+		○ pueden contener una ó múltiples clases==(Varios Bloques de código funcionando en armonía para llevar a cabo un propósito).
+		○ pueden contener Funciones simples útiles.
+		
+NOTA:::: sobre: "dependencias" (Si nuestro código necesita una "librería" si ó si para funcionar, esa librería es llamada "dependencia", en RUST las dependencias fueron bautizadas como CRATES).
+
+Creando un PROYECTO con CARGO::::
+NAVEGA A TU DIRECTORIO DE PROYECTOS::::
+$cd %USERPROFILE%/Desktop/ProyectosRust
+Ejecuta el comando para crear un nuevo proyecto CARGO:::: 
+(¡Este comando GENERA el árbol de "carpetas" y "archivos" iniciales que todo proyecto hecho en cargo necesita!)
+$cargo new a2_hello_cargo
+
+El arbol de carpetas y archivos iniciales dentro de la carpeta de nuestro proyecto es el siguiente:::: NOTA: ESTE ARBOL CRECE DESPUES DE COMPILAR EL PROYECTO
+	• Carpeta "src==source" ==> Cargo busca los archivos que contengan código fuente dentro de este directorio.
+		(La cual contiene en su interior:)
+		○ main.rs ==> archivo con nuestro código fuente, Cargo busca los archivos que contengan código fuente dentro de este directorio.
+	• Archivo ".gitignore" ==> archivo que contiene una lista de los archivos y carpetas a ignorar si usamos un "sistema de control de versiones" como "GIT"  (SI ESTE ARCHIVO EXISTE: RUST inicializo un repositorio git automaticamente)
+Archivo "Cargo.toml" ==> archivo de configuración de cargo que contiene una lista con todas nuestras dependencias implementadas, la extension de este archivo quiere decir: "Tom's Obvious, Minimal Language", este archivo es sencillo de leer y comprender, este archivo es el formato estándar para cualquier configuración de CARGO.

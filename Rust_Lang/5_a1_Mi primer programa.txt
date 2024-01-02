@@ -1,0 +1,43 @@
+Haremos un programa que imprima hello world!
+a1_Hello_World
+CREANDO EL DIRECTORIO/FOLDER de nuestro nuevo proyecto::::
+
+NOTA USA POWERSHELL!! (de lo contrario, si no usas powershell, entonces emplea diagonal invertida para separar la ruta: "\" , en lugar de emplear esta diagonal normal que se muestra en los ejemplos: "/")
+
+Crea una nueva carpeta donde estarán todos los proyectos que crees de ahora en adelante!::::
+$cd %USERPROFILE%/Desktop
+$mkdir ProyectosRust
+
+Luego crea una carpeta para tu primer programa!::::
+$cd ./ProyectosRust
+$mkdir hello_world
+$cd ./hello_world
+
+Luego crea un archivo para alojar el código de tu primer programa!
+(si estas en linux puedes usar VIM ó CAT)::::
+$vim main.rs
+(si estas en windows crea un archivo en blanco usando PowerShell ó CMD con el siguiente comando)::::
+$type nul > main.rs
+
+EL ARBOL DE LA RUTA DONDE TE ENCUENTRAS QUEDARA ASI::::
+C:\Usuarios\MiUsuario_lex\ProyectosRust\Hello_world\main.rs
+
+A continuación edita ese archivo "main.rs", para agregar el siguiente contenido::::
+fn main() {
+    println!("hello, world!");
+}
+
+nota::: la línea: "println!()" es una invocación a una macro, no es una invocación a una función, si fuese la invocación a una función seria: println() donde por favor nótese la falta del símbolo de exclamación "!" (veremos macros después chapter 19)
+
+Guarda el archivo, y a continuación ejecuta los siguientes comandos::::
+$rustc main.rs 
+==> este comando compila el código almacenado dentro de "main.rs", este archivo de código "luego de la compilación" pasa de ser un "archivo de código" a ser llamado "programa ejecutable" en estado de reposo.
+$./main
+==>este comando ejecuta el programa pasando de un estado de reposo a un estado activo.
+
+LA COMPILACION DE RUST GENERA SIEMPRE 3 ARCHIVOS (en windows, ya que en linux y MacOS solo genera 2):
+	main.rs	archivo código fuente 
+	main.pdb	archivo que contiene la información de debugging (Exclusivo de windows)
+	main.exe	archivo ejecutable (archivo de codigo compilado y listo para ejecutarse)(Este archivo se generara sin ninguna extensión en linux y MacOS)
+	
+nota: linux sabe si un archivo es ejecutable en base a los "permisos propios del archivo", si el archivo posee: "el permiso de EJECUCION habilitado/marcado" entonces por lo tanto el archivo será "ejecutable" 
