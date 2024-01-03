@@ -1,0 +1,93 @@
+Contenido:
+
+
+
+Que es una "Annotation":
+Una annotation es La accion realizada dentro de una declaracion para asignar un DataType de manera directa a una localidad de memoria para asi crear un nuevo contenedor de valores.
+
+Parafraseando la definicion anterior:
+Una "Annotation" es el codigo capaz de asignar un formato DataType (a una existencia de codigo capaz de contener datos.)
+
+
+IMPORTANTE::::_(Una "Annotation"::::_ "no define", "ni instancia" y "tampoco llama" a un DataType.
+
+Lo que realiza es:::::_ 
+"MARCA" EXACTAMENTE UNA ZONA/AREA/SECCION/sinonimos sinonimos de lugar…/ 
+ dentro de la "definicion/declaracion de una existencia de codigo que pueda contener datos"  
+
+Y donde se encuentra la marca, es DONDE SE REALIZARA A FUTURO UNA "INSTANCIA DE UN DATATYPE" como consecuencia haber realizado correctamente las siguientes acciones:
+Primero haber empleado una annotation dentro de la declaracion de una existencia de codigo en particular capaz de contener datos y luego haber realizado una instancia de esa existencia de codigo en particular capaz de contener datos).
+
+//A continuacion esta seccion queda como: Pendiente de estructurar: Se deja un ejemplo de como deberia de quedar el arbol de Annotations: (Vease: "integer" como la plantilla:)
+
+//Mapa de FORMATOS DataTypes disponibles (Solo titulos), se define a continuacion_: "valores de ejemplo" y la annotation necesaria para hacer uso de los Formatos DataTypes :
+
+	1. DataType Classification: Primitive/Scalar types //DataTypes capaces de dar formato a valores simples u primitivos:
+	
+		a. DataTypes para almacenar valores Numericos:
+			i. Bool ==> bool
+			ii. Integer ==> 
+				1) Accepted Values:
+				Number literals	Example
+				Decimal	98_222
+				Hex	0xff
+				Octal	0o77
+				Binary	0b1111_0000
+				Byte (u8 only)	b'A'
+				
+				Desde <https://doc.rust-lang.org/book/ch03-02-data-types.html> 
+				
+				2) Annotation Code:
+				Length	Signed	Unsigned
+				8-bit	i8	u8
+				16-bit	i16	u16
+				32-bit	i32	u32
+				64-bit	i64	u64
+				128-bit	i128	u128
+				arch	isize	usize
+				
+			iii. Float ==>
+				
+			
+		b. DataTypes para almacenar un solo carácter textual:
+			i. Char 
+			
+		c. DataTypes para denotar que la localidad de memoria se encuentra vacia en ese momento:
+			i. Never 
+			
+	2. DataType Classification: Compound/Collection Types: //DataTypes capaces de dar formato a valores complejos u compuestos.
+	
+		a. DataTypes para conjunto de valores:  "Secuencias"
+		
+				1) _Secuencias capaces de almacenar valores alfa-numericos, pero mayormente con un uso enfocado a valores NUMEROS_ 
+					a) Tuple 
+					b) Array
+					
+				2) _Secuencias capaces de almacenar valores alfa-numericos, pero mayormente con un uso enfocado a valores TEXTOS_
+					a) String  
+					b) &str
+					c) _Vector
+					
+		b. DataTypes para conjunto de valores: "Personalizados u definidos por el usuario"
+			i. Struct
+			ii. Enum
+			iii. Union
+			
+		c. DataTypes para conjunto de valores: "Funciones"
+			i. Functions
+			ii. Closures
+		
+		d. DataTypes para conjunto de valores: "Apuntadores"
+			i. References
+			ii. Raw pointers
+			iii. Function pointers
+		
+		e. DataTypes para conjunto de valores: "Trait":
+			i. Trait objects
+			ii. Impl trait
+
+
+___________________________________________________
+___________________________________________________
+___________________________________________________
+

@@ -1,0 +1,247 @@
+("Contenedor de valor" ==> Se agrega un documento para realizar una explicacion detallada debido a la expansion que esta requiriendo mi intepretacion personal.)
+
+CONTENEDOR DE VALOR: 
+Digase de cualquier existencia DE CODIGO digital capaz de almacenar uno o mas valores en su interior.
+
+Una localidad de memoria es una "existencia fisica" creada con el proposito de almacenar valores (Al conectar un dispositivo que tenga multiples localidades de memoria fisica dentro de una maquina digital, el dispositivo es detectado dentro del entorno digital gracias a codigo que trae por defecto de fabrica, este codigo proporciona informacion acerca del dispositivo en si mismo y las caracteristicas y propiedades que puede aportar a la maquina, proporcionando asi informacion acerca de el numero de localidades de memoria que posee en su interior, el nombre BINARIO predeterminado que tiene cada una de las localidades de memoria y una forma rudimentaria pero fiable de manipular cada una de esas memorias de manera individual) .
+
+Para poder trasladar todas las caracteristicas y propiedades disponibles de esa existencia fisica a un entorno digitalizado, hace falta una interpretacion de la misma en nuestro programa mediante codigo.
+
+Por lo que se podria decir que: La existencia de codigo digital: "CONTENEDOR DE VALOR", no es mas que una manera de acceder, manipular y administrar la Existencia fisica: "Localidad de memoria".
+
+Ahora:
+
+Cuando se tiene una localidad de memoria en particular, y se le aplica un formato DataType a esa localidad de memoria en particular:
+
+Esa localidad de memoria en particular sigue existiendo, sin embargo nuestra maquina ya no la reconoce como una localidad de memoria, ya que al aplicar el formato DataType esa localidad de memoria en particular pasa a ser una: "localidad contenedora de valores" u "localidad de memoria capaz de contener valores" == lo que se acorta en: CONTENEDOR DE VALORES.
+
+
+El proposito de un CONTENEDOR DE VALORES es almacenar dentro de si, de manera expresa y detallada los siguientes valores==Datos u Informacion mostrados a continuacion:
+
+	1) "FORMATO DataType"
+		Que actualmente se encuentra asignado al presente contenedor de valores. 
+		(Especificamente es capaz de almacenar una instancia del objeto de codigo "Formato DataType").
+	2) "NOMBRAMIENTO"
+		Es la "identidad u identificador" que asignamos como programadores para poder acceder a nuestro contenedor de valores.
+	3) "VALOR"
+		valores diversos que deseen almacenarse, los cuales siempre deben cumplir con los lineamientos de formato proveidos por su Formato DataType asignado.
+		
+
+Parafraseando el concepto de "CONTENEDOR DE VALOR"
+
+//Mediante el uso de "formateadores de valores DataType"
+	Una "localidad de memoria" 
+		==> a la cual se aplica un "FORMATO DATATYPE"
+			 ==> se convierte en un  "contenedor de valor".
+			
+
+Existen 2 tipos de contenedor de valor: PRIMITIVO U SINGULAR Y COMPUESTO
+
+Un "contenedor de valor singular o primitivo" es una localidad de memoria a la cual se le aplica un formato DataType primitivo y se nombra, 
+luego a continuacion dentro de esa "localidad de memoria", (la cual ya tiene en ese momento tiene un formato DataType realizado y un nombramiento realizado), es posible colocar un "valor primitivo" compartible con el formato DataType asignado.
+
+Explicacion: como funciona un DataType nativo de rust:
+
+Cuando se tiene una localidad de memoria en particular, y se le aplica un formato DataType a esa localidad de memoria en particular:
+
+Esa localidad de memoria en particular sigue existiendo, sin embargo nuestra maquina ya no la reconoce como una localidad de memoria, ya que al aplicar el formato DataType esa localidad de memoria en particular pasa a ser una: "localidad contenedora de valores" u "localidad de memoria capaz de contener valores" == lo que se acorta en: CONTENEDOR DE VALORES.
+
+
+El proposito de un CONTENEDOR DE VALORES es almacenar dentro de si, de manera expresa y detallada los siguientes valores==Datos u Informacion mostrados a continuacion:
+
+	1) "FORMATO DataType"
+		Que se realizo y que actualmente se encuentra asignado al presente contenedor de valores. (Especificamente es capaz de almacenar una instancia del objeto de codigo "Formato DataType").
+	2) "NOMBRAMIENTO"
+		Es la "identidad u identificador" que asignamos como programadores para poder acceder a nuestro contenedor de valores.
+	3) "VALOR"
+		valores diversos que deseen almacenarse, los cuales siempre deben cumplir con los lineamientos de formato proveidos por su Formato DataType asignado.
+
+
+Existen 2 tipos de contenedor de valor: PRIMITIVO U SINGULAR Y COMPUESTO
+
+Un "contenedor de valor singular o primitivo" es una localidad de memoria a la cual se le aplica un formato DataType primitivo y se nombra, 
+luego a continuacion dentro de esa "localidad de memoria", (la cual ya tiene en ese momento tiene un formato DataType realizado y un nombramiento realizado), es posible colocar un "valor primitivo" compartible con el formato DataType asignado.
+
+RECUERDEN Y REPITAN::::
+
+UN CONTENEDOR DE VALOR ES UNA LOCALIDAD DE MEMORIA, A LA CUAL SE LE APLICO UN FORMATO DATATYPE. 
+ESTE "ContenedorDeValor" (anteriormente una localidad de memoria): 
+POSEE UN NOMBRE, UN FORMATO VALIDO Y YA PUEDE COMENZAR A ALMACENAR VALORES.
+
+UNA LOCALIDAD DE MEMORIA NO PUEDE ALMACENAR VALORES POR SI SOLA. 
+ES SOLO UN SITIO/LUGAR FISICO SIN UN USO CONOCIDO (hasta que se aplica el DataType).
+
+UN DATATYPE NO ALMACENA VALORES. LA UTILIDAD DE UN DATATYPE ES DAR FORMA AL SITIO/LUGAR PARTICULAR DONDE SE GUARDAN LOS DATOS:
+Otorgandole UNA DIRECCION BINARIA que mas tarde sera ligada a un nombramiento
+Otorgandole UN TAMAÑO?
+
+
+
+
+IMPORTANTE PASO A PASO DE COMO ESTRUCTURAR "Un Contenedor de Valor primitivo":
+
+
+Paso 1 ==>  Un DataType se DEFINE/DECLARA dentro de una librería, paquete de codigo u dependencia.
+
+//Se establece previo a la creacion de un objeto DataType, mediante codigo:
+
+-el alcance y limitacion de las acciones del objeto (FUNCIONES que interactuaran con los valores dentro de nuestro DataType).
+-El formato que se aplicara a las localidades de memoria que interactuen con la futura instancia de nuestro DataType.
+(Aquí se establecen las caracteristicas u propiedades que se desea que tengan los datos como: el tamaño que debe tener un valor para poder entrar a la localidad, los caracteres aceptables dentro del valor para poder entrar en la localidad, el orden u formato DataType previo (si aplica) que debe tener un valor para poder entrar en la localidad de memoria, entre otros).
+
+//EXISTEN DATATYPES PROVEIDOS POR EL PROPIO ECOSISTEMA DE RUST, (por lo que podemos omitir el paso de tener que estructurar un Formato DataType), sin embargo, podemos crear tambien nuestro propio FormatoDataType si asi lo deseamos y luego utilizarlo.
+//La creacion de un formato DataType personalizado normalmente se utiliza para agrupar diferentes valores con su propio formato DataType y crear algunas funciones para usar dentro del formato DataType personalizado.
+Por lo que podemos decir que un formato DataType personalizado hace uso y recicla los ya disponibles formatos DataType predeterminados proveidos por el ecosistema Rust. 
+
+
+Paso 2 ==> Crear una definicion de "Contenedor de valores"
+
+//Siendo que el contenido de la definicion de un contenedor de valor es:
+	-Anotacion del DataType Deseado (Obligatorio)
+	-Funciones y metodos que puedan interactuar con los futuros valores que el contenedor contendra (Opcional).
+
+IMPORTANTE DE APRENDER:
+	
+	Un DataType se "ANOTA/Annotation" dentro de una definicion de "CONTENEDOR DE VALOR":
+	
+	Dentro de una definicion de "Contenedor de valores"….
+		…Realizamos una "Anotacion" ==> para marcar/indicar que en un momento futuro (especificamente cuando se instancie el contenedor de valores) se cree (al mismo tiempo cuando se instancia el Contenedor de valores) una instancia del formato DataType….
+	
+(para que asi: cuando se realice la instancia del Contenedor de valor, se realice al mismo tiempo la instancia del Formato DataType,
+La instancia del formato DataType se encargara entonces de monitorear los datos entrantes a nuestro contenedor y solo de ese contenedor, asi como de proveer a la nuestra maquina PC el estandar necesario para manipular y utilizar esos valores).
+	
+
+
+Si aun no queda del todo claro lo presentamos de la siguiente manera:
+
+Recordemos que: 
+Las fases de: "definicion/declaracion", "instancia", "uso/llamada" son utilizadas para existencializar objetos de codigo.
+
+Sin embargo al existencializar un objeto de codigo "Formato DataType": 
+Existe una fase que se añade entre las fases de: "Definicion" e "instancia", esta fase agregada se llama "Annotation" y  solamente se LIMITA y es EXCLUSIVA para cuando estamos buscando existencializar un objeto de codigo "Formato DataType".
+
+Una Annotation se utiliza, dentro de una definicion de un Contenedor de valor para:
+"indicar/marcar donde es posible elaborar a futuro una <<instancia de nuestro DataType==> la cual sera contenida y pertenecera a nuestro Contenedor de valores >>"
+
+
+Presentamos el siguiente caso de uso de una: "annotation".
+
+DURANTE EL MOMENTO U INSTANTE QUE ESTAMOS ESCRIBIENDO/CODIFICANDO: 
+Una definicion de nuestro "CONTENEDOR DE VALOR"  u "existencia de codigo capaz de contener datos"
+
+Debemos establecer que formato DataType es el que queremos para nuestro "CONTENEDOR DE VALOR".
+
+Para ello empleamos dentro de la definicion de nuestro "contenedor de valor" una "ANNOTATION":
+
+IMPORTANTE::::_(Una "Annotation"::::_ "no define", "ni instancia" y "tampoco llama" a un DataType.
+
+Lo que realiza es:::::_ 
+"MARCA" EXACTAMENTE UNA ZONA/AREA/SECCION/sinonimos sinonimos de lugar…/ 
+dentro de una "definicion de una existencia de codigo que pueda contener datos"  
+
+EN ESTA ZONA/AREA/SECCION/LUGAR/ESPACIO/sinonimos sinonimos de lugar…/ donde se encuentra la marca, es DONDE SE REALIZARA A FUTURO UNA "INSTANCIA DE UN DATATYPE").
+
+Repitan en voz alta y melodica:::: "Una annotation: Se emplea durante la "DEFINICION de UN CONTENEDOR DE VALOR; Y lo que hace es:"marcar la zona donde se realizara la instancia de un DataType.
+
+Ejemplo de uso real de una Annotation para una variable simple:
+
+let nombre_variable: DataType_a_asignar_Usando_Annotation = valor;
+let var_alex: u32 = 42;
+
+La anotation del ejemplo es ": u32" (incluyedo el simbolo de los 2 puntitos).
+
+Paso 3 ==> CREAMOS LA INSTANCIA DE UN CONTENEDOR DE VALOR:
+
+IMPORTANTE: 
+	
+	Un DataType se INSTANCIA/IMPLEMENTA al mismo tiempo que se INSTANCIA el CONTENEDOR DE VALORES al cual realizamos una anotacion. 
+
+SIENDO QUE la INSTANCIA DE UN DataType se realiza DENTRO de la INSTANCIA Contenedor de valores.
+
+Primero se realiza la instancia del contenedor de valores, lo que incluye en ese momento: 
+"Localidad de memoria" (la cual se asigna de manera automatica).
+
+Y luego se realiza la instancia del formato DataType lo que afecta a la localidad de memoria, anexando a esta:
+"Un nombramiento para la localidad de memoira == a.k.a. identificador" 
+y "El formateo de la localidad de memoria que nos permitira contener cierto tipo de dato"
+
+Paso 4 ==> Cuando se LLAMA al contenedor de valores para hacer uso de su valor, El DataType es la instancia que se LLAMA/usa primero para decirle a la maquina como es que debe manipular/interactuar con el valor. Luego, a continuacion se proporciona el valor.
+
+
+
+
+
+Un contenedor de valor, tambien puede ser varias localidades de memoria agrupadas como si fuese una sola localidad de memoria == Contenedor de valor Compuesto.
+
+Para crear una instancia de un contenedor de "valor compuesto":
+
+Primero: 
+
+Se define "El DataType compuesto" que nos gustaria usar, colocando dentro: 
+	//Se puede saltar este paso empleando uno de los muchos DataTypes compuestos predeterminados y proporcionados por RUST-LANG  
+		-Reglas de nombramiento: que se aplicaran y verificaran al aplicar un unico nombramiento a un conjunto de localidades de memoria en particular. 
+		-Reglas de sub-nombramiento: que se aplicaran y verificaran al aplicar uno o mas sub-nombramientos a cada localidad de memoria individual dentro del conjunto.
+		-Reglas de Valor: que se aplicaran y verificaran al acceder o manipular los futuros valores a contener.
+
+
+Se define "El contenedor de valor compuesto" para ello debemos incluir:
+	-La annotacion de nuestra "definicion DataType Compuesto" (obligatorio)
+	-Los metodos y funciones compartibles con los futuros valores a contener (opcional)
+
+	
+Segundo: 
+
+1) Se crea la instancia del "contenedor de valor compuesto":
+	a)se asigna el "nombramiento en particular" a la instancia del objeto "contenedor de valor compuesto" 
+
+2) A partir de la annotacion que se localiza dentro de la Definicion del objeto "contenedor de valor compuesto"
+ 
+Se accede a la Definicion de: Formato DataType compuesto ==>
+	y se crea dentro de nuestro objeto "contenedor de valor compuesto"
+		==> una Instancia del objeto "formato DataType compuesto".
+
+	Dentro de la instancia del objeto: "formato DataType compuesto":
+		a)la maquina automaticamente agrupa un conjunto conformado por Diferentes localidades de memoria individuales hasta alcanzar el tamaño que solicitamos.
+		b)la maquina automaticamente asigna el sub-nombramiento a cada localidad de memoria individual
+
+	
+3) Luego dentro de la instancia de nuestro contenedor:
+
+	b) La instancia del objeto: "DataType compuesto" 
+		==> provee/otorga acceso total a el conjunto de localidades de memoria que contiene
+			==> a la instancia del objeto "contenedor de datos compuesto".
+				(lo cual permite que la instancia del objeto: "contenedor de datos compuesto" pueda acceder directamente a las localidades de memoria sin tener que solicitar acceso constantemente a la instancia del objeto  DataType compuesto", permitiendo que se salte ese paso de solicitar acceso).
+				 
+	a) Se enlaza el "nombramiento en particular" propio del "contenedor de Datos"
+		==> a el "conjunto de Diferentes localidades de memoria" la instancia del DataType.
+		
+		Siendo que el "nombramiento en particular" se asigna de manera general para nombrar a TODO el conjunto de localidades de memoria.
+		
+		Logrando asi que cuando se emplee el nombramiento en particular:
+		-no solo podamos referirnos a la instancia del objeto: "contenedor de datos",
+		-sino que ademas podamos usar ese nombramiento en particular como identificador de acceso para referirse y accesar directamente al conjunto de localidades de memoria.
+
+
+Finalmente, es asi como obtenemos una Instancia del objeto: "Contenedor de valor COMPUESTO" la cual ahora podra contener "valores compuestos".
+
+
+IMPORTANTE: cada una de las localidades de memoria del conjunto de manera individual, poseera un  "sub_nombramiento" unico para referirse de manera individual a esa localidad de memoria, este "sub-nombramiento" viene definido dentro del DataType Compuesto y es automaticamente asignado por la maquina al aplicar una instancia del FormatoDataType COMPUESTO) …
+
+
+Es importante destacar que: 
+
+El nombramiento en particular del "contenedor de valores compuesto", solo sirve para acceder a las localidades de memoria en conjunto, lo que permite manipular los valores contenidos solamente como conjunto.
+Dicho de otra manera: NO ES POSIBLE ACCEDER a una localidad de memoria individual para manipular el valor dentro de dicha localidad de memoria individual UTILIZANDO/USANDO solamente EL NOMBRAMIENTO EN PARTICULAR DE NUESTRO CONTENEDOR DE VALORES.
+
+Lo que NECESITAMOS Para acceder de manera individual a una localidad de memoria individual para manipular el valor dentro de dicha localidad de memoria es:
+	
+	Primero: acceder al conjunto de localidades de memoria usando para ello: el "nombramiento en particular de nuestro contenedor de valores compuestos", 
+	
+	y Segundo inmediatamente luego de acceder al conjunto de localidades de memoria: acceder a una sola localidad de memoria individual usando el "sub-nombramiento", lo que nos permitira entonces ya manipular el valor dentro de esa localidad de memoria individual.
+	
+
+
+Notas: (Nombramiento en particular del "contenedor de valores compuesto"== el nombramiento en particular que asignamos para identificar TODO el conjunto de localidades de memoria 
+a las cuales se les realizo el "Formato DataType compuesto" y cada una de cuales se encuentra actualmente dentro de nuestro "contenedor de valores compuesto").
+ 
+Notas: (Al emplear el identificador/nombramiento de un "contenedor de valores compuesto" para realizar una operación de acceso o manipulacion de datos, se accede de forma general a TODO el  "conjunto de Localidades de memoria al cual se le aplico un formato DataType", es decir: Se realiza el acceso al valor compuesto como conjunto, sin embargo, si queremos acceder, manipular o simplemente referirnos a un solo valor dentro de todo el conjunto empleamos: "NombramientoGeneral.Sub-nombramiento").

@@ -161,7 +161,7 @@ La manipulación de datos incluye pero no solo se limita a:
 	
 	2) Realizar operaciones/evaluaciones con los valores == datos/información dentro de los DataTypes ESTO MEDIANTE EL USO DE EXPRESIONES.
 	
-	3) Crear, modificar, borrar, leer, copiar y mover Valores == datos/información dentro de "LOCALIDADES DE MEMORIA". 
+	3) Realizar operaciones Operaciones de acceso a la memoria: Crear, modificar, borrar, leer, copiar y mover Valores == datos/información dentro de "LOCALIDADES DE MEMORIA". 
 	(A la realizacion de cualquier acción de CMBLCM se le llama: allocation of memory/ locacion de memoria).
 
 

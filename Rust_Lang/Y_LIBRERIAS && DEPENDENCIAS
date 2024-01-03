@@ -1,0 +1,183 @@
+
+(Desglose del posible contenido de una librería, 
+esta es una generalización de algunas posibilidades by _lex)
+	• Librería ==>
+		○ Refiérase a EL CONJUNTO DE "MULTIPLES PAQUETES DE CODIGO" Ó "MULTIPLES SUB-LIBRERIAS" creados para ser utilizados como MODULOS dentro de nuestro programa.
+			
+			§ Nota: un modulo es código que funciona como "una parte de recambio, pieza de recambio u refacción" es decir: "código acoplable o modular" que no es nativo del programa el cual estamos creando, el cual siempre es fácilmente implementable dentro de otro programa, su característica es que: se invocan las funciones provenientes desde una librería, se le proporciona un input, el input es procesado dentro de la librería gracias a las funciones que especificamos al realizar la invocación de la librería, luego las funciones que invocamos devuelven un output.".
+			§ "modulos == paquetes de codigo capaces de comunicarse con otras librerias", los cuales ayudan a esa librería a expandir sus funcionalidades.
+			
+		
+		NOTA:::: sobre: "DEPENDENCIAS" (Si nuestro código necesita una "librería" si ó si para funcionar, esa librería es llamada "dependencia", en RUST las dependencias fueron bautizadas como CRATES)
+			
+			§ Una "Crate" no es mas que una librería con una colección de diversos paquetes de codigo Rust donde individualmente cada paquete de la libreria es un modulo integrable dentro de rust que por si solo posee utilidad, pero es en conjunto cuando se revela el verdadero potencial de todos esos paquetes ya que dan solucion a un problema o necesidad que tengamos.
+		
+		
+		
+		
+		
+	Una librería dentro de si, puede contener, mas no limitándose a solo los siguientes tipos de código:
+			
+			§ TRAIT == Librería Simbiotica u Paquete de codigo simbiotico ( un modulo trait ayudar a expandir la funcionalidad de otras librerias ,definiendo un conjunto de métodos o funciones que los tipos de datos deben implementar para agregar "funcionalidades o caracteristicas" a un DataType SIN AFECTAR LA DEFINICION/DECLARACION INTERNA DE ESTE).
+			
+			Un modulo trait como "paquete de codigo u librería simbiotica" define/declara codigo el cual es capaz de extraer la definicion de un DataType en particular sin hacer un duplicado y luego es capaz de añadir codigo a esa extraccion realizada de la estructura/declaracion/definicion de nuestro DataType, y por tanto el resultado es el mismo DataType, pero con modificaciones superpuestas, lo cual afecta su comportamiento/funcionalidad original.
+			
+			Pero a pesar de que se dice que modifica el codigo de un DataType, que quede en claro que Nunca se toca directamente la definicion/estructura/declaracion del DataType original, sino que solo se anexan/superponen esas funcionalidades/comportamientos, dejando asi INTACTA la definicion original/origen del DataType modificado.
+			
+			Este nuevo comportamiento/funcionalidad añadido a la definicion/estructura/declaracion del TipoDeDato, al ser implementada y crear una o varias instancias de ese mismo tipo de dato afecta a la instancia de todos esos nuevos DataTypes creados.
+			
+			Y si ese DataType recien instanciado lo contenemos dentro de otra definicion o lo anexamos dentro de otra instancia, seguira teniendo nuevo comportamiento que sustituyo al las funcionalidades originales.
+			
+		
+		Un TRAIT casi siempre tiene el objetivo de ayudarle a otra librería a crear un objeto/instancia de codigo.
+		 
+		(nota: una librería independientemente tambien puede estar codificada para crear un objeto por si sola, no necesariamente siempre es necesario implementar un TRAIT para crear un objeto de codigo).
+		
+			Un objeto de codigo se forma a partir de un DataType, Struct , clase, interfaz ó funcion de codigo:
+		
+				□ Clases ==> Se especializan en realizar una o varias acciones, englobadas en responder a una necesidad mediante un concepto: GENERALIZADO, UTIL y NECESARIO, dentro del programa.
+				□ Interfaces ==> intermediarias, protegen la visibilidad del codigo base al mismo tiempo que vigilan las entradas de datos INPUT que se reciben. 
+				□ Triggers & "handlers/manejadores de eventos" ==> funcionan cuando ocurre cierto evento, desencadenando una accion
+				□ DataTypes
+			
+			
+			Un trait:: funciona de la siguiente manera: Dentro de una dependencia/librería/paquete de codigo, 
+			pueden existir uno o mas "modulos trait"
+			
+			Cada trait/modulo de manera individual posee dentro de si codigo el cual contiene no solo variables o funciones, sino tambien declaraciones/Definiciones de diferentes "DataTypes" 
+			
+			Cada uno de esos DataTypes de manera individual posee ciertas "caracteristicas" que los vuelven unicos en el codigo y por tanto, al momento de implementar u ejecutar esos DataTypes para crear una instancia, el trait que los contiene se comunica con otras librerias u paquetes de codigo como "aceptar" el comportamiento del tipo que les comparte para expandir la funcionalidad de esas librerias ajenas al trait mediante FUNCIONES ASOCIADAS.
+			
+			
+			NOTA: Llamese tambien traits, a cualquier sub-librería/librería derivada u sub-paquete de codigo/paquete de codigo derivado que sea independiente de otra librería u sub-librería pero que sea capaz de ayudar a EXTENDER LA FUNCIONALIDAD DE ESA LIBRERÍA, es habitual que un trait se centre en extender o modificar las caracteristicas de los DataTypes y sea capaz de agregue funcionalidades. 
+			
+			Con extender y modificar me refiero a superponer nuevo codigo sobre las declaraciones de codigo original, de tal modo que al instanciar el nuevo codigo, se sea capaz de añadir existencias de codigo que antes no estaban, quitar las que no se consideren necesarias, modificar cuanto se considere relevante, y finalmente haciendo uso de lo que sea util en la instancia..
+			
+			Las capacidades de extension de funcionalidades de un trait no se limitan a los DataTypes, sino que tambien pueden modificar u "extender" la funcionalidad de otras existencias de codigo (ejem. Funciones, estructuras, etc etc)
+			.
+			
+			§ Trait, dentro de la programacion orientada a objetos, vendria a ser el equivalente a una "interfaz".
+		
+Trait:::
+Trait en Rust: En Rust, un trait es un (mecanismo/sub-librería u paquete de codigo perteneciente a una dependencia) que define un conjunto de comportamientos que pueden ser implementados por varios tipos de datos. Los traits permiten agregar funcionalidades y comportamientos adicionales a los tipos de datos sin modificar su estructura interna. Los traits se asemejan a las interfaces en otros lenguajes de programación y se utilizan para lograr la abstracción y la reutilización de código.
+
+Características clave de los traits:
+1. Definición de Comportamiento: Un trait define un conjunto de métodos o funciones que los tipos de datos deben implementar. Los tipos de datos que implementan un trait deben proporcionar definiciones concretas para esos métodos.
+2. Reutilización de Código: Los traits permiten la reutilización de código al definir comportamientos comunes que múltiples tipos de datos pueden compartir. Esto promueve la abstracción y la modularidad en el código.
+3. No Modifican la Estructura Interna: Los traits no modifican la estructura interna de los tipos de datos. En lugar de ello, proporcionan una interfaz para definir cómo se comporta un tipo.
+4. Polimorfismo: Los traits permiten el polimorfismo, lo que significa que los mismos métodos pueden ser utilizados en varios tipos de datos diferentes, siempre que implementen el mismo trait.
+5. Implementación de Traits: Los tipos de datos implementan traits utilizando la palabra clave impl. Esto proporciona las definiciones concretas de los métodos del trait.
+6. Herencia de Traits: Los traits pueden heredar de otros traits, lo que permite componer traits más grandes a partir de traits más pequeños.
+7. Usos en Rust: Los traits se utilizan en toda la programación en Rust, desde la definición de comportamientos básicos en tipos predefinidos (por ejemplo, std::cmp::PartialOrd) hasta la creación de abstracciones genéricas y polimórficas.
+8. Similar a una Interfaz: En la programación orientada a objetos, los traits en Rust son similares a las interfaces en otros lenguajes, ya que definen un contrato que los tipos deben cumplir. Sin embargo, en Rust, los traits pueden incluir implementaciones de métodos, no solo declaraciones.
+
+En resumen, los traits son una parte fundamental de Rust que permite definir comportamientos compartidos entre diferentes tipos de datos sin afectar su estructura interna. Facilitan la reutilización de código y la creación de abstracciones poderosas en el lenguaje
+
+
+Cuando me refiero a un "mecanismo" en el contexto de la explicación de traits en Rust, estoy haciendo referencia a un conjunto de reglas, estructuras y conceptos usando codigo, los cuales permiten lograr ciertos comportamientos en el lenguaje. En este caso, el "mecanismo de traits" se refiere al sistema de Rust que permite definir, implementar y utilizar traits.
+Un mecanismo, en este contexto, es una forma organizada y predefinida de hacer algo en el lenguaje de programación. Los traits en Rust son un mecanismo porque proporcionan una estructura y una forma de definir comportamientos compartidos por diferentes tipos de datos sin modificar su estructura interna. Los traits son una parte esencial del sistema de tipos de Rust y brindan una forma de lograr la abstracción y la reutilización de código de manera elegante y segura.
+En resumen, cuando menciono "mecanismo de traits" en mi respuesta anterior, me refiero a la infraestructura y las reglas que permiten que los traits funcionen en Rust. Estos mecanismos son fundamentales para la programación en Rust y para la creación de abstracciones y comportamientos compartidos en el lenguaje.
+
+
+Fin de Trait::::
+			
+				
+			§ SCRIPTS
+			§ FUNCIONES (una función puede "pertenecerle u estar contenida" dentro de un módulo)
+			§ ARCHIVOS (se proporcionan algunos ejemplos tales como….)
+				□ "DOCUMENTACION" (documentación interna dentro del código, así como documentación externa en forma de manuales, tutoriales, ejemplos, etc.)
+				□ "CONFIGURACION" (información como claves API, nombres de usuarios, contraseñas, etc.)
+				□ "RECURSOS" (imágenes, sonidos, fuentes, etc.)
+			§ PRUEBAS UNITARIAS (RESULTADOS U INTRUCCIONES).
+			§ TIPOS DE DATOS
+
+Una librería puede estar dentro de nuestro código de 2 formas diferentes::::
+	1. En el preludio::::
+		a. Cuando una "libreria/dependencia/paquete de codigo" es llamada dentro del "preludio", se dice que  es una libreria que esta "preparada" para ser "implementada con antelación" ==> lo que significa menores tiempos de carga en tiempo de ejecucion.
+	2. En una funcion::::
+		a. Cuando una "libreria/dependencia/paquete de codigo" es llamada dentro de "una función", se dice que la libreria "no se prepara", sino que esta "implementada directamente" ==> lo que significa menores tiempos de carga al iniciar por primera vez el programa, pero un tiempo de carga mas largo al momento de llegar a esa funcion especifica (ya que carga la libreria solo al momento de llegar a la funcion donde se llama).
+Detalle::::
+Podemos usar sub_paquetes directamente de las "librerias preparadas/implementadas con antelacion" (esto tambien aplica con las funciones que esten contenidas dentro de nuestra libreria).
+
+ejemplo, si la libreria esta en el preludio::::
+use std;
+podemos invocar directamente el subpaquete "io" para usar alguna de sus funciones::::
+io::stdin().read_line(&mut mivariable).expect("Failed to read line");
+
+En cambio si no colocamos la libreria "std" en el preludio y queremos usar el paquete "io" para usar alguna de sus funciones (en este caso la funcion "read_line" para leer la entrada en el teclado y almacenar esta entrada dentro de una variable ) DEBEMOS COLOCAR LA RUTA ENTERA::::
+ std::io::stdin().read_line(&mut mivariable).expect("Failed to read line");
+
+
+Nota: hay partes de la librería STD que ya vienen incrustadas por defecto en RUST y a las cuales no es necesario invocar en el preludio!!!!
+Ejemplo: no es necesario instanciar en el preludio las librerias asociadas al DataType: Result, ya que se considera una librería INCRUSTADA.
+
+std ==> "standard", es la libreria por defecto de rust, proporciona "funciones" y "sub-bibliotecas" utiles, ejemplos importantes son::::
+	• std::collections: proporciona tipos de colecciones, como Vec, HashMap, HashSet, etc.
+	• std::io: proporciona tipos para la entrada y salida de datos (input & output), como stdin, stdout, stderr, File, etc.
+		○ io::stdin().read_line(&mut mi_nombre_variable_tipoString).expect("errormsj"); ==> 
+		○ Esta funcion stdin():::Retorna un tipo de dato "stdin" este DataType contiene las funciones y definiciones propias de un "manejador de eventos de entrada" que puede leer multiples entradas de hardware y software fisico y virtual del sistema.
+		○ luego en concreto usando la funcion "read_line" le solicitamos a el manejador de eventos "stdin" que se centre en la Lectura de la entrada de una letra en el teclado, luego de ello, el argumento que toma la funcion "read_line" ayuda a saber a donde se redirigira esa lectura de entrada de teclado (la cual es actualmente dato) para ser almacenado dentro de una INSTANCIA de un DataType   
+	• std::fs: proporciona tipos para trabajar con el sistema de archivos, como File, DirEntry, metadata, etc.
+	• std::thread: proporciona tipos para trabajar con hilos, como JoinHandle, spawn, etc.
+	• std::sync: proporciona tipos para trabajar con sincronización de datos, como Mutex, RwLock, Condvar, etc.
+	• std::net: proporciona tipos para trabajar con la red, como TcpListener, TcpStream, UdpSocket, etc.
+	• std::time: proporciona tipos para trabajar con el tiempo, como Duration, SystemTime, Instant, etc.
+	• std::env: proporciona tipos para trabajar con variables de entorno, como args, var, etc.
+	• std::mem: proporciona funciones para trabajar con la memoria, como size_of, align_of, transmute, forget, etc. Esta sub-biblioteca es especialmente útil para trabajar con estructuras de datos de bajo nivel y para manipular los bytes directamente en la memoria.
+	• std::cmp ==> COMPARE proporciona funciones y tipos para comparar valores, como PartialEq, PartialOrd, Eq, Ord, etc. También proporciona funciones como max, min, max_by, min_by, etc. que son útiles para encontrar el máximo o mínimo de un conjunto de valores.
+		○ std::cmp::Ordering: esta sub-librería define y especifica un DataType de tipo enumerador llamado: "Ordering" el cual posee las variantes: Less, Greater, and Equal, los cuales son las posibilidades que puede tomar un valor respecto a otro cuando realizas una comparacion entre 2 valores.
+		
+		
+	• std::fmt: proporciona macros y tipos para formatear datos en cadenas de caracteres, como println!, format!, Debug, Display, etc. Esta sub-biblioteca es esencial para la depuración y para mostrar información en la consola o en archivos de registro.
+	• std::path: proporciona tipos para trabajar con rutas de archivo y directorios, como Path, PathBuf, Metadata, FileType, etc. Esta sub-biblioteca es útil para trabajar con el sistema de archivos y para manipular rutas de archivo.
+	• std::process: proporciona tipos y funciones para trabajar con procesos, como Command, ExitStatus, Child, etc. Esta sub-biblioteca es útil para ejecutar otros programas desde dentro de tu programa de Rust y para trabajar con la entrada y salida de los mismos.
+	• std::num: proporciona tipos y funciones para trabajar con números, como Integer, Float, ParseIntError, ParseFloatError, etc. Esta sub-biblioteca es útil para realizar cálculos y para convertir entre diferentes tipos de datos numéricos.
+	• std::error: proporciona tipos y funciones para trabajar con errores, como Error, Result, From, Into, etc. Esta sub-biblioteca es esencial para el manejo de errores y para la propagación de los mismos a lo largo de tu programa.
+	• std::result: proporciona tipos y funciones para trabajar con resultados, como Ok, Err, unwrap, expect, etc. Esta sub-biblioteca es útil para manejar los resultados de las funciones que pueden devolver errores.
+		○ std::result::Result: proporciona la definicion del DataType "Result", asi como las funcion necesaria para poder instanciar el propio DataType Result: .expect(); 
+		//Nota relevante: no es necesario importar explícitamente la librería std::result::Result en el preludio para poder utilizar el método .expect() en un valor de tipo Result. Esto se debe a que Result y sus métodos, incluido .expect(), son parte de la librería estándar de Rust, y su uso está disponible de forma predeterminada en todos los programas Rust sin necesidad de importar nada adicional (DataType incrustado).
+	
+	• std::string::String: proporciona tipos y funciones para trabajar con "Cadenas de Texto", util para manipular cadenas de texto String.
+		○ .trim() ==> metodo que elimina, si es que existen, los espacios en blanco solo al principio, y al final de nuestra cadena de texto 
+		(nota1: deja intactos los espacios de enmedio). 
+		(nota2: se consideran espacios en blanco cualquier "caracter de escape" ejemplo: "\r == " ó "\n"=="newline")       
+		○ .parse() ==> metodo que convierte una "Cadena de texto" a un "numero". 
+		Es NECESARIO especificar el DataType al cual queremos convertir, esto se realiza dentro de la parte de la asignacion de la variable que contendra el resultado de la conversion, ejemplo: 
+			let guess: u32 = "582".parse();  //EN CASO DE NO TERMINAR SU PROCESO, RETORNA UN DATATYPE "Result"
+
+ 
+	
+
+rand ==> "Randomize", es una dependencia u librería externa == crate, la cual proporciona "funciones" utiles en la generacion de datos Randomizados/aleatoriosm, su firma .toml es: [dependencies] rand = "0.8.5"
+
+	rand::Rng ==> es un trait usado dentro del prelude que no afecta directamente a una librería en particular, sino que es parte de la biblioteca "rand" y proporciona una interfaz común para generar números aleatorios en el lenguaje. El Rng (Generador de Números Aleatorios) es un trait que define métodos y funciones para la generación de números aleatorios y se utiliza en conjunto con tipos concretos de generadores de números aleatorios.
+	
+	Dentro de la dependencia "rand", existen 2 funciones compartibles que son capaces de crear una instancia del trait "Rng".
+	
+		a. rand::ThreadRng(): Este tipo de generador de números aleatorios es adecuado para la generación de números aleatorios en un solo hilo de ejecución dentro de nuestro programa, vuelvo a mencionar que este metodo es perfectamente compatible con el trait:  "Rgn".
+		
+		b. OsRng: Utiliza el generador de números aleatorios compartible pero a diferencia de generar numeros aleatorios con un solo hilo de ejecucion utiliza multi-Threading. Esto puede es util para obtener números aleatorios criptográficamente seguros. vuelvo a mencionar que este metodo es perfectamente compatible con el trait:  "Rgn
+	
+	Para usar la instancia de "rand::Rng" , generadas gracias al apoyo de las variables propias de la librería rand: ThreadRng() y OsRng(), se hace uso de la instancia ejecutando el metodo: .gen_range() 
+	En este metodo, pasa un rango de los posibles numeros que queremos como parametro.
+	
+	Ejemplo de uso de: un generador de numeros ==> rand.ThreadRgn().gen_range(1,101);
+	
+	Paso a paso se lee:
+	
+	1) use rand::Rgn; //llamada de la librería "rand", y sub-llamada a el paquete de codigo trait: "Rgn" el cual contiene la declaracion/estructura/definicion de un generador de codigo.
+	2) rand.ThreadRgn() //metodo que genera una instancia del generador de codigo.
+	3) .gen_range(1,101); //metodo que provee un rango de numeros a la instancia del generador de codigo
+
+	Nota: 
+	existen generalmente dos formas principales de expresar un rango:
+	1. Rango Abierto (Open Range) con Dos Puntos (start..end): En este tipo de rango, el valor inicial (start) está incluido, pero el valor final (end) está excluido. Esto significa que el rango abarca desde start hasta "end - 1". Por ejemplo, en el rango 1..5, se incluyen los números 1, 2, 3 y 4, pero no se incluye el número 5.
+	2. Rango Cerrado (Closed Range) con Dos Puntos y un Signo Igual (start..=end): En este tipo de rango, tanto el valor inicial (start) como el valor final (end) están incluidos. Esto significa que el rango abarca desde start hasta end, incluyendo ambos valores. Por ejemplo, en el rango 1..=5, se incluyen los números 1, 2, 3, 4 y 5.
+	
+	
+	Implementaciones personalizadas: Los desarrolladores pueden implementar sus propios generadores de números aleatorios y hacer que cumplan con el trait Rng, lo que permite utilizarlos de la misma manera que las implementaciones estándar.
+	
+	En resumen, el trait Rng en Rust es una interfaz que define cómo se pueden generar números aleatorios, pero las implementaciones concretas de generadores de números aleatorios, como ThreadRng y OsRng, son proporcionadas por la biblioteca estándar de Rust. Los desarrolladores pueden utilizar estas implementaciones o crear las suyas propias que cumplan con el trait Rng para generar números aleatorios en sus programas.
+	
+CLAP ==> "nombre completo CLAP": es una dependencia u librería externa == crate, la cual proporciona "funciones" utiles en la manipulacion de Strings.
+clap ={ version = "4", features = ["derive"]}

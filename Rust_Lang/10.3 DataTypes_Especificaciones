@@ -1,0 +1,131 @@
+A continuacion se explican los DataTypes proporcionados de forma predeterminada por RUST_LANG:
+
+
+//Mapa de FORMATOS DataTypes disponibles: (Esta es una Explicacion detallada, pero NO deja de ser introductoria):
+
+	1. DataType Classification: Primitive/Scalar types //DataTypes capaces de dar formato a valores simples u primitivos:
+	
+		a. DataTypes para valores Numericos:
+			i. Bool ==> Valores: Estado binario Verdadero==1 o Estado binario falso==0
+			ii. Integer ==> Valores Numericos enteros = 362
+			iii. Float ==> Valores Numericos con punto decimal = 362.1416
+			
+		b. DataTypes para valores de Texto:
+			i. Char ==> Valor Alfanumerico de tamaño: un solo carácter aislado = 'K'
+			
+		c. DataTypes para denotar que la localidad de memoria se encuentra vacia en ese momento:
+			i. never ==> este no es un carácter que un programador deba utilizar, pero existe y por eso se coloca, sin embargo es de mi preferencia NO TOCAR JAMAS este datatype (quizas incluya algunos casos de uso muy muy especificos que pudiesen aplicar y dar uso a este DataType que casi nunca sale).
+			
+	2. DataType Classification: Compound/Collection Types: //DataTypes capaces de dar formato a valores complejos u compuestos.
+	
+		a. DataTypes para conjunto de valores:  "Secuencias"
+		
+				1) _Secuencias capaces de almacenar valores alfa-numericos, pero mayormente con un uso enfocado a valores NUMEROS_
+				
+					a) Tuple ==> secuencia ordenada de valores, cada uno de los cuales de manera individual puede tener su propio DataType.
+					No es posible cambiar una vez que se han asignado: 
+						El tamaño de la secuencia, los valores individuales que contiene, los DataTypes de esos valores individuales. 
+					Se definen utilizando paréntesis, por ejemplo, (1, "hola", 3.14)
+					
+					b) Array ==> colección de valores, el DataType se elige previo al llenado de valores, lo que significa todos y cada uno de los valores a contener sera de ese DataType elegido.
+					Es posible realizar cambios despues de asignar: 
+						Un tamaño a cualquier: "colección de valores": 
+							Es posible ampliar o disminuir este tamaño de acuerdo a la cantidad de valores a almacenar que sean necesarios == "Array con almacenaje dinamico". 
+							Ó tambien se puede optar por mantener ese tamaño de manera constante e inamovible == "Array con almacenaje estatico". 
+						Los valores dentro de cualquier: "Colección de valores":
+							Es posible "modificar, borrar o agregar" cualquier valor individual, siempre que este sea compartible con el DataType elegido por la "Colección de valores".
+					Se definen utilizando corchetes, por ejemplo, [1, 2, 3, 4, 5].
+					
+				2) _Secuencias capaces de almacenar valores alfa-numericos, pero mayormente con un uso enfocado a valores TEXTOS_
+					a) String  ==> Nota::"String" es un Sub-DataType de Array:  ya que es una "cadena de caracteres" dinámica, la cual explicitamente solo se enfoca en almacenar caracteres Textuales: "Char", la cual se almacena en un búfer de memoria y puede crecer o reducirse según sea necesario. String tambien es conocido (al platicar con las personas) como el DataType: "Textual compuesto" o "cadena de texto".
+						
+					b) "&str" es un sub-DataType de Slice ==> Se creo el formato: "&str" para el valor resultante de aplicar una accion: "Slice" a una String en memoria, resultando en un Array de tamaño definido: es decir una "Cadena de caracteres estatica" u "cadena de caracteres con tamaño definido no dinamica".
+					
+					c) Vector ==> lo mencionan pero no tengo idea de que es en realidad (Sera que solo hace referencia a: las tuplas y arrays y en realidad no es un DataType como tal sino una forma elegante de hacer referencia a las tuplas y arrays?) nota: aparentemente si existe el DataType Vector hasta donde encontre: 
+					Representan "colecciones de valores" del mismo DataType con tamaño variable, la diferencia con respecto a Array es que se declaran como Vec<T>.
+					(FALTA encontrar si solo almacena valores alfa-numericos de texto parecido mas  a "lista" y que diferencias existen respecto a "Array")
+					 // Pendiente de revision
+					
+		b. DataTypes para conjunto de valores: "Personalizados u definidos por el usuario"
+		Los cuales se encargan de: ==> Se usan para "agrupar" distintos formatos DataTypes dentro de uno solo.
+		Siendo el "valor" a almacenar: 
+			-instancias completas de DataTypes a almacenar: Nombramiento,DataType,Valor.
+			-Funciones y Metodos que interactuen con las instancias de DataTypes almacenadas.
+		
+		(Para ello el DataType es capaz de almacenar distintas instancias de otros DataTypes tomando como principal valor su Nombramiento de cada una de estas instancias.
+		PASO A PASO:
+		
+		1)Las Definiciones de cada uno de los otros DataTypes pueden ser definidas dentro del DataType que almacena/contiene varios nombres,
+	
+		2)Primero se realiza la instanciacion de este DataType contenedor, luego de manera automatica, se realiza la instanciacion de los otros DataTypes contenidos.
+		
+		3)Como resultado de instanciar el DataType contenedor, cada instancia de los otros DataType posee de manera individual: su nombre de su correspondiente localidad de memoria en donde almacenaran los datos, su respectivo formato el cual ya esta aplicado a su correspondiente localidad de memoria y su valor a almacenar (si este fue definido durante la construccion del "DataType que contiene otros multiples DataTypes" previamente se realiza entonces la invocacion automatica del valor, de lo contrario todavia falta realizar una llamada a el "DataType individual que esta siendo contenido" para hacer la correspondiente asignacion de su valor).
+		
+			i. Struct ==> Conjunto de definiciones de DataTypes creada con el unico proposito de organizar y hacer mas legible nuestro codigo. 
+			Se crea siempre que sea necesario describir algun objeto u existencia del mundo real, realizando una descomposicion del objeto u existencia en partes u caracteristicas. 
+			Luego cada parte/caracteristica puede ser clasificada:
+				Cualitativa == cuyos valores seran: "adjetivos calificativos" 
+				ó Cuantitativa == cuyos valores seran: "cifras o cantidades" 
+			Estos valores: "Adjetivos calificativos" u "cifras o cantidades", son los valores a almacenar.
+			Luego se asignan DataTypes a estos valores con su respectivo nombramiento.
+			Y finalmente se agrupan esos DataTypes en un solo sitio para que no se pierda el proposito original: Describir un objeto de la vida real mediante sus partes u caracteristicas ==> agrupando estas partes dentro de un DataType "Struct".
+		
+			i. Enum ==> Conjunto de definiciones de DataTypes, cada una de las cuales se le asigna un valor predeterminado en particular. Al seleccionar una definicion DataType para realizar una instancia, se bloquean las demas, resultando en solo una instancia de un DataType con un valor por defecto.
+			
+			ii. Union ==> Conjunto de definiciones de DataTypes, al introducir cualquier valor, aquella definicion DataType compartible con el valor introducido se selecciona y bloquea las demas definiciones DataType. Resultando en una instancia de un DataType con un  valor en particular proporcionado por el usuario.
+			
+			
+		a. DataTypes para conjunto de valores: "Funciones"
+		Los cuales se encargan de: ==> almacenar el conjunto de instrucciones de codigo: al cual denominamos funcion.
+		
+		//Inicio notas: Respecto a las funciones:
+		
+		Una funcion es un codigo que agrupa instrucciones, las cuales son capaces de ser ejecutadas para realizar una accion u funcionalidad. (Nota: no confundir funcion: "la accion de definir en codigo las instrucciones a ejecutar a futuro" con funcionalidad: "la accion llevar a cabo la ejecucion de una funcion haciendo uso de una definicion previamente establecida").
+		
+		Se toma como valor para este DataType: "el texto alfanumerico literalmente: que exista en toda la definicion de una funcion".
+		El nombramiento se realiza durante la definicion, al contrario de muchos otros DataTypes que realizan el nombramiento durante la instancia.
+		
+		Si alguien te pregunta ¿Dónde esta tu funcion de codigo?: // les muestras la definicion de la funcion == el texto que escribiste.
+		Si alguien te pregunta ¿Dónde  esta la funcionalidad de tu funcion? //les muestras donde es que realizas la llamada/uso de tu funcion de codigo
+		
+		Nota: Una funcion es el unico codigo que es posible definirlo, pero al cual no se le realiza una instancia, ya que es posible llamarlo para hacer uso del mismo solo a partir de su definicion.
+		 
+		Aparentemente: "no es posible realizar una instancia de una funcion", pero esto se debe a que: cuando llamamos al codigo, lo primero que se realiza automaticamente es una instancia de la funcion, luego se ejecutan las instrucciones y en cuanto esas instrucciones se completan o dejan de ejecutarse, la instancia automaticamente es borrada del sistema.
+		
+		Como tal hablando de funciones, se puede decir que todo ese codigo es una cadena de texto, el cual al realizar una llamada para hacer uso del mismo: Se instancia en memoria, se ejecuta el uso, y se borra de memoria.
+		//Fin notas: Respecto a las funciones.
+		
+			i. Functions ==> formatea una localidad de memoria para almacenar dentro de ella el codigo correspondiente a una funcion (bloques de código con nombre que pueden aceptar argumentos y devolver o no un valor)
+			ii. Closures ==> formatea una localidad de memoria para almacenar dentro de ella el codigo correspondiente una "'¿Clausura o clausula?" (bloques de código con nombre que pueden aceptar argumentos, realizar una operación logico-matematica con esos argumentos y siempre devolver un valor como resultado) //pendiente de revision.
+		
+		b. DataTypes para conjunto de valores: "Apuntadores"
+		Los cuales se encargan de: ==>  Almacenar un valor: "apuntador" en general se compone de 2 partes:
+			§ Almacenar el valor "IDENTIFICADOR BINARIO/DIRECCION BINARIA" de una localidad de memoria especifica/particular.
+			§ Almacenar el valor "NOMBRE" el cual es un identificador secundario en la identificacion de una direccion de memoria, este identificador es personalizable y lo que hace es hacer de sustituto de la direccion binaria de una localidad de memoria especifica/particular.
+		
+			i. References ==> DataType que almacena la direccion binaria y nombrada de una localidad de memoria en particular creada por otro DataType. Solo almacena la direccion de la localidad de memoria mas no es el creador u instanciador de esa localidad de memoria .
+			ii. Raw pointers ==> DataType que almacena la direccion de una localidad de memoria en particular: solo es posible almacenar unicamente la direccion en BINARIO y nadamas.
+			iii. Function pointers ==> DataType que almacena la direccion de una localidad de memoria en particular, la cual se usa de manera temporal y es exclusiva para las funciones y sirve como area de: Instanciacion,ejecucion y borrado, de funciones.
+		
+		c. DataTypes para conjunto de valores: "Trait":
+		
+		Los cuales se encargan de: ==> Almacenar valores: METODOS SIMBIOTICOS.
+		
+		Un metodo es la definicion de una funcion dentro de un DataType Personalizado.
+		Esta funcion puede interactuar con los valores u otros metodos contenidos dentro del DataType Personalizado al que pertenece, pudiendo incluso realizar una instancia de los valores o del Propio DataType.
+		
+		El valor: METODO SIMBIOTICO, se encuentra dentro de un conjunto compuesto por diversas definiciones de diferentes METODOS SIMBIOTICOS contenido dentro de un DataType personalizado. El cual es una copia de otro DataType localizado en algun: "Paquete de codigo", ó "librería u Biblioteca" ó "una dependencia".
+		
+		Estos metodos simbioticos cuentan con la capacidad de superponer informacion dentro de DataTypes pertenecientes a una librería en particular, modificando su comportamiento y caracteristicas.
+		
+		Esta superposicion no realiza un cambio directo o permanente en el codigo, sino lo que hace es crear una copia de la definicion de un DataType y trabaja directamente sobre esa copia.
+		
+		"Al metodo simbiotico que al ejecutarse superpone con nueva informacion una definicion de algun DataType en particular para asi modificar su comportamiento y caracteristicas: se le llama "Trait"
+		
+			i. Trait objects ==> DataType que almacena la definicion de un metodo: TRAIT.
+			Siendo especificos, se almacena dentro de este valor:
+				El valor: "referencia" que apunta a una definicion de un tipo en particular al cual se le aplicara una implementacion un trait.
+				La definicion del metodo que contiene las modificaciones que se ejecutaran al DataType.
+				
+				
+Impl trait ==> DataType que almacena como valor: una llamada a una: "Dependencia/Trait" que retorna una instancia del DataType modificado por el trait.

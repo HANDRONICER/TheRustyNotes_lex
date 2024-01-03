@@ -37,7 +37,10 @@ La manera de ALMACENAR UN VALOR Y la manera de MANIPULAR UN VALOR:
 
 Para ello un DataType posee la informacion necesaria dentro de si que establece: 
 	• la manera de CONVERTIR el "valor==datos/información" al código binario y viceversa.
-	• la manera de ORGANIZAR el código binario que representa el valor dentro de las localidades de memoria disponibles en nuestro computador.
+	• El Tamaño maximo puede alcanzar el valor usando el formato proveido.
+	
+	• la manera de ORGANIZAR el código binario que representa el valor, dentro de las localidades de memoria disponibles en nuestro computador.
+	
 
 Los DataTypes disponibles para formatear localidades de memoria ya estan definidos por el lenguaje Rust.
 
@@ -119,18 +122,3 @@ Es a partir de esos 2 grupos que nace la actual clasificacion de DataTypes como 
 ___________________________________________________
 ___________________________________________________
 ___________________________________________________
-
-Explicacion: como funciona un DataType nativo de rust:
-
-Cuando se tiene una localidad de memoria en particular, y se le aplica un formato DataType a esa localidad de memoria en particular:
-
-Esa localidad de memoria en particular sigue existiendo, sin embargo nuestra maquina ya no la reconoce como una localidad de memoria, ya que al aplicar el formato DataType esa localidad de memoria en particular pasa a ser una: "localidad contenedora de valores" u "localidad de memoria capaz de contener valores" == lo que se acorta en: CONTENEDOR DE VALORES.
-
-El proposito de un CONTENEDOR DE VALORES es almacenar dentro de si, de manera expresa y detallada los siguientes valores==Datos u Informacion mostrados a continuacion:
-
-	1) "FORMATO DataType"
-		Que se realizo y que actualmente se encuentra asignado al presente contenedor de valores. (Especificamente es capaz de almacenar una instancia del objeto de codigo "Formato DataType").
-	2) "NOMBRAMIENTO"
-		Es la "identidad u identificador" que asignamos como programadores para poder acceder a nuestro contenedor de valores.
-	3) "VALOR"
-		valores diversos que deseen almacenarse, los cuales siempre deben cumplir con los lineamientos de formato proveidos por su Formato DataType asignado.
