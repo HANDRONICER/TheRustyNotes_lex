@@ -226,21 +226,139 @@ Tarea ==> código simple, que realiza un proceso simple, cuyo resultado es una a
 Como podemos ver: Un programa, se compone de tareas y las tareas están compuestas por instrucciones.
 
 
-La "tarea" == "conjunto de instrucciones", más sencilla y funcional que un programador puede codificar, es la tarea que permite la creación de un: "Objeto de código".
+
+__________________________________
+__________________________________
+__________________________________
+
+Concepto de nombramiento:
+
+Sabemos ahora que una "tarea" == "conjunto de instrucciones".
+Ese "conjunto de instrucciones" se crea con motivo de REALIZAR ACCIONES O FUNCIONES sencillas.
+
+Sin embargo colocar a mano instrucciones repetitivas es algo tedioso, ya que ese mismo conjunto de instrucciones puede que necesite colocarse en distintas zonas del codigo para que este realice una accion o funcion.
+
+No es util o practico colocar una y otra y otra y otra vez el mismo codigo dentro de distintas zonas porque:
+El codigo crece y crece, y si falla una sola instrucción, hay que buscar entre todos los conjuntos repetidos esa instrucción en particular, y cambiarla a mano una y otra y otra vez, hasta que todo quede igual.
+
+Asi pues se decidio que es util dar un "nombre" a las "tareas" que nosotros codifiquemos, 
+Ya que usando un solo "nombre" corto en particular el cual es otorgado a un solo conjunto de instrucciones en particular, se puede representar a todo ese " conjunto de instrucciones"=="tarea" en particular.
+
+Por lo que:
+
+1)Se crea el conjunto de instrucciones
+2)Se nombra el conjunto de instrucciones
+3)Se puede usar el conjunto de instrucciones
+
+Siendo que por ejemplo:
+
+Imaginemos que La situacion actual es:
+1) Se creo y codifico "La tarea con 5999 instrucciones contenidas dentro"
+2) Se realizo el nombramiento de esa tarea, nombrandola u identificandola como: "MiTareaConsentida5999" 
+3)Se uso el nombramiento asignado a nuestra tarea: especificamente se uso el nombramiento 70 veces colocandolo en 70 zonas que lo requerian. 
+4) Se detecto un error dentro de una sola instrucción de las 5999 instrucciones,
+
+Como solucion: podemos ir al conjunto original y corregir esa instrucción erronea por una instrucción correcta, lo que provocara que todas las 70 zonas que usaron el nombramiento, empleen el conjunto de datos original revisado y corregido.
 
 
 
-La tarea para crear un "objeto de código" contiene:
-	-"Un solo valor".
-	-3 instrucciones en el siguiente orden: 
-		-Definir una plantilla con las características y formato que se requiere que posea la localidad de memoria.
-		-Dar formato a una localidad de memoria según la plantilla que tenemos y asignarle a esa localidad nueva == limpia/sin valores y recién modificada con nuestra plantilla, un "nombre unico" == "identificador alfanumerico".
-		- Meter "Un solo valor" en la localidad de memoria 
+Concepto de objeto de codigo:
+
+La programacion se puede sintetizar en 2 acciones fundamentales:
+
+A)Almacenamiento de valores.
+B)Realizar acciones==funciones con valores.
+
+Asi pues existen 2 conjuntos de instrucciones que dan soporte a esa ideologia:
+
+A.1)El conjunto de instrucciones que permite almacenar un valor.
+B.1)y el conjunto de instrucciones que permite realizar acciones ó funciones.
+
+Ambas TAREAS tienen una estructura similar, ambas son sencillas de codificar y ambas son de fundamental utilidad, 
+Y son tambien ambas tareas las que realizan la creación de un: "Objeto de código".
+
+Sin embargo debido a su "extension" o tamaño, estas tareas se sub-dividieron en un total de 3, las cuales permiten
+Crear 2 tipos especificos de objeto de codigo.
+
+______________________
+
+
+Un valor puede ser lo siguiente: 
+	-Un "Dato" o un conjunto de datos
+	-Un solo "dato con significado" o un "conjunto de datos con significado" == información.
+	-Una "instrucción" o un conjunto de instrucciones
+
+
+Recordemos que "codigo" es:
+"Un conjunto de datos" los cuales pueden interactuar con la máquina.
+
+Recordemos que el concepto de "existencia de codigo" es:  
+La forma en que un programador puede referirse a una sola parte dentro de un código, (si se habla con claridad y de manera específica), ó a Todo el código en si mismo, (siempre que se hable de manera clara y general).
+Ejemplo de una sola parte puede ser:"un simbolo, una palabra, una linea de codigo, o un conjunto de lineas de codigo==bloque de codigo, un conjunto de instrucciones de codigo==tarea".
+Ejemplo de todo el codigo puede ser: "El texto total contenido dentro de un archivo de codigo, un archivo de codigo en particular, un conjunto de archivos de codigo, un programa, un conjunto de programas, o cualquier entidad digital, de software la cual puede existir dentro de un computador.
+
+Asi pues el concepto de "objeto de codigo", no es mas que la manera elegante de referirse a una existencia de codigo en particular la cual es capaz de ser nombrada, para asi, poder ser re-utilizada dentro del codigo empleando su nombramiento.
+
+Pero si aun asi lo requieren: Un objeto de codigo, puede definirse como:
+
+La tarea con identidad propia la cual:
+crea una asignación de un "valor ó conjunto de instrucciones" hacia una (o varias localidades de memoria en particular, en caso de que el valor o conjunto de instrucciones a contener sea extenso o muy grande). 
+
+Permitiendo asi que ese "valor/conjunto de instrucciones" habite u se encuentre contenido dentro de esa localidad de memoria
+
+Es importante destacar que luego de que Esa localidad de memoria contenga un valor ó contenga un conjunto de instrucciones, Esa localidad de memoria sera identificada de ahora en adelante mediante un nombre proporcionado por el usuario.
+
+Un "objeto de código" permite que el programador y su código accedan mediante la identidad del objeto de codigo a un valor o conjunto de instrucciones, contenido dentro de una localidad de memoria, sin tener que colocar en cada ocasión el identificador binario de la localidad de memoria completo y en su lugar colocando un nombre asociado a la localidad de memoria.
+
+Existen entonces 2 objetos de codigo fundamentales:
+
+A.2)Contenedor de valor.
+B.1)Contenedor de instrucciones.
+
+Estos objetos de codigo se crean mediante los siguientes conjuntos de instrucciones previamente propuestos:
+
+A.1)El conjunto de instrucciones que permite almacenar un valor
+B.1)y el conjunto de instrucciones que permite realizar acciones ó funciones.
+
+Sin embargo debido a su complejidad, las tareas A.1 y B.1 se dividieron, cada una en 3 fases/etapas, 
+Esas fases/etapas son casi exactamente iguales en ambos casos, sin embargo poseen ligeras variaciones para adaptarse a su proposito, el proposito de A.1 es crear un A.2, y el proposito de B.1 es crear un B.2)
+
+
+La tarea para crear un "objeto de código: a.2)Contenedor de valor" contiene:
+
+	-3 fases/etapas, las cuales deben ejecutarse progresivamente en el siguiente orden: 
+		1.1 Definir una plantilla con las características y formato que se requiere que posea la localidad de memoria. (Declarar el DataType, este paso oficialmente se omite porque la maquina aprovisiona declaraciones DataType de forma predeterminada y solo es necesario de tener en cuenta cuando querramos declarar nuestro propio DataType).
 		
-//IMPORTANTE: se consideran 3 instrucciones en total de esta tarea: "Crear Objeto de codigo", las cuales codifica a mano el programador.
-Sin embargo todas las demas instrucciones de la tarea son realizadas de manera automatica por la maquina. 
+		1.2Dar formato a una localidad de memoria según la plantilla que tenemos y asignarle a esa localidad nueva == limpia/sin valores y recién modificada/formateada con nuestra plantilla DataType, un "nombre unico" == "identificador alfanumerico". (Declarar nuestro contenedor de valores y annotar el DataType que se desea asignar)
+		
+		2 - Meter "Un solo valor" en la localidad de memoria (Inicializar/Instanciar el contenedor asignando valores, los cuales seran contenidos/almacenados dentro de la localidad de memoria asignada al contenedor)
+		
+		3-  Usar el identificador/nombramiento para poder acceder a la informacion contenida dentro de nuestra localidad de memoria. (Usar la variable)
 
-Realizando todo un proceso dentro de la tarea.
+___
+
+La tarea para crear un "objeto de código: b.2) Contenedor de instrucciones" contiene:
+
+	
+	-3 fases/etapas, las cuales deben ejecutarse progresivamente en el siguiente orden: 
+	
+		1.1 Definir una plantilla con las características y formato que se requiere que posea la localidad de memoria. (Declarar el DataType, este paso oficialmente se omite porque la maquina aprovisiona declaraciones DataType de forma predeterminada, por lo que solo es necesario de tener en cuenta este paso cuando queramos declarar nuestro propio DataType).
+		
+		1.2 Dar formato a una localidad de memoria según la plantilla que tenemos y asignarle a esa localidad nueva == limpia/sin valores y recién modificada con nuestra plantilla, un "nombre unico" == "identificador alfanumerico". (Declarar nuestro contenedor de instrucciones, 
+		en caso de que nuestro contenedor de instrucciones requiera el uso de argumentos: Declarar los contenedores de valor y su respectiva annotacion DataType como parametros
+		En caso de que nuestro contenedor de instrucciones requiera el uso de un retorno: Declarar el contenedor de valor y su respectiva annotacion DataType como retorno del contenedor).
+		
+		2 - Meter "El conjunto de instrucciones o conjunto de tareas" en la localidad de memoria  (Inicializar/Instanciar el contenedor asignando instrucciones, las cuales seran contenidas/almacenadas dentro de la localidad de memoria asignada al contenedor)
+		
+		3-  Usar el identificador/nombramiento para poder acceder a la informacion contenida dentro de nuestra localidad de memoria. (Usar la variable o Ejecutar la funcion)
+
+//
+		
+//IMPORTANTE: Las 3 fases (1.2,2,3) para crear esta tarea: "Crear Objeto de codigo:Contenedor de valores", son las unicas que el programador codifica a mano.
+
+Sin embargo, existen instrucciones propias de cada fase,  las cuales son realizadas de manera automatica por la maquina. 
+
+Visualizando la creacion del objeto de codigo: "Contenedor de valores" como un "proceso":
 
 ==> Obtener un "valor" cualquiera (Este "valor" lo proporciona el programador)
 	==> guardar "el valor" en una localidad de memoria temporal con identificador binario (Esto lo realiza la maquina) 
@@ -264,61 +382,236 @@ Realizando todo un proceso dentro de la tarea.
 
 No piensen en ello a menos que quieran especializarse en lenguaje maquina, o sea necesario acceder al codigo de esos procesos en segundo plano debido a algun error que no es nuestro sino por parte de la propia codificacion interna de la máquina.
 
-		
-Un valor puede ser lo siguiente: 
-	-Un "Dato" o un conjunto de datos
-	-Un solo "dato con significado" o un "conjunto de datos con significado" == información.
-	-Una "instrucción" o un conjunto de instrucciones
+//Se omite la realizacion del proceso de un contenedor de instrucciones.
+
+Recapitulando y para concluir: 
+Un objeto de código siempre debe pasar por estas 3 etapas realizadas por el programador antes de poder ser usado y ser de utilidad:
+
+1)Planificacion de un objeto de codigo AKA. Declaracion = definicion
+2)Creacion de un objeto de codigo AKA. Instanciacion == inicializacion
+	2.1 ==> Invocacion == Planificacion y creacion de un objeto de codigo usando la misma instrucción.
+3)Uso de un objeto de codigo AKA. llamada
+
+Let x: i32; es un ejemplo valido de una declaracion de codigo ==> Ya que estamos creando un objeto de codigo.
+X = 32; es un ejemplo valido de la instanciacion de un objeto de codigo. ==> Ya que estamos llenando ese objeto de codigo??
+Println!("imprime valor: {}",x); es un ejemplo valido del uso/llamada de un objeto de codigo.
 
 
-Un objeto de codigo puede definirse como:
-La instrucción con identidad propia la cual:
-crea una asignación de un "valor" hacia una (o varias localidades de memoria en particular, en caso de que el valor sea extenso o muy grande). 
+Notas::::
 
-Permitiendo asi que ese "valor" habite u se encuentre contenido dentro de esa localidad de memoria
-
-Es importante destacar que luego de que Esa localidad de memoria contenga un valor, Esa localidad de memoria sera identificada de ahora en adelante mediante un nombre proporcionado por el usuario.
-
-Un "objeto de código" permite que el programador y su código accedan mediante la identidad del objeto de codigo a un valor contenido dentro de una localidad de memoria, sin tener que colocar en cada ocasión el identificador binario de la localidad de memoria completo y en su lugar colocando un nombre asociado a la localidad de memoria.
-
-	
 //importante: un objeto de codigo solo interactua con una unica localidad de memoria, 
-POR TANTO solo existe una unica asociacion de esa localidad de memoria hacia un solo valor contenido.
+POR TANTO solo existe una unica asociacion de esa localidad de memoria hacia un solo valor contenido o un solo conjunto de instrucciones.
 
 	Por ello, en lugar de decir:
-Que un objeto de codigo es una asociacion entre una localidad de memoria y el valor que contiene dentro de si.
+Que un objeto de codigo es una asociacion entre una localidad de memoria y el valor o conjunto de instrucciones que contiene dentro de si.
 	Es perfectamente válido decir: 
-Un objeto de codigo ==> contiene valores.
+Un objeto de codigo ==> contiene valores ó contiene instrucciones.
 
-//nota: Un objeto de código puede poseer varios valores dentro de si,
+//nota: Un objeto de código: Contenedor de valores, puede poseer tambien varios valores dentro de si,
 siempre que este conjunto de valores se considere no un conjunto de valores sino un UNICO VALOR que represente a todos los valores.
 
 //nota: Un objeto de código puede poseer varias localidades de memoria dentro de si,
 siempre que este conjunto de localidades de memoria se considere: no un conjunto de localidades sino como una UNICA LOCALIDAD que representa a todas las localidades .
 
+//nota: un objeto de codigo:"Contenedor de instrucciones" almacena instrucciones, las cuales pueden crear uno o mas objetos de codigo anidados dentro de si, (Objetos de codigo tales como: Contenedores de valor ó contenedores de instrucciones)
 
-Un objeto de código pasa por esas 3 instrucciones u etapas realizadas por el programador antes de poder interactuar con otros "valores" == "otros objetos de codigo, o con mas instrucciones: 
+//nota: un objeto de codigo: "contenedor de instrucciones" almacena su contenido dentro de UNA LOCALIDAD DE MEMORIA SOLO DURANTE LA COMPILACION 
+Resultando en que un Contenedor de instrucciones es incapaz de almacenar mas contenido o menos contenido mientras se ejecuta en tiempo real, 
+Luego de terminar de ejecutarse, el contenedor de instrucciones es capaz de proporcionar un valor de retorno el cual debe ser almacenado dentro de otro objeto de codigo ajeno a nuestro contenedor de instrucciones, (El retorno de algun valor por parte de la instrucción ó bloque de instrucciones, asi como los elementos de codigo dentro de la instrucción ó bloque de instrucciones pueden almacenar valores redirigiendo estos a objetos fuera del contenedor de instrucciones en el cual ESTAN CONTENIDOS siendo asi que NO forman parte instrinseca del Objeto de codigo, sino que solamente se encuentran meramente CONTENIDOS dentro de este: Contenedor de instrucciones.
+Ejemplo: una funcion es el ejemplo perfecto de un contenedor de instrucciones, para declarar una funcion y hacer uso de la funcion no es necesario que tenga contenido dentro de si, ya que aunque el contenido del cuerpo de una funcion en puede ser: "valor o conjunto de valores, instrucción o conjunto de intrucciones u objeto de codigo, conjunto de objetos de codigo", no es mas que eso: Contenido el cual es perteneciente a la funcion, Y que no es el contenedor de instrucciones: Funcion dueño del contenido.
+
+
+
+//INICIO de zona de trabajo
+ 
+
+
+Sí, el bloque de código que constituye el cuerpo de una función en Rust se almacena en memoria. En Rust, como en muchos otros lenguajes de programación, el código fuente se compila en instrucciones de máquina que finalmente se almacenan en la memoria ejecutable del programa.
+Cuando compilas un programa Rust, el compilador traduce tu código fuente a instrucciones de bajo nivel específicas de la arquitectura de la máquina objetivo. Estas instrucciones, junto con los datos estáticos y otros elementos necesarios, se organizan en el ejecutable del programa, que se carga en la memoria cuando se ejecuta.
+El código de una función, junto con otras secciones del programa, como los datos estáticos, las variables globales, etc., se almacena en la memoria del programa durante su ejecución. Cuando la función es llamada, el control se transfiere a la ubicación de memoria que contiene el código de la función para su ejecución.
+En resumen, el código de las funciones en Rust, después de la compilación, se almacena en la memoria del programa y se ejecuta desde allí cuando se llama a la función.
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+
+
+
+//Estoy equivocado??? NO, pero es necesario parafrasear la informacion previa con la siguiente informacion:
+
+La definicion/Declaracion de un objeto de codigo es cuando codificamos las caracteristicas de un objeto.
+
+Let x: i32; es un ejemplo valido de una declaracion de codigo ==> Ya que estamos creando un objeto de codigo.
+X = 32; es un ejemplo valido de la instanciacion de un objeto de codigo. ==> Ya que estamos llenando ese objeto de codigo??
+Println!("imprime valor: {}",x); es un ejemplo valido del uso/llamada de un objeto de codigo.
+
+Podrias por favor definir y diferenciar los siguientes conceptos de programacion, las definiciones creadas deben ser aplicables a cualquier lenguaje de codigo existente: "definicion","declaracion", "instanciacion", "inicializacion", "invocacion", "llamada"
+ChatGPT
+ChatGPT
+Claro, aquí tienes definiciones generales para esos conceptos de programación que deberían ser aplicables a cualquier lenguaje de programación:
+1. Definición:
+	• Definición se refiere al acto de especificar la estructura, tipo o comportamiento de un elemento en el código.
+	• Por ejemplo, la definición de una función incluiría su nombre, parámetros y tipo de retorno.
+2. Declaración:
+	• Declaración es el acto de asociar un identificador/nombramiento a algun tipo de dato o estructura, pero no necesariamente asignarle un valor.
+	• Por ejemplo, la declaración de una variable especifica su tipo, pero no le asigna un valor.
+3. Instanciación:
+	• Instanciación se refiere al proceso de crear una instancia de una clase u objeto, basándose en su definición.
+	• En el contexto de variables, puede significar asignar un valor a una variable después de declararla.
+4. Inicialización:
+	• Inicialización implica asignar un valor inicial a una variable en el momento de su creación o después de su declaración.
+	• Es común que la inicialización ocurra durante la instanciación, pero no siempre es el caso.
+5. Invocación:
+	• Invocación se refiere a la ejecución de una función o método. Es el acto de llamar a la funcionalidad definida por el código.
+	• En la invocación de funciones, se proporcionan los argumentos necesarios y se ejecuta el código contenido en la función.
+6. Llamada:
+	• Llamada es un término similar a la invocación y se utiliza para referirse al acto de solicitar la ejecución de una función o método.
+	• Al igual que con la invocación, implica proporcionar los argumentos requeridos para que la función realice su tarea.
+Estas definiciones proporcionan una base general que es aplicable a una variedad de lenguajes de programación. Sin embargo, ten en cuenta que algunos términos pueden tener matices específicos según el contexto del lenguaje de programación en el que se utilicen.
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+Sí, puedo corroborar la afirmación sobre instanciación en el contexto general de programación:
+Instanciación se refiere al proceso de crear una instancia de una clase u objeto, basándose en su definición.
+En el contexto de variables, cuando hablamos de instanciación, nos referimos al acto de crear una instancia específica de una variable basada en su tipo o definición. En algunos lenguajes de programación, la instanciación de una variable implica asignarle un valor específico, lo cual puede ocurrir al mismo tiempo que se declara la variable o en un momento posterior. En el caso de tipos de datos más complejos, como objetos o clases, la instanciación implica crear un nuevo objeto basado en la definición de la clase.
+Es importante señalar que el término "instancia" a menudo se asocia más estrechamente con la creación de objetos a partir de clases en la programación orientada a objetos. Sin embargo, en un sentido más general, puede aplicarse a la creación de cualquier variable o entidad basada en su definición.
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+
+Sí, puedo corroborar la definición proporcionada para "Declaración":
+Declaración:
+• Declaración es el acto de asociar un identificador/nombramiento a algún tipo de dato o estructura, pero no necesariamente asignarle un valor.
+• Por ejemplo, la declaración de una variable especifica su tipo, pero no le asigna un valor.
+Según esta definición, una declaración se centra en establecer la existencia y tipo de un identificador sin necesariamente asignar un valor específico en el momento de la declaración.
+Respecto a la segunda pregunta:
+En base a la definición proporcionada, una declaración no sería lo mismo que una instanciación. La declaración se refiere a la asociación de un identificador a un tipo de dato o estructura sin necesariamente asignar un valor, mientras que la instanciación implica la creación de una instancia específica basada en esa declaración y, en muchos casos, incluye la asignación de un valor inicial.
+En términos más sencillos, la declaración establece la existencia y tipo de una entidad, mientras que la instanciación crea una instancia específica de esa entidad, a menudo asignándole un valor.
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+
+Voy a revisar las definiciones y afirmaciones proporcionadas. Hasta donde he revisado, las definiciones y afirmaciones proporcionadas parecen ser correctas y coherentes:
+7. Definición:
+	• La definición se refiere al acto de especificar la estructura, tipo o comportamiento de un elemento en el código. Esta definición es precisa y aplicable en diferentes contextos de programación.
+8. Declaración:
+	• La declaración se refiere al acto de introducir un identificador al programa y asociarle un tipo de dato o estructura, sin necesariamente asignarle un valor. Esta definición también es precisa y concisa.
+9. Instanciación:
+	• La instanciación se refiere al proceso de crear una instancia de una clase u objeto, basándose en su definición. En el contexto de variables, puede significar asignar un valor a una variable después de declararla. Esta afirmación es correcta y destaca la creación de instancias específicas.
+10. Inicialización:
+	• La inicialización implica asignar un valor inicial a una variable en el momento de su creación o después de su declaración. Esta definición es clara y alineada con el uso común del término.
+11. Invocación:
+	• La invocación se refiere a la ejecución de una función o método. Es el acto de llamar a la funcionalidad definida por el código. Esta definición es precisa y se ajusta al contexto de funciones y métodos.
+12. Llamada:
+	• La llamada es un término similar a la invocación y se utiliza para referirse al acto de solicitar la ejecución de una función o método. Esta definición es correcta y complementaria a la de invocación.
+No he identificado errores en las definiciones o afirmaciones proporcionadas. Si tienes alguna pregunta adicional o necesitas más aclaraciones, estaré encantado de ayudarte.
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+
+
+
+
+Aquí están los ejemplos completos para cada concepto en la tabla:
+13. Definición:
+	• Definición de una estructura (struct) en Rust:
+
+rustCopy code
+// Definición de un tipo de dato
+struct Point {
+    x: f64,
+    y: f64,
+};
+14. Declaración:
+	• Declaración de variables basadas en la definición:
+
+rustCopy code
+// Declaración de variables basadas en la definición
+let origin: Point = Point { x: 0.0, y: 0.0 };
+let destination: Point = Point { x: 10.0, y: 5.0 };
+15. Instanciación:
+	• Instanciación de variables basadas en la definición:
+
+rustCopy code
+// Instanciación de variables basadas en la definición
+let my_point = Point { x: 8.0, y: 12.0 };
+let another_point = Point { x: -5.0, y: 2.5 };
+16. Inicialización:
+	• Inicialización de variables en el momento de la declaración:
+
+rustCopy code
+// Inicialización de variables en el momento de la declaración
+let radius: f64 = 5.0;
+let name: &str = "John";
+17. Invocación:
+	• Invocación de una función con argumentos:
+
+rustCopy code
+// Invocación de una función con argumentos
+let result = add(2, 3);
+18. Llamada:
+	• Llamada a una función:
+
+rustCopy code
+// Llamada a una función
+greet("World");
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+
+
+
+Desde <https://chat.openai.com/c/f4ac0e43-324c-43bf-a815-1e749b8acba8> 
+
+
 
 1)Planificacion del objeto de codigo
-AKA. Definicion/Declaracion == ES LA "ESTRUCTURACION/PLANIFICACION" DE un objeto de  CODIGO "INERTE".
+AKA. Definicion/Declaracion == ES LA "ESTRUCTURACION/PLANIFICACION" DE un objeto de  CODIGO "INERTE/INACTIVO"
 
-	Dicho de otra manera: EN OTRAS PALABRAS PLANIFICAMOS LAS CARACTERISTICAS DE NUESTRA LOCALIDAD DE MEMORIA, ESPECIFICANDO el  FORMATO del valor que contendra asi como tambien las CARACTERISTICAS y comportamientos de ese valor, REALIZANDO ASI UNA "PLANTILLA" DE UN POSIBLE "CONTENEDOR DE VALOR".
+	Dicho de otra manera: 
+	PARA CONTENEDORES DE VALOR:
+	EN OTRAS PALABRAS PLANIFICAMOS LAS CARACTERISTICAS DE NUESTRA LOCALIDAD DE MEMORIA, ESPECIFICANDO el  FORMATO del valor que contendra asi como tambien las CARACTERISTICAS y comportamientos de ese valor, REALIZANDO ASI UNA "PLANTILLA" DE UN POSIBLE "CONTENEDOR DE VALOR".
 	
-	//A esta Planificacion/Estructuracion/plantilla se le denomina con el nombre de:  Definición de un DataType.
-	(Veremos a detalle que es un DataType, mantengan el nombre en su memoria pero no se distraigan con ello).
+	
+	PARA Contenedores de INSTRUCCIONES DE CODIGO.
+	En esta fase, tambien: "PLANIFICAMOS LAS CARACTERISTICAS DE NUESTRA "INSTRUCCIÓN" u Bloque de Instrucciones DE CODIGO EJECUTABLE" (previo a ejecutar esa instrucción)
+	
+	
+	Una Definicion/Declaracion siempre es un DataType??? NO!
+	
+	//A esta Planificacion/Estructuracion/plantilla se le denomina con el nombre de:  Definición de un contenedor de valores, Al cual se le asigna durante su declaracion:
+	DataType, Nombramiento y el valor a contener.
+	(Veremos a detalle que es un "DataType" y que es un "contenedor de valores" y como se diferencia este de "localidad de memoria", por favor mantengan en su memoria estos nombres pero no se distraigan con ello).
+	
+	Ejemplo de de la creacion de una declaracion de un objeto de codigo: Definicion DataType.
+	// Colocar aquí la definicion del objeto de codigo: DataType i32.
+	
+
 
 2)Creacion del objeto de codigo, 
-AKA. Instanciacion (tambien se usa el termino de "llamada" aunque su uso es erroneo") == Es la "CREACION" DE un objeto de CODIGO "VIVO" a partir de una definición/declaración.
+AKA. Instanciacion/INICIALIZACION (tambien se usa el termino de "llamada" aunque su uso es erroneo") == Es la "CREACION" DE un objeto de CODIGO "VIVO" a partir de una definición/declaración.
 	
 	Dicho de otra manera: CREAMOS UN "CONTENEDOR de VALOR", con su formato, caracteristicas y comportamientos ya presentes,  y acto seguido asociamos un nombre que identifique de forma unica este "contenedor de valor".
 	
 	Directamente cuando asociamos un nombre a un "Contenedor de valor" este deja inmediatamente de ser una posibilidad, y se convierte en algo real y manipulable dentro de nuestro programa.
 	
-	A pesar de ya poder contener datos en su interior, TODAVIA NO INCLUIMOS UN VALOR dentro de este Objeto de codigo.
+	A pesar de ya poder contener datos en su interior, Durante la declaracion TODAVIA NO INCLUIMOS UN VALOR dentro de este Objeto de codigo, siendo que este objeto de codigo se encuentra "incompleto". (Siempre y cuando este objeto de codigo sea un "contenedor de valor" y no una instrucción)
+	¿Existen entonces 2 clases de objeto de codigo principales? Contenedor de valor e instrucción/bloque de instrucciones?
+	
+	Durante una inicializacion/instanciacion: ya incluimos un valor dentro del objeto de codigo, siendo que se completan todas las condiciones para que se considere un objeto de codigo completo
 	
 	//Una instancia de codigo siempre es independiente de la declaración a partir de la cual se creó.
 	
-	a. Invocación ==> Se crea la instancia de nuestro objeto de codigo e inmediatamente despues de crearse, dentro de la misma instrucción con la cual creamos la instancia del objeto de codigo, se realizar el llenado de nuestro objeto de codigo con valores.
+	Ejemplo de de la creacion de la instancia de un objeto de codigo: "Contenedor de valor" de categoria: "Variable", luego a esa instancia le asignamos un valor.:
+	// x = 128;
+	
+	
+	a.  Invocación ==> Se crea la instancia de nuestro objeto de codigo e inmediatamente despues de crearse, dentro de la misma instrucción con la cual creamos la instancia del objeto de codigo, se realizar el llenado de nuestro objeto de codigo con valores.
+		
+	
+	
+	Invocación es una declaracion con pasos extra ==> Se crea la declaracion de nuestro objeto de codigo, y en lugar de realizar una asignacion a la instancia de nuestro objeto de codigo por separado para asignar un valor, se realiza la asignacion de un valor dentro de la misma instrucción de declaracion.
+	
+	Siendo que se realizan los 2 pasos: Declaracion y asignacion de un valor a la instancia del codigo, directamente dentro de la declaracion el valor a asignar, por lo que ya no es necesario realizar el paso de realizar el llenado de nuestro objeto de codigo con valores. 
+	
+	Ejemplo de invocacion: 
+	Let x = 
+	
+	
+	
 	
 3)Uso del objeto de codigo
 AKA. Llamada == Es el uso de nuestro "Contenedor de valor u Objeto de codigo".
@@ -330,6 +623,7 @@ Y al realizar cualquier interaccion con nuestro OBJETO DE CODIGO instanciado en 
 
 
 
+//FIN de zona de trabajo
 
 
 
@@ -359,5 +653,6 @@ Un valor puede y debe ser almacenado dentro de un "Objeto de Codigo". (Excepto c
 
 
 Desde <https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico> 
+
 
 
