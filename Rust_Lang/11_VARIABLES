@@ -1,0 +1,99 @@
+Una variable es el objeto de codigo mas simple que cae dentro de la categoria: "Contenedor de valor", debido a que puede almacenar datos en su interior.
+
+La sintaxis de las variables es la siguiente:
+let &mut nombre_variable:tipoDato = String::new();
+
+//vease primero Y_Librerias y Dependencias
+//vease primero DataType
+
+Explicacion:::: //A continuacion se expone un cuadro, el cual explica la desambiguacion de la sintaxis de una variable rust
+let	&mut	mi_nombre_variable	: u32	=	String	::	new()
+Crea una nueva variable	declara que esa variable sea "mutable"	es el nombre que le asignamos a nuestra variable	Annotation/Anottation == Se emplea durante la definición de una existencia de código que pueda contener datos. Y lo que hace es "asignar un DataType".	"LIGA/BIND/ASIGNA/ASOCIA" == nuestro valor de la derecha con/a/hacia nuestra variable de la izquierda	Paquete de código, el cual contiene el "tipo de dato", en este caso el "tipo de dato" es: "String", lo que permite definir las características, funciones y propiedades del Tipo Dato al cual pertenecerá nuestro valor (Sin inicializar), de esta forma solo declaramos la estructura de datatype a la cual le haremos una instancia.	Define que la siguiente funcion es una "funcion	Función que retorna una nueva instancia de tipo de Dato (En este caso es: "String") , esta instancia contiene dentro un valor ya "inicializado" el cual es el: predeterminado
+						ASOCIADA", en cambio si fuese: "." la siguiente funcion seria: "Función Derivada de un DataType u paquete de codigo/librería/dependencia".
+	//por ver…	//Por ver…	EN ESTE 		String == 
+	El termino: "&", define que ya existe una variable actual con valores, y se procedera a acceder a ese valor copiando y usando unicamente su identificador de localidad de datos pero sin copiar el valor seleccionado es decir se crea una "referencia"	En caso de que nuestra variable, sea una variable de referencia "NO MUTABLE", colocaremos el "&" e inmediatamente despues de este la variable como se muestra a continuación:			DataType: "UTF-8 encoded bit of text" provided by STD library
+		"&mi_nombre_variable"			
+	Es comun declarar/definir una referencia como parametros 
+	
+	Y luego usar el valor obtenido por la referencia como argumento para  instanciar el uso de la referencia como una variable dentro de una funcion.
+	
+//Fin de la Explicacion de la desambiguacion de una variable
+
+
+QUE PUEDE SER UN VALOR?::::
+let &mut nombre_variable: tipoDato = "VALOR"
+
+nota::::
+"VALOR" puede ser un: 
+	• "valor personalizado" ==> el cual es colocado por el usuario
+	Ó 
+	• "nuevo valor==valor predeterminado por la definición del DataType"
+
+Con "valor nuevo", nos referimos a:
+ El valor predeterminado o por default que esta definido dentro de las librerias incrustadas de rust viene con la "instanciación" de un cierto "tipo de dato".
+	
+	(en este caso el "DataType == tipo de dato" del ejemplo es: "String", pero cuando el valor de string requiere que este este vacio, se pasa dentro de este la instancia de un valor de DataType: "ENUMERADOR" llamado: "Option"
+	
+	Este valor "Option<T>" tiene 2 estados en su declaracion: 
+	None ==> el cual se activa cuando se busca representar una "ausencia de datos" y contiene el valor "None" el cual representa literalmente un "valor vacio", esta representacion es de DataType: i32)
+	Some(T) ==> el cual se activa cuando existe cualquier valor valido diferente de None, contendra el valor que le queramos meter independientemente de su DataType, con esto el compilador omite la asignacion definitiva de un DataType al valor y de manera temporal el compilador automaticamente busca y asigna un DataType compartible con el dato.
+	Lo cual hace que: si el dato es similar o posee caracteristicas similares a un DataType: "string", el compilador asigne el DataType temporal: Some<string>.
+	Luego si queremos hacer uso del valor, debemos convertir el DataType temporal: Some<string> primero a el DataType: string. Y si necesitamos un DataType diferente de string, realizar la conversion correspondiente.
+	
+	(Rust de manera nativa provee un paquete de codigo que no es necesario llamar en el preludio, sino que esta siempre presente, el cual contiene y provee la definicion/caracteristicas/funcionalidades para inicializar un tipo de dato, esta funcion asociada es:"new()" la cual inicializa todos los valores de un DataType, asignando a estos el valor "None" predeterminado/default)
+	
+
+Siendo mas especificos es comun pensar que al instanciar una definicion, se obtiene una instancia completamente vacia de datos lista para ser llenada. Si se realiza el llenado de datos de manera instantanea cuando se crea, la instancia deja de llamarse instancia y en su lugar pasa a llamarse "invocacion".
+
+Pero, debemos tener presente que cuando se realiza una "instancia vacia" esta instancia en realidad no viene vacia de datos, como se puede creer, sino que posee una "inicialización" propia, la cual se realiza usando una función presente dentro del paquete de código (en este caso la funcion asociada "new()" es la mas empleada para inicializar valores, la funcion new(), la cual es una de tantas funciones capaces de inicializar un DataType con valores vacios), la funcion que elijamos para inicializar un DataType, inicializa cualquier valor==Datos&Informacion como "None" (Vease: tipo de dato "NEVER" && tipo de dato "None"). 
+
+Ejemplo de la "instanciación" de un tipo de dato==>String, con su respectiva funcion==>new(), la cual provee los valores por default::::
+	String::new()
+
+
+Las variables pueden contener 3 tipos de valores="datos u informacion":
+
+Variable simple puede contener Valores basicos compartibles con DataTypes Primitivos.
+Variable simple puede contener Valores complejos compartibles con DataTypes Compuestos.
+Variable de referencia puede contener Valores de referencia ==>  
+	El valor a contener dentro de una "variable de referencia" es un "valor de referencia":
+	Un valor de referencia es una "Direccion Binaria" la cual apunta directamente y sirve como acceso hacia una localidad de memoria que "pertenece/ha sido asignada" a otro contenedor de valores. 
+
+Es decir: "Un contenedor de valores: variable simple" es una localidad de memoria a la cual ya se le ha realizado previamente asignado un DataType,Un nombramiento y un valor a contener.
+Y un "contenedor de valores: variable de referencia", es una localidad de memoria previamente asignada a otro contenedor de valores.
+
+
+Una "variable de referencia" permite que una existencia de codigo pueda acceder al valor contenido en la referencia SIN copiar ese valor de nuevo en memoria, ya que solo copia el "identificador de localidad de memoria" en el que ese valor se encuentra.
+
+Las referencias son INMUTABLES por default.
+
+
+
+Una variable, siempre es inmutable por defecto si no se especifica su propiedad de inmutabilidad, por tanto una variable INMUTABLE es tambien denominada ==  "CONSTANTE" (su valor no cambiara nunca luego de su Instanciación/invocacion).
+
+La inmutabilidad es_: una vez que se da declara la variable, y en ese mismo instante se otorga a la variable un valor, ese valor NO CAMBIA nunca a menos que re-declaremos la variable y redeclaremos simultáneamente un nuevo valor  == "Shadowing", o que transformemos la propiedad de la variable INMUTABLE a MUTABLE.
+
+
+CONSTANTES
+
+Existe otro concepto ademas de las variables: las constantes (la cual es una variable que nunca cambia su valor)
+
+	1) No es posible usar "mut" cuando se declara una constante.
+	2) El valor asignado a una constante no cambia nunca, por lo que no es posible contener dentro de una constante valores (o contenedores de valores que contienen un valor) que puedan cambiar despues de que se de inicio a la ejecucion del programa.
+		Ejemplo: 
+		const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+		Desde <https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html> 
+		
+		 
+	3) El DataType siempre debe ser explicitamente "annotado", es imposible que una constante infiera el dataType del valor que sera contenido dentro de la constante.
+
+Su sintaxis es exactamente igual a la sintaxis utilizada para declara una variable, pero en lugar de emplear la palabra clave: "let", se emplea la palabra clave "const", esa palabra clave se emplea para indicarle al programa que estamos declarando una constante y que el codigo a continuacion debe tomarse como una declaracion de constante.
+
+Ejemplo de codigo: Declaracion de una constante
+// const nombre_constante: i32 = 84;
+
+La utilidad de una constante principalmente es que es una forma de nombrar Valores y guardarlos como: "codigo INAMOVIBLE/RIGIDO == HARDCODE".
+
+Esto es util cuando es necesario transferir el significado de un valor a otra persona ó futuros mantenedores del código, sin el nombramiento el valor es eso: un valor, el cual carece de significado, pero al emplear un nombramiento para identificar ese valor se puede transmitir el significado de cual es el funcionamiento de ese valor. 
+También ayuda a ten er valor dentro de una zona en tu código que tendrías que cambiar si el El valor codificado de forma rígida debía actualizarse en el futuro.
+Desde <https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html> 

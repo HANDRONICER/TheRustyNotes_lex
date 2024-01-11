@@ -1,0 +1,123 @@
+Siendo que dentro de rust existe el concepto de "MUTABILIDAD" "INMUTABILIDAD":
+
+La inmutabilidad es_: una vez que se da declara la variable, y en ese mismo instante se otorga a la variable un valor, ese valor NO CAMBIA nunca
+((… a menos que re-declaremos usando el mismo nombre asignado a nuestra variable y dejemos su caracteristica: "inmutable" intacta, y a continuacion asignemos en ese instante un "nuevo valor" a esa "variable inmutable recien re-declarada"  == "Shadowing".))
+
+Ejemplo de inmutabilidad usando codigo:
+
+// let var_lex: i32 = "87";
+// var_lex = "32"; ==> al ejecutar el programa esta linea nos marcara un error porque nuestra variable es inmutable, es decir: La variable siempre conservara su valor asignado original, por lo que no es posible re-asignar a la variable otro valor diferente del original. 
+_______________________________________
+_______________________________________
+
+Cambiando el valor de una variable Inmutable usando shadowing:
+
+Una forma de cambiar el valor de una variable inmutable es empleando la accion manual: "Shadowing/Sombreado/Re-Declaracion".
+Shadowing permite crear una variable_A usando el nombre asignado a una variable_B en particular que ya existe. 
+Sin importar:
+	Si la variable_B es inmutable ó mutable
+	Si la variable_B tiene un valor actualmente asignado
+
+Es decir:
+Puedes hacer 2 declaraciones de la misma variable, USANDO EL MISMO NOMBRAMIENTO, 
+pero solo la segunda variable declarada va a poder contener un valor.
+Mientras que la primera variable declarada es eliminada automaticamente por Rust junto con su valor contenido.
+
+Ejemplo de SHADOWING usando codigo:
+
+=> Siendo que: 
+Shadowing es la habilidad para: 
+"re-declarar" este seria un buen codigo de ejemplo:
+
+// let var_lex:int32 = 20;  ==> Declaramos una variable inmutable, con dataType i32, asignamos el valor a contener: 20
+// let var_lex:int32 = 45;  ==> Re-Declaramos una variable inmutable nueva, con dataType: i32, asignamos el valor a contener: 45.
+
+(Al usar el mismo nombramiento que una variable existente entonces: NO estamos Declarando una variable por primera vez, sino que estamos: Re-Declarando una variable por segunda vez.)
+
+NOTA IMPORTANTE:
+
+Al tener un bloque_anidado_B dentro de otro bloque_de_codigo_A: 
+
+La variable de origen_A siempre sera la que se encuentre fuera del bloque anidado, mientras que la variable_Shadow_B a la que se aplico la accion de SHADOWING siempre sera la que se encuentre dentro del bloque anidado.
+
+Ejemplo ilustrativo de codigo:
+
+fn main() {
+    let mut  x = 5; //Declaracion e invocacion de una variable mutable de nombramiento: "x"
+    println!("The value of x is: {x}");
+    x = 6; //Re-asignacion de valor de nuestra variable mutable "x"
+    println!("The value of x is: {x}");
+	
+	    //Importante: Shadowing permite re-declarar una variable con el mismo nombre, pero con un nuevo tipo y/o valor.
+    { //Esta corchea delimita el inicio de un bloque anidado
+
+        let x = x * 2; //Re-Declaracion de la variable x ==> "SHADOWING" aplicado a la variable x), Esta variable shadow solo sera valida dentro de este bloque anidado.
+        println!("El valor de x dentro de este nuevo bloque anidado es:  {x}"); //El valor actual de la variable x con shadowing aplicado es: 12
+
+    } //Esta corchea delimita el final de un bloque anidado
+
+
+
+    //En esta zona ya nos encontramos fuera de nuestro bloque anidado, por lo que la validez del shadowning anterior termino, por tanto el valor de x fuera del bloque anidado es 6 de acuerdo a la variable mutable original: "x".
+Mientras que valor dentro de la variable x shadow, siempre y cuando se encuentre dentro del bloque anidado para ser valida, siempre sera: 12
+
+    println!("El valor de x fuera del bloque anidado es: {x}");
+}
+
+
+_________________________________________
+
+No confundir shadowing  (re-declaracion de la variable) con "re-uso/re-utilizacion de la variable":
+
+Usar el nombre de una variable_A para asi acceder a su valor contenido, 
+	operar con ese valor, 
+		y luego asignar el resultado a esa misma variable_A.
+
+// let mut var_lex:i32 = 52; 
+//var_lex = var_lex + 88; 
+
+(*using a variable value to self-asign another value to the same variable"*)
+___________________________________________
+___________________________________________
+___________________________________________
+
+La mutabilidad es_: una vez que se da declara la variable, y en ese mismo instante se otorga a la variable un valor, PODEMOS MODIFICAR ese valor contenido dentro de nuestra variable mas tarde o cuando queramos.
+
+Ejemplo de mutabilidad usando codigo:
+
+// let mut var_lex: i32 = "54";
+// var_lex = "65"; ==> al ejecutar el programa esta linea se ejecuta correctamente, porque nuestra variable es mutable, es decir: La variable puede MODIFICAR su valor asignado original, por lo que SI es posible re-asignar a la variable otro valor diferente del original. 
+
+El DataType asignado a una variable mutable durante su declaracion NO CAMBIA NUNCA.
+Es decir: 
+
+El valor asignado a una variable mutable puede ser modificado.
+El dataType asignado a una variable mutable ES INAMOVIBLE. (a menos que se re-declare la variable por completo)
+
+Ejemplo de codigo: Modificando el valor dentro de una variable mutable:
+
+// let mut var_lex:i32 = 78; ==> Se crea una  variable mutable y se le asigna El DATATYPE: i32, El VALOR: 78. 
+//var_lex = 37;  ==> Se modifica el VALOR: originalmente el valor era 78 , actualizado AHORA el valor es: 37. ESTO ES VALIDO
+//var_lex = "hello"; ==> Se modifica el VALOR: originalmente el valor era 78, actualizado Ahora el  valor es: "hello".ESTO NO ES VALIDO porque el DATATYPE del valor original (i32) es diferente al DataType del valor actualizado (String) y la regla dice que una variable mutable puede modificar su valor asignado a contener, pero no puede modificar su DataType asignado.
+
+The error if we try to compile this code: shows and say we’re not allowed to mutate a variable’s type…
+Desde <https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html> 
+
+
+
+Como nota: Tambien es posible realizar Shadowing de las variables mutables:
+¿Porque hacer shadowing de una variable que es mutable?
+Porque SHADOWING tambien permite cambiar el DataType asignado a una variable.
+(Es posible cambiar el DataType de cualquier variable independientemente de que nuestra variable sea mutable o inmutable).
+
+Ejemplo de SHADOWING de variables mutables usando codigo: 
+
+// let mut var_lex:int32 = 20;  ==> declaramos una variable mutable, con dataType i32, asignamos el valor a contener: 20
+// let mut var_lex:String = "hello"; ==> Re-Declaramos una variable mutable nueva, ESTA VEZ CON dataType: String, asignamos el valor a contener: "hello".
+
+
+Resumen:
+Variable In-Mutable: Modificar el valor contenido esta Prohibido.
+Variable Mutable: Modificar el valor contendido esta permitido.
+Shadowing: Re-Declaracion de una variable para: 1) modificar el Valor asignado, 2) modificar el DataType asignado
+

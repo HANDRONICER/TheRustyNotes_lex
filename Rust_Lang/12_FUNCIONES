@@ -1,0 +1,308 @@
+Contenido 
+Concepto de funciones:
+
+Una funcion es un codigo que agrupa instrucciones,
+Al ejecutar una funcion, esas instrucciones se realizan para realizar una accion u funcionalidad. 
+
+(Nota: 
+no confundir funcion: "definir/declarar en codigo las instrucciones a ejecutar a futuro" 
+con accion/funcionalidad/ejecucion: "llevar a cabo las instrucciones de una funcion haciendo uso de una definicion/declaracion previamente establecida").
+
+
+(fn) ==> es la palabra reservada empleada para crear funciones!
+
+• Un parámetro es cuando, dentro de la declaracion de nuestra funcion: 
+	Se "crea/define/declara" uno o mas contenedores de valores, Esos contenedores de valores se consideran exclusivos de nuestra funcion por lo que solamente podran emplearse en el scope de nuestra funcion.
+
+	Estos contenedores de valores propios de la funcion se declaran de tal modo que se encuentran:
+		"Formateados": Cada uno de los parametros tienen un DataType asignado.
+		"vacios": Lo que quiere decir que esos contenedores estan:
+			// "sin inicializar==con su valor predeterminado"
+			//"sin haber realizado una invocacion"
+			//"sin haber realizado una llamada para llenar ese contenedor de valor con un valor"
+			//En otras palabras intactos y sin un valor asignado.
+		"Y Dentro de los parentesis": Los parametros se colocan durante la declaracion de una funcion dentro de los parentesis de la funcion.
+
+• Un argumento es cuando, dentro de la llamada de nuestra funcion:
+
+	Se proporcionan los valores concretos = "argumentos" para que estos sean asignados a su respectivo parametro especificado dentro de la declaracion de nuestra funcion. 
+
+	Esos valores se proporcionan de tal modo que se encuentran en:
+		"Formato Compartible", deben de ser compartibles con el formato proporcionado por el parametro.
+		"Y Dentro de los parentesis": Los argumentos se colocan durante la llamada de una funcion, dentro de los parentesis de la funcion.
+		
+En otras palabras sintetizando los conceptos de parametros y argumento:
+
+• Un parámetro es cuando se "definen" los espacios de los datos que se aceptaran.
+
+• Un argumento es cuando se "proporcionan" los datos para llenar esos espacios.
+
+
+
+• Firma == Se le llama asi al conjunto declarado de parámetros exclusivos de una funcion
+
+
+Ejemplo de codigo:_Declarando una funcion:
+
+fn main() {  ==> Este código indica la creación de una función llamada "MAIN".
+	//Aquí iria el bloque de codigo que esta funcion ejecutara
+}
+
+Por  tradición las funcion: "MAIN" dentro de un ejecutable o archivo de codigo siempre es la primera en ejecutarse,
+como nota importante: 
+Dentro de un solo ejecutable individual pueden habitar varias funciones con diferentes nombres, pero por regla solo puede existir una solitaria función MAIN dentro de ese ejecutable ó archivo de codigo, 
+Esa funcion siempre debe poseer el nombre "main", ya que si existen 2 a la vez el compilador no sabe cuál es la primera que se ejecutara.
+Repito: LA FUNCION MAIN solo puede declararse una sola vez por ejecutable.
+
+
+La sintaxis de la declaracion de una funcion es la siguiente:
+fn nombre_funcion (nombre_Parametro1: tipoDato, nombre_Parametro2:tipoDato2) => DataTypeDeseado_Para_NuestroRetorno 
+{ //Bloque de codigo a ejecutar
+//Linea de codigo 1;
+//Linea de codigo 2;
+//Linea de codigo 3;
+//Linea de codigo 4;
+let Valor_Retorno = nombre_Parametro1+nombre_Parametro2;
+//Nombre_Return:DataTypeDeseado_Para_NuestroRetorno_Compartible con "Valor_Retorno" = Valor_Retorno
+ }
+
+Explicando un poco mas el codigo anterior:
+
+fn nombre_funcion(parametros_aceptados_por_mi_funcion){
+	//Dentro de los "brackets{}" va lo que se denomina "CUERPO DE LA FUNCION/ BODY OF THE FUNCTION";
+	//en el cuerpo de la función contiene el código a ejecutar cuando se invoque esta función;
+	//CADA CONJUNTO DE "BRACKETS {}" DELIMITA DENTRO DE SI EL "ALCANCE U SCOPE" (independientemente que pertenezcan a una función u bloque de codigo).
+	//este comentario está dentro del cuerpo de la función!!
+	retorno_de_la_funcion
+}
+
+
+La sintaxis de una Llamada de una funcion es la siguiente:
+////Nota: 
+En la llamada que se muestra a continuacion,"los ARGUMENTOS: valor_Argumento1 y valor_Argumento2" siempre deben de contener valores existentes.
+
+Esos valores proporcionados por los argumentos de la funcion, deben ser compartibles con los respectivos DataTypes especificados por los PARAMETROS: "nombre_Parametro1:DataType y nombre_Parametro2:DataType"  en la declaracion de nuestra funcion  
+/////
+
+nombre_funcion(valor_Argumento1, valor_Argumento2);
+
+
+Nota: Una funcion es el unico codigo que es posible definirlo, pero al cual no se le realiza una instancia, ya que es posible llamarlo para hacer uso del mismo solo a partir de su definicion.
+ 
+Aparentemente: "no es posible realizar una instancia de una funcion", pero esto se debe a que: cuando llamamos a una funcion (Siempre que exista una declaracion de esa funcion previamente realizada), lo primero que nuestro computador realiza automaticamente es una instancia de la funcion, luego se ejecutan las instrucciones y en cuanto esas instrucciones se completan o dejan de ejecutarse, la instancia automaticamente es borrada del sistema.
+
+Como tal hablando de funciones:
+Se puede decir que todo el codigo de la declaracion de una función es una cadena de texto, 
+Y al cual al realizar una llamada para hacer uso del mismo: Se instancia en memoria, se ejecuta el uso, y se borra de memoria.
+
+Dentro de Rust: Existe algo denominado:
+
+STATEMENT/SENTENCIAS: Son objetos de codigo que al ejecutarse/llamarse NO RETORNAN NINGUN VALOR.
+EXPRESSION/EXPRESIONES: Son objetos de codigo que al ejecutarse/llamarse RETORNAN UN VALOR.
+
+Recordar: Objeto de codigo SIEMPRE SE NOMBRA; Existen 2 objetos de codigo: Contenedor de "valores" ó Contenedor de "Funciones==Funcion/Acciones==Bloque de codigo"
+
+
+• Statements: "instruction_s" that perform some action and "do not return a value".
+• Expressions: "evaluation_s" that perform to "resultant value_s". 
+			§ Then the resultant value is returned/expelled outside their
+			§  code object as an "code_object: Container_value"
+
+Modified, base statement was on: Desde <https://doc.rust-lang.org/book/ch03-03-how-functions-work.html> 
+
+
+A continuacion ahondaremos en detalles acerca de las sentencias y expresiones.
+
+Respecto a Sentencias:
+
+Las sentencias son existencias de codigo que al llevarse a cabo: NO RETORNAN NINGUN VALOR.
+
+Declarar una variable y asignar un valor de inmediato = invocacion ==> Es un ejemplo de una "sentencia".
+let nombre_variable = 4; ==> este es el ejemplo de codigo de una sentencia.
+
+Declarar una funcion (la cual no retorna ningun valor) ==> Es un ejemplo de una "sentencia".
+fn nombre_funcion () {
+}
+
+La declaracion ó la invocacion de una sentencia no puede ser asignada como valor:
+let nombre_variable_A = (let nombre_variable_B = 6); ==> Aquí erroneamente tratamos de asignar como valor "la invocacion de la variable B" a nuestra "variable_A".
+
+Sin embargo la llamada/uso de una sentencia Si puede ser asignada como valor:
+let nombre_variable_B = 6; ==> Aquí estamos declarando una variable_B
+let nombre_variable_A = nombre_variable_B; //Se llama/usa al contenedor de datos "variable_B" previamente declarada, para asi poder acceder al valor que continene.
+
+Existen palabras reservadas que sirven para exclusivamente crear sentencias, una de esas palabras clave/keyword es: "let" ==> Se USA PARA DECLARAR un contenedor de datos: VARIABLE
+¿Aquí que otras palabras clave/reservadas/Keyword son validas para declarar sentencias?
+
+Son Sentencias: 
+Las declaraciones y llamadas de contenedores de codigo los cuales no retornen ningun valor.
+Toda existencia de codigo que no retorne ningun valor al 1)declararse/definirse, 2)instanciarse/inicializarse ó 2.1)invocarse, asi como 3)llamarse.
+
+
+Respecto a EXPRESIONES:
+
+Las expresiones son valores que se obtienen al realizar/ejecutar un proceso o un conjunto de instrucciones.
+es decir: 
+
+Las expresiones son Instrucciones u procesos que al llevarse a cabo: RETORNAN UNO O MAS VALORES.
+
+Las expresiones en su interior: pueden ejecutar "instrucciones" opcionalmente si es necesario, pero siempre y de manera obligatoria se va a ejecutar una o mas "evaluaciones de valores" y al terminar de evaluar se va a retornar de inmediato el "valor resultado final".
+
+
+La declaracion de una expresion y la llamada a esa expresion pueden encontrarse contenidas dentro de una sentencia, siempre que no afecten a la declaracion de una sentencia.
+
+Se muestra un ejemplo de codigo que respalda la ultima afirmacion:
+fn main() { 
+	let y = { 
+		let x = 3; 
+		x + 1 
+	}; 
+	println!("The value of y is: {y}"); 
+}
+
+Las FUNCIONES, tienen 2 formas de "Retornar Valores"
+
+//Expression/expresion: ejemplo de expresion/evaluacion: FUNCION CON RETORNO EXPLICITO
+
+fn funcion_que_retorna_un_valor() -> i32 { //Despues de ejecutar este codigo, vemos que el codigo si retorna un valor.
+    let y=5+1; // se realiza una "operacion matematica"=="evaluacion entre valores" y se guarda el resultado en la variable "y"
+    return y; //notese que la palabra reservada "return" es una palabra reservada de Rust, y que se utiliza para retornar un valor de una funcion. en este caso el resultado final de la ejecucion de nuestra funcion fue almacenado en contenedor de valores: variable "Y", por lo que retornamos esa "variable". 
+}
+
+//Expression/expresion: ejemplo de expresion/evaluacion: FUNCION CON RETORNO IMPLICITO
+fn funcion_que_retorna_un_valor2() -> i32 { //notese que siempre cuando se declara una funcion que posee un valor de retorno, se realiza el uso de "->" seguido de un datatype: i32, esto significa que se busca que la funcion retorne un valor de tipo "i32", esta accion de "definir el tipo de retorno deseado" NO SE NOMBRA.
+    let y=5+1; // se realiza una "operacion matematica"=="evaluacion entre valores" y se guarda el resultado en la variable "y"
+    y //notese que se puede omitir la palabra reservada "return" que se utiliza para retornar un valor de una funcion,aun asi se retorna el valor de la variable "Y" como el resultado final de la ejecucion de nuestra funcion, gracias a que Rust implicitamente la ejecucion o lectura de la ultima linea como valor, (siempre que no tenga un "punto y coma")
+}
+
+El retorno de una funcion siempre es un "valor", el cual puede ser asignado a un "Contenedor de valores" compartible:
+//Ejemplo de la afirmacion anterior en codigo:
+fn five() -> i32 { 5+1 } //1) creamos una funcion que retorna el numero 6 al ejecutarse.
+let x = five(); //2) Realizamos la invocacion de un contenedor de valores: variable al cual le asignamos como valor el resultado de la ejecucion de una funcion con retorno.
+
+//Como el resultado de la ejecucion de la funcion es 6, el paso 2) anteriormente realizado es equivalente a esto:
+let x = 6;
+
+Desde <https://doc.rust-lang.org/book/ch03-03-how-functions-work.html> 
+
+
+
+
+_______________________________________
+_________________________________________________________________________
+_______________________________
+___________________________
+________________________
+Inicio de zona: informacion relacionada con la explicacion ó informacion relevantes que pienso es util pero no me queda del todo claro como agregar esta informacion a la explicacion principal  o que es util pero su explicacion es extensa y haria que la explicacion principal fuera muy extensa.
+
+1___
+Cual afirmacion es correcta?
+
+Las funciones: NO SON CONTENEDORES DE CODIGO.
+En apariencia las funciones guardan codigo en su interior, pero en realidad una funcion es mas parecido a un "apuntador": El cual NO GUARDA TODAS LAS LINEAS DE CODIGO EN SU INTERIOR, sino que indica en que parte o linea de nuestro codigo podemos localizar el inicio del bloque de codigo a ejecutar, La capacidad de localizar el inicio del bloque de codigo a ejecutar, y acto seguido realiza ejecuta linea por linea el contenido del bloque de la funcion.
+
+Esa capacidad de localizar el inicio del bloque de codigo a ejecutar hace que no sea necesario almacenar todo el bloque de codigo en una localidad de memoria, sino que solo se guarda el numero de la linea donde inicia la funcion.
+
+Las funciones: SI SON CONTENEDORES DE CODIGO.
+En apariencia las funciones guardan codigo en su interior, pero en realidad una funcion NO GUARDA nunca en memoria LAS LINEAS DE CODIGO EN SU INTERIOR, sino que al mandar a llamar a la funcion, nuestro equipo se dirige a la linea de nuestro codigo donde podemos localizar el inicio del bloque de codigo a ejecutar, y acto seguido realiza ejecuta linea por linea el contenido del bloque de la funcion.
+
+Esa capacidad de localizar el inicio del bloque de codigo a ejecutar hace que no sea necesario almacenar todo el bloque de codigo en una localidad de memoria, sino que solo se guarda el numero de la linea donde inicia la funcion. 
+
+
+2____
+//(Y si es que la funcion acepta argumentos y tiene un tipo de retorno, Procesa e infiere las llamada y el tipo de retorno que deberian realizarse al momento de ejecutar la funcion y el TipoDeDato que el uso del retorno debe proporcionar, luego almacena esos datos (llamada+DataType que solicitan los argumentos y uso+DataType del retorno) dentro de su firma).
+
+3____
+Nota: si una funcion posee un retorno de datos que se desea pasar a otra funcion:
+
+Ejemplo:
+
+fn Mi_funcion () => int32 {
+	Let var_numero: i32 = 52;
+	
+	return var_numero;
+}
+
+Y  tenemos otra función que acepta parámetros como por ejemplo
+
+fn Mi_otra_funcion (let var_numerica:i32) {
+	let var_colocar_cualquier_numero_aqui: i32 = var_numerica; 
+}
+
+Podemos pasar directamente el valor retornado que resulta de ejecutar Mi_funcion() a la otra funcion!
+
+Ejemplo:
+
+Mi_otra_funcion().Mi_funcion();
+
+
+4____
+a. DataTypes para conjunto de valores: "Funciones"
+Los cuales se encargan de: ==> almacenar el conjunto de instrucciones de codigo: al cual denominamos funcion.
+Una funcion es un codigo que agrupa instrucciones, las cuales son capaces de ser ejecutadas para realizar una accion u funcionalidad. (Nota: no confundir funcion: "la accion de definir en codigo las instrucciones a ejecutar a futuro" con funcionalidad: "la accion llevar a cabo la ejecucion de una funcion haciendo uso de una definicion previamente establecida").
+
+Se toma como valor para este DataType: "el texto alfanumerico literalmente: que exista en toda la definicion de una funcion".
+El nombramiento se realiza durante la definicion, al contrario de muchos otros DataTypes que realizan el nombramiento durante la instancia.
+
+Si alguien te pregunta ¿Dónde esta tu funcion de codigo?: // les muestras la "definicion" de la funcion que escribiste en codigo.
+
+Si alguien te pregunta ¿Dónde  esta, donde se encuentra "en funcionamiento" ó "la funcionalidad" ó simplemente: ¿Donde mandas a traer/ejecutar a tu funcion? //les muestras donde es que realizas la llamada/uso de tu funcion, en tu codigo.
+
+Si alguien te pregunta ¿Dónde esta visualmente durante tiempo de ejecucion esta tu funcion?, le señalas la parte especifica donde tu funcion se ejecuta y visualmente retorna una respuesta. //Creo que este comentario esta de mas, porque nadie es tan especifico, (Es el equivalente a los problemas de matematicas: Pedro el vecino, compro Un millon y medio de sandias rojas, y otro millon y medio de sandias verdes y se le cayeron dos y se rompieron, cuantas sandias le quedan a pedro el vecino?) pero por motivos didacticos la colocare.
+
+Nota: Una funcion es el unico codigo que es posible definirlo, pero al cual no se le realiza una instancia, ya que es posible llamarlo para hacer uso del mismo solo a partir de su definicion.
+ 
+Aparentemente: "no es posible realizar una instancia de una funcion", pero esto se debe a que: cuando llamamos al codigo, lo primero que se realiza automaticamente es una instancia de la funcion, luego se ejecutan las instrucciones y en cuanto esas instrucciones se completan o dejan de ejecutarse, la instancia automaticamente es borrada del sistema.
+
+Como tal hablando de funciones, se puede decir que todo ese codigo es una cadena de texto, el cual al realizar una llamada para hacer uso del mismo: Se instancia en memoria, se ejecuta el uso, y se borra de memoria.
+
+
+	i. Functions ==> formatea una localidad de memoria para almacenar dentro de ella el codigo correspondiente a una funcion (bloques de código con nombre que pueden aceptar argumentos y devolver o no un valor)
+	ii. Closures ==> formatea una localidad de memoria para almacenar dentro de ella el codigo correspindiente una "'¿Clausura o clausula?" (bloques de código con nombre que pueden aceptar argumentos, realizar una operación logico-matematica con esos argumentos y siempre devolver un valor como resultado) //pendiente de revision.
+
+b. DataTypes para conjunto de valores: "Apuntadores"
+Los cuales se encargan de: ==>  Almacenar un valor: "apuntador" en general se compone de 2 partes:
+	§ Almacenar el valor "IDENTIFICADOR BINARIO/DIRECCION BINARIA" de una localidad de memoria especifica/particular.
+	§ Almacenar el valor "NOMBRE" el cual es un identificador secundario en la identificacion de una direccion de memoria, este identificador es personalizable y lo que hace es hacer de sustituto de la direccion binaria de una localidad de memoria especifica/particular.
+
+	i. References ==> DataType que almacena la direccion binaria y nombrada de una localidad de memoria en particular creada por otro DataType. Solo almacena la direccion de la localidad de memoria mas no es el creador u instanciador de esa localidad de memoria .
+	ii. Raw pointers ==> DataType que almacena la direccion de una localidad de memoria en particular: solo es posible almacenar unicamente la direccion en BINARIO y nadamas.
+	iii. Function pointers ==> DataType que almacena la direccion de una localidad de memoria en particular, la cual se usa de manera temporal y es exclusiva para las funciones y sirve como area de: Instanciacion,ejecucion y borrado, de funciones.
+
+c. DataTypes para conjunto de valores: "Trait":
+
+Los cuales se encargan de: ==> Almacenar valores: METODOS SIMBIOTICOS.
+
+Un metodo es: la "definicion" de una funcion dentro de un DataType Personalizado.
+
+Parafraseando un poco y re-Ordenando el concepto: 
+
+Un metodo  ==> Es una funcion Dentro de un DataType Personalizado.
+La Definicion de un metodo Se realiza dentro de ese DataType:
+//Colocar un ejemplo de codigo donde se realice la definicón de un Metodo dentro de un DataType Personalizado.
+El "uso" de un metodo
+
+
+Esta funcion puede interactuar con los valores u otros metodos contenidos dentro del DataType Personalizado al que pertenece, pudiendo incluso realizar una instancia de los valores o del Propio DataType.
+
+El valor: METODO SIMBIOTICO, se encuentra dentro de un conjunto compuesto por diversas definiciones de diferentes METODOS SIMBIOTICOS contenido dentro de un DataType personalizado. El cual es una copia de otro DataType localizado en algun: "Paquete de codigo", ó "librería u Biblioteca" ó "una dependencia".
+
+Estos metodos simbioticos cuentan con la capacidad de superponer informacion dentro de DataTypes pertenecientes a una librería en particular, modificando su comportamiento y caracteristicas.
+
+Esta superposicion no realiza un cambio directo o permanente en el codigo, sino lo que hace es crear una copia de la definicion de un DataType y trabaja directamente sobre esa copia.
+
+"Al metodo simbiotico que al ejecutarse superpone con nueva informacion una definicion de algun DataType en particular para asi modificar su comportamiento y caracteristicas: se le llama "Trait"
+
+	i. Trait objects ==> DataType que almacena la definicion de un metodo: TRAIT.
+	Siendo especificos, se almacena dentro de este valor:
+		El valor: "referencia" que apunta a una definicion de un tipo en particular al cual se le aplicara una implementacion un trait.
+		La definicion del metodo que contiene las modificaciones que se ejecutaran al DataType.
+		
+		
+	ii. Impl trait ==> DataType que almacena como valor: una llamada a una: "Dependencia/Trait" que retorna una instancia del DataType modificado por el trait.
+
+5___________
+Rust doesn’t care where you define your functions, only that they’re defined somewhere in a scope that can be seen by the caller.
+Desde <https://doc.rust-lang.org/book/ch03-03-how-functions-work.html> 
+
+Una funcion puede llamarse siempre y cuando su declaracion se encuentre dentro del mismo scope (la llamada esta localizada dentro del mismo bloque de codigo (delimitado por parentesis) que su declaracion) o en un scope superior == (la llamada puede estar localizada dentro de parentesis anidados y sub-anidados).
