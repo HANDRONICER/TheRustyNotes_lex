@@ -1,0 +1,28 @@
+Se visualizo:
+
+Fundamentos de la programacion; (Codigo,Codificar, Dato, informacion, valor, instrucción, tarea, programa).
+DataTypes ("DataTypes singulares == primitivos" "DataTypes Conjunto == Compuestos")
+Concepto: Contenedores de: "valor" e "instrucciones"
+variables, los contenedores de valor mas simples.
+Mutabilidad
+Funciones, los contenedores de instrucciones mas utiles (Recordemos que los bloques de codigo son los contenedores de instrucciones mas simples)
+Condicionales aka. patrones u flujos" de control ("Condicionales redireccionamiento de ejecucion: IF,IF_ELSE, MATCH" y "Condicionales de ciclado de ejecucion: CicloSimple ,WHILE, FOR")
+
+Pendiente: Llenar informacion respecto a la condicional MATCH
+
+
+Actividad: Realiza programas que:
+
+• Convert temperatures between Fahrenheit and Celsius.
+• Generate the nth Fibonacci number.
+• Print the lyrics to the Christmas carol “The Twelve Days of Christmas,” taking advantage of the repetition in the song.
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+
+
+1)Conviertan temperaturas entre Fahrenheit y Celsius.
+2)Generen el numero Fibonacci
+3)Impiman las letras de la cancion "20 dias de navidad" ==> usando ciclos.
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

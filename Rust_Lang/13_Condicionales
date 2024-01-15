@@ -1,0 +1,311 @@
+Contenido 
+
+En rust existe el concepto: "patrones u flujos" de control 
+(En ingles el concepto es denominado: "PatternMatching"==Localizacion de Patrones)
+
+Un flujo de control es: "Direccionar la ejecucion de un programa".
+
+Siendo que cualquier programa se compone de lineas de codigo ordenadas dentro de "bloques de codigo", 
+
+Se busca controlar la ejecucion de las lineas de codigo que componen nuestro programa, direccionando la ejecucion hacia los bloques que queremos que si se ejecuten y omitir los bloques de codigo que no queremos que se ejecuten. 
+
+La manera en que se direcciona si un bloque de codigo debe ejecutarse ó debe omitirse es: 
+Mediante la Evaluacion de una "condicion".
+Para ello, se determinan en codigo ciertos criterios que deben cumplirse para que el resultado de la evaluacion sea satisfactoria ó en caso de que no se cumplan los criterios requeridos se considere que el resultado de la evaluacion fue "no-satisfactoria"
+
+Es decir: Si la condicion, luego de ser evaluada se considera que cumple con los criterios que se solicitan, permitira que se desencadene la ejecucion de algun Bloque de codigo o funcion en particular. 
+Y de lo contrario, si la condicion luego de ser evaluada NO-CUMPLE con los criterios que se solicitan, omitira que se desencadene la ejecucion de un codigo o funcion en particular.
+
+Conditional expressions allows you to branch your code depending on conditions. You provide a condition and then state, “If this condition is met, run this block of code. If the condition is not met, do not run this block of code or run this other block of code instead”
+Modificado Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+
+Fue a partir de el hecho de que las "condiciones" pueden determinar el "flujo de ejecucion de codigo==patron de ejecucion de bloques de codigo". 
+Que el termino: "patrones u flujos de control de codigo" tambien se le denomino con otro nombre: 
+"patrones y flujos CONDICIONALES de codigo". 
+Este termino a su vez se acoto para reducir su tamaño, resultando que hoy en dia se le denomine y se conozca a los patrones u flujos de control: "CONDICIONALES" 
+
+
+En resumen una condicion es: "Codigo que determina si un bloque de codigo en particular se ejecuta o se omite".
+Una condicional es: "El control que establecemos y obtenemos sobre un codigo al especificar las condiciones que permiten que un bloque de codigo se ejecute o se omita".
+
+
+___________________
+___________________
+___________________
+
+
+Existen varios tipos de "condicionales/patrones de control de codigo/flujos de control de codigo" que son fundamentales al momento de especificar control sobre como se ejecutaran los bloques de codigo dentro de nuestro programa cuando se cumplan ciertas condiciones.
+
+
+Condicionales SIMPLES. ==> Evaluan una condicion, y siempre como maximo poseen 2 arms. 
+
+1)CONDICIONAL:"IF" ==>Ejecuta el bloque de codigo mientras el resultado de evaluar la condicion sea satisfactoria. De lo contrario si el resultado de evaluar la condicion es no-satisfactoria, Omite el bloque de codigo por completo.
+
+Los bloques de codigo dentro de una condicional "if" se conocen coloquialmente con el nombre de: 
+"Brazos/Arms" de la expresion condicional "if"
+
+2)CONDICIONAL "IF_LET" ==>Ejecuta el bloque de codigo mientras el resultado de evaluar la condicion sea satisfactoria. De lo contrario si el resultado de evaluar la condicion es no-satisfactoria, Omite el bloque de codigo por completo y acto seguido Ejecuta otro bloque de codigo diferente como alternativa.
+
+Los bloques de codigo dentro de una condicional "if_else" se conocen coloquialmente con el nombre de: 
+"Brazos/Arms" de la expresion condicional "if_else"
+
+
+Condicionales Multiples aka. Condicionales Listadas ==> Evaluan una condicion, no poseen un limite de las arms que pueden poseer.
+
+3)CONDICIONAL:"MATCH" (anteriormente conocida como CONDICIONAL: "SWITCH") ==> Ejecuta codigo mientras una sola condicion dentro de una lista de multiples condiciones sea correctamente detectada, tomando para ejecutar solo la primera coincidencia correcta de la lista de condiciones y descartando las demas, de lo contrario, mientras la condicion no sea detectada NO EJECUTA CODIGO.
+
+_____________________________________________
+____________________________________________
+
+Ejemplos de Condicionales en codigo:
+
+Condicionales simples
+1)Condicional "IF"
+
+// fn main() {
+	let var_numero: i32 = 4;
+	
+	If(var_numero>3){
+		Println!("El valor de mi var_numero es mayor a tres!!");
+	}
+}
+
+2)Condicional "IF_ELSE"
+
+// fn main() {
+	let var_numero: i32 = 10;
+	
+	if (var_numero<7){
+		println!("El valor de mi var_numero es menor a siete!!!!");
+	}
+	else{
+		Println!("El valor de mi var_numero es entonces mayor a siete!!!!!");
+	}
+}
+
+Como nota: 
+Ya que una condicional puede ser una "Expresion",es decir ejecutar una condicional para seleccionar un bloque de codigo, y luego el bloque de codigo: puede retornar codigo.
+Se puede asignar una condicional como valor a un Contenedor De Valor.
+
+Siempre y cuando todos los bloques de codigo dentro de sus ARM/Brazos RETORNEN un valor,
+Y siempre y cuando el valor retornado por todos esos bloques sea compartible con el DataType usado como annotation dentro de la declaracion de nuestro contenedor de valores, tal y como se muestra a continuacion:
+
+fn main() { 
+	let condition = true; 
+	let number = if condition { 5 } else { 6 }; 
+	println!("The value of number is: {number}"); }
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+
+
+//Pendiente
+Condicionales Multiples a.k.a. condicionales listadas
+3)Condicional "Match"
+
+
+
+
+Existen ademas otro tipo de condicionales: "las condicionales de Repeticion" aka. Ciclos ==> Evaluan una condicion, mientras esta se cumpla repiten la ejecucion de una unica arm.
+
+Una condicional de Repeticion: Ejecuta el bloque de codigo mientras el resultado de evaluar la condicion sea satisfactoria al terminar la ejecucion del bloque de codigo vuelve a evaluar la condicion para continuar repitiendo el mismo ciclo de codigo.
+De lo contrario si el resultado de evaluar la condicion es no-satisfactoria, Omite el bloque de codigo por completo.
+
+Rust has three kinds of loops: loop, while, and for. Let’s try each one.
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+Existen 3 tipos de loops/Ciclos:
+
+1)Condicional Repetitiva/ciclo/loop ==>"CICLO SIMPLE/SimpleLoop"
+Ejecuta el bloque de codigo infinidad de veces de manera ciclica, la condicion para romper ese ciclo de ejecuciones infinitas se realiza al detectar la palabra reservada "BREAK".
+
+	==>Si el resultado de evaluar la condicion BREAK, es "no-satisfactoria", es decir: no se encuentra la palabra clave "break" durante la ejecucion de una sola iteracion del ciclo que ejecuta nuestro bloque de codigo, entonces repite el bloque de codigo por completo. 
+	==>De lo contrario si el resultado de evaluar la condicion es satisfactoria, es decir: Se detecta la palabra clave "break, durante la ejecucion de una sola iteracion del ciclo que ejecuta nuestro bloque de codigo, termina de ejecutar siempre exactamente en el punto donde se encuentre la palabra "break" en la iteracion actual (por lo que si existe codigo despues de detectar la palabra clave break este codigo ya no sera ejecutado), luego Omite la siguiente iteracion del bloque de codigo por completo, dejando asi de repetir el ciclo.
+
+existe otra condicion que los ciclos loop pueden detectar, la condicion para interrumpir la ejecucion de una iteracion en cierto punto, y continuar con la siguiente iteracion, permitiendo asi que el ciclo continue.
+se realiza mediante la deteccion de la palabra reservada: "CONTINUE"
+
+	==>Si el resultado de evaluar la condicion CONTINUE, es "no-satisfactoria", es decir: no se encuentra la palabra clave "continue" durante la ejecucion de una sola iteracion del ciclo que ejecuta nuestro bloque de codigo, entonces repite el bloque de codigo por completo. 
+	==>De lo contrario si el resultado de evaluar la condicion es satisfactoria, es decir: Se detecta la palabra clave "continue", durante la ejecucion de una sola iteracion del ciclo que ejecuta nuestro bloque de codigo, termina de ejecutar siempre exactamente en el punto donde se encuentre la palabra "continue" en la iteracion actual (por lo que si existe codigo despues de detectar la palabra clave continue este codigo ya no sera ejecutado), luego pasa inmediatamente a la proxima iteracion del bloque de codigo por completo, continuando asi la repeticion del ciclo.
+
+Los loops pueden anidarse (Colocar un nuevo loop dentro de otro loop ya existente), es obligatorio que cuando se realice esta accion se coloque una "etiqueta/label" al loop, una etiqueta ES el NOMBRAMIENTO/Identificador de un ciclo loop.
+
+El etiquetado de un loop sirve para cuando se desea utilizar las palabras claves: "continue" y "break", ya que al emplear cualquiera de esas palabras clave seguido de la etiqueta, podemos saber perfectamente a cual de los ciclos afectara:
+Ejemplo en codigo del concepto de anidacion de loops, empleando etiquetas para realizar el nombramiento/identificacion de loops, y empleando palabras clave que afectan a un loop etiquetado en especifico:
+
+fn main() { 
+	let mut count = 0; 
+		'counting_up: loop { 
+			println!("count = {count}");
+			 let mut remaining = 10; 
+				'NombreMiCiclo: loop { 
+					println!("remaining = {remaining}"); 
+					
+					if remaining == 9 { 
+						break 'NombreMiCiclo; 
+					} 
+					if count == 2 { 
+						break 'counting_up; 
+					}
+					 
+					remaining -= 1; 
+				} //Fin loop 'NombreMiCiclo
+				count += 1; 
+			} //Fin loop 'counting_up
+		println!("End count = {count}"); }
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+
+
+La utilidad de un loop es que pueden ejecutarse de manera continua, y son utilizados para checar que un codigo que constantemente se ejecuta se lleve a cabo correctamente.
+
+
+1)Ejemplo en codigo: Condicional Repetitiva/ciclo/loop ==>"CICLO SIMPLE/SimpleLoop"
+
+fn main() {
+	loop {
+		Println!("Este comentario se repite infinidad de veces!!!");
+	}
+}
+
+Ejemplo en codigo de un ciclo loop, el cual retorna un valor al cesar iteraciones:
+
+fn main () {
+	let mut counter: i32 = 0;
+	
+	let result = loop {
+		counter +=1;
+		
+		if (counter == 10){
+			break counter *2; // rompe el ciclo e inmediatamente retorna un valor.
+		}
+	}
+	
+	println!("El valor de nuestra variable result es: {}", result);
+}
+
+
+
+
+2)Condicional Repetitiva/ciclo/loop ==> "WHILE"
+Ejecuta el bloque de codigo mientras el resultado de evaluar la condicion sea satisfactoria, luego al terminar la ejecucion del bloque de codigo vuelve a evaluar la condicion, si se mantiene satisfactoria continua repitiendo el mismo ciclo de codigo hasta que el resultado de evaluar la condicion es no-satisfactoria, en cuyo caso como consecuencia Omite el bloque de codigo por completo.
+
+Si el resultado de evaluear la condicion es no-satisfactoria desde el principio: Omite el bloque de codigo por completo y no repite ninguna vez.
+
+
+el comportamiento de un ciclo while es parecido al proporcionado por el siguiente codigo:
+
+fn main() {
+	loop{
+		if (MiCondicion==true){
+			//La condicion es satisfactoria, por tanto el ciclo se repetira
+			//CODIGO QUE BUSCAMOS EJECUTAR MIENTRAS LA CONDICION SEA SATISFACTORIA VA EN ESTA ZONA
+		}
+		else {
+			//La condicion no es satisfactoria, por tanto el ciclo deja de ejecutarse cierra.
+			break;
+		}
+		
+	}
+}
+
+Sin embargo el codigo anterior era tan usado que se decidio construir un ciclo que lo representase: WHILE.
+
+El codigo de un ciclo while es el siguiente:
+
+fn main() {
+	while (MiCondicion==true{ ////Si la condicion es satisfactoria el ciclo se repetira, de lo contrario no se ejecutara ni se repetira.
+		//CODIGO QUE BUSCAMOS EJECUTAR MIENTRAS LA CONDICION SEA SATISFACTORIA VA EN ESTA ZONA
+	}
+}
+
+Ejemplo de uso de un ciclo While:
+fn main() { 
+	let mut number = 3; 
+	while number != 0 { 
+		println!("Imprime numero {number}!"); //Se imprime un numero
+		number -= 1; //Se resta -1 al numero en cada iteracion/repeticion del ciclo
+	} 
+	println!("CicloTerminado"); }
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+
+
+
+
+3)Condicional Repetitiva/ciclo/loop ==> "FOR"
+
+Un rango o collection:
+Es un agrupamiento de multiples valores dentro de un solo Conjunto.
+Ese conjunto es considerado un unico valor, por lo que puede ser almacenado dentro de un solo "Contenedor de valores" el cual posea un DataType compartible (El DataType debe ser de la categoria: DataType capaz de dar formato a un Conjunto de valores)
+
+
+El ciclo: "FOR"
+Ejecuta el bloque de codigo mientras el resultado de evaluar la condicion:
+1) Sea satisfactoria
+2) La condicion sea que: Dentro de un Conjunto en particular, se pueda localizar la existencia de un elemento, el cual debe encuentrarse numerado en secuencia respecto a todos los elementos contenidos dentro de ese conjunto en particular.
+
+De lo contrario Si la condicion es no-satisfactoria, Omite la ejecucion del bloque de codigo.
+
+En otras palabras un ciclo FOR, sirve para recorrer TODO un rango o collection, pasando por todos sus elementos, uno a la vez en cada iteracion.
+
+
+Ejemplo de uso de un for empleando un "rango":
+
+fn main() { 
+	for number in (1..4).rev() {
+		println!("Ciclos hasta el despegue de nuestra nave espacial: {number}!");
+	} 
+	println!("Despegue!!!"); }
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+Ejemplo de uso de un ciclo for empleando una "collection" la cual contiene varios elementos:
+
+
+fn main() { 
+	let Micollectionlex = [10, 20, 30, 40, 50]; 
+	for element in Micollectionlex { 
+		println!("El valor == elemento disponible durante esta iteracion es: {element} el cual forma parte de nuestra collection"); 
+	} 
+}
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+
+Como nota: Es posible iterar a traves de los elementos pertenecientes a una collection empleando el ciclo while de la siguiente manera: (Siempre que se conozca el tamaño de la collection == extension actual de los elementos de nuestra collection) NO USAR SI NO SE CONOCE EL TAMAÑO DE LA COLLECTION O EL TAMAÑO DE LA COLLECTION VARIA CONSTANTEMENTE.
+
+fn main() { 
+	let a = [10, 20, 30, 40, 50]; 
+	let mut index = 0; 
+	while index < 5 { 
+		println!("the value is: {}", a[index]); index += 1; 
+	}
+}
+
+Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
+
+Un ciclo funciona de la siguiente manera:
+Si el resultado de evaluar la condicion es satisfactoria, entra a ejecutar el bloque de codigo, luego al terminar la ejecucion del bloque de codigo vuelve a evaluar la condicion, si se mantiene satisfactoria continua repitiendo el mismo ciclo de codigo hasta que:
+==>Se determina que bloque de codigo puede repetirse un numero maximo de veces, por lo que al alcanzar el maximo numero de veces permitido este deja de repetirse y omite el bloque de codigo por completo.
+==>El resultado de evaluar la condicion es no-satisfactoria, en cuyo caso como consecuencia Omite el bloque de codigo por completo.
+
+
+
+
+___________________________________________
+_______________________________________
+__________________________________
+____________________________
+________________________
+___________________
+_____________
+_______
+
+//Pendiente
+Los contenedores de instrucciones: "condicionales", solo pueden ser expresiones?
+
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
