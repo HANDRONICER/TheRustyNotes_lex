@@ -99,11 +99,45 @@ fn main() {
 Desde <https://doc.rust-lang.org/book/ch03-05-control-flow.html> 
 
 
-
-//Pendiente
 Condicionales Multiples a.k.a. condicionales listadas
 3)Condicional "Match"
 
+
+Ejemplo de uso de una condicional match simple:
+fn main() {
+	let x = 5;
+match x {
+    1 => println!("uno"),
+    2 => println!("dos"),
+    3 => println!("tres"),
+    4 => println!("cuatro"),
+    5 => {
+        println!("cinco");
+        println!("el valor es {}", x);
+    }
+    _ => println!("> 5"),
+}
+}
+
+Desde <https://danigm.net/rust-match.html> 
+
+Ejemplo de uso de una condiconal match, (la condicional match no retorna valores, Es el Contenedor de instrucciones que se encuentra contenido dentro de nuestra condicional match el que retorna valores)
+let number = match x {
+    1 => 1,
+    2 => 2,
+    3 => 3,
+    4|5 => 27, //Aquí  es posible que la condicion de entrada a la arm pueda ser satisfecha con 2 valores diferentes (cuatro ó cinco)
+    6 => {
+        println!("detro del match estamos retornando un seis");
+        6
+    }
+    _ => 63, //En caso de no encontrar ninguna coincidencia que sea satisfactoria en la condicion propia de una sola arm que permite acceder a el contenedor de instrucción/Bloque de codigo contenido dentro de sola arm, retorna el numero 63
+};
+
+Desde <https://danigm.net/rust-match.html> 
+
+//Pendiente
+//MATCH tiene otros usos mas complejos (Los cuales se detallaran mas adelante)
 
 
 
